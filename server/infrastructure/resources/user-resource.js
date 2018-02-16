@@ -6,7 +6,7 @@ var await = require('asyncawait/await');
 
 function getUsers() {
     var db = await(MongoClient.connect(url)); 
-    var dbase = db.db("kulukdb");
+    var dbase = db.db("heroku_p2cqk5m3");
     var users = await(dbase.collection("users").find({}).toArray());
     db.close();
     return users;
@@ -14,7 +14,7 @@ function getUsers() {
 
 function getUser(id) {
     var db = await(MongoClient.connect(url)); 
-    var dbase = db.db("kulukdb");
+    var dbase = db.db("heroku_p2cqk5m3");
     var user = await(dbase.collection("users").findOne({_id: new ObjectId(id)}));
     db.close();
     return user;
@@ -22,7 +22,7 @@ function getUser(id) {
 
 function deleteUser(id) {
     var db = await(MongoClient.connect(url)); 
-    var dbase = db.db("kulukdb");
+    var dbase = db.db("heroku_p2cqk5m3");
     var user = await(dbase.collection("users").deleteOne({_id: new ObjectId(id)}));
     db.close();
     return user;
@@ -30,7 +30,7 @@ function deleteUser(id) {
 
 function updateUser(user) {
     var db = await(MongoClient.connect(url)); 
-    var dbase = db.db("kulukdb");
+    var dbase = db.db("heroku_p2cqk5m3");
     var id = user._id;
     delete user._id; // no se puede enviar el ID de nuevo porque da un error de que _id es inmutable
     var user = await(dbase.collection("users").replaceOne({_id: new ObjectId(id)}, user, {upsert: true}));
@@ -42,7 +42,7 @@ function updateUser(user) {
 function addUser(user) {
     console.log('add user',user)
     var db = await(MongoClient.connect(url)); 
-    var dbase = db.db("kulukdb");
+    var dbase = db.db("heroku_p2cqk5m3");
     var user = await(dbase.collection("users").insertOne(user));
     db.close();
     return user;

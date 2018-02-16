@@ -536,7 +536,6 @@ var ProductoAgregarComponent = /** @class */ (function () {
             });
         }
         this.submitted = true;
-        this.newProducto();
     };
     ProductoAgregarComponent.prototype.ngOnInit = function () {
     };
@@ -544,7 +543,7 @@ var ProductoAgregarComponent = /** @class */ (function () {
         console.log('changes', changes);
         if (changes.producto && changes.producto.currentValue._id) {
             console.log('is editing');
-            //this.isEditing = true;
+            this.isEditing = true;
         }
     };
     ProductoAgregarComponent.prototype.newProducto = function () {
@@ -644,7 +643,6 @@ var ProductoDisplayComponent = /** @class */ (function () {
         this.borrarProducto.emit(this.producto);
     };
     ProductoDisplayComponent.prototype.editar = function () {
-        this.isEditingOut.emit(this.isEditing = true);
         this.editarProducto.emit(this.producto);
     };
     __decorate([
