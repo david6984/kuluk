@@ -1,6 +1,7 @@
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectId;
-var url = "mongodb://localhost:27017/";
+// var url = "mongodb://localhost:27017/";
+var url="mongodb://kulukdatabaseuser:.Kuluk28@ds139138.mlab.com:39138/heroku_p2cqk5m3"
 var async = require('asyncawait/async');
 var await = require('asyncawait/await');
 
