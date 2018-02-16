@@ -1,7 +1,7 @@
 <form (ngSubmit)="onSubmit(productoForm)" #productoForm="ngForm">
 	<div class="form-group">
 		<label for="name">Nombre</label>
-		<input type="text" class="form-control" id="name"
+		<input type="text" class="form-control " id="name"
 		required
 		[text-contains-validator]="requiredText"
 		[(ngModel)]="producto.nombre" name="nombre"
