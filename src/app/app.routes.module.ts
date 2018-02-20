@@ -4,6 +4,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { UsuarioLoginComponent } from './usuarios/usuario-login/usuario-login.component';
 
 export const ROUTES: Routes = [
     { 
@@ -17,6 +18,10 @@ export const ROUTES: Routes = [
     { 
         path: 'usuarios',  
         component: UsuariosComponent
+    },
+    { 
+        path: 'usuariologin',  
+        component: UsuarioLoginComponent
     },
     {
         path: 'about',

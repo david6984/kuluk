@@ -161,11 +161,12 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__usuarios_usuarios_component__ = __webpack_require__("../../../../../src/app/usuarios/usuarios.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__usuarios_usuario_display_usuario_display_component__ = __webpack_require__("../../../../../src/app/usuarios/usuario-display/usuario-display.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__usuarios_usuario_agregar_usuario_agregar_component__ = __webpack_require__("../../../../../src/app/usuarios/usuario-agregar/usuario-agregar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_productos_service__ = __webpack_require__("../../../../../src/app/services/productos.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_usuarios_service__ = __webpack_require__("../../../../../src/app/services/usuarios.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_data_service__ = __webpack_require__("../../../../../src/app/services/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__shared_text_contains_directive__ = __webpack_require__("../../../../../src/app/shared/text-contains.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__usuarios_usuario_login_usuario_login_component__ = __webpack_require__("../../../../../src/app/usuarios/usuario-login/usuario-login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_productos_service__ = __webpack_require__("../../../../../src/app/services/productos.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_usuarios_service__ = __webpack_require__("../../../../../src/app/services/usuarios.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_data_service__ = __webpack_require__("../../../../../src/app/services/data.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__shared_text_contains_directive__ = __webpack_require__("../../../../../src/app/shared/text-contains.directive.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -179,6 +180,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 //Import del archivo que tiene las rutas, se debe agregar a los imports
 
 // Componentes que deben ser agregados a los declarations
+
 
 
 
@@ -211,7 +213,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_12__usuarios_usuarios_component__["a" /* UsuariosComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__usuarios_usuario_display_usuario_display_component__["a" /* UsuarioDisplayComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__usuarios_usuario_agregar_usuario_agregar_component__["a" /* UsuarioAgregarComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__shared_text_contains_directive__["a" /* TextContainsValidator */]
+                __WEBPACK_IMPORTED_MODULE_15__usuarios_usuario_login_usuario_login_component__["a" /* UsuarioLoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__shared_text_contains_directive__["a" /* TextContainsValidator */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -221,10 +224,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_15__services_productos_service__["a" /* ProductosService */],
-                __WEBPACK_IMPORTED_MODULE_16__services_usuarios_service__["a" /* UsuariosService */],
-                __WEBPACK_IMPORTED_MODULE_17__services_data_service__["a" /* DataService */],
-                __WEBPACK_IMPORTED_MODULE_18__services_auth_service__["a" /* AuthService */]
+                __WEBPACK_IMPORTED_MODULE_16__services_productos_service__["a" /* ProductosService */],
+                __WEBPACK_IMPORTED_MODULE_17__services_usuarios_service__["a" /* UsuariosService */],
+                __WEBPACK_IMPORTED_MODULE_18__services_data_service__["a" /* DataService */],
+                __WEBPACK_IMPORTED_MODULE_19__services_auth_service__["a" /* AuthService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
@@ -248,12 +251,14 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_about_component__ = __webpack_require__("../../../../../src/app/about/about.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__usuarios_usuarios_component__ = __webpack_require__("../../../../../src/app/usuarios/usuarios.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__usuarios_usuario_login_usuario_login_component__ = __webpack_require__("../../../../../src/app/usuarios/usuario-login/usuario-login.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -272,6 +277,10 @@ var ROUTES = [
     {
         path: 'usuarios',
         component: __WEBPACK_IMPORTED_MODULE_5__usuarios_usuarios_component__["a" /* UsuariosComponent */]
+    },
+    {
+        path: 'usuariologin',
+        component: __WEBPACK_IMPORTED_MODULE_6__usuarios_usuario_login_usuario_login_component__["a" /* UsuarioLoginComponent */]
     },
     {
         path: 'about',
@@ -428,7 +437,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/nav/nav.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" href=\"#\">Login</a>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\"  routerLink=\"/\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\" >Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/productos\" routerLinkActive=\"active\">Productos</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/about\" routerLinkActive=\"active\">About</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/info\" routerLinkActive=\"active\">Info</a>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav>"
+module.exports = "\n<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" routerLink=\"/usuariologin\" routerLinkActive=\"active\">Login</a>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\"  routerLink=\"/\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\" >Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/productos\" routerLinkActive=\"active\">Productos</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/about\" routerLinkActive=\"active\">About</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/info\" routerLinkActive=\"active\">Info</a>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav>"
 
 /***/ }),
 
@@ -1337,6 +1346,67 @@ var UsuarioDisplayComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_usuarios_service__["a" /* UsuariosService */]])
     ], UsuarioDisplayComponent);
     return UsuarioDisplayComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/usuarios/usuario-login/usuario-login.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/usuarios/usuario-login/usuario-login.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  usuario-login works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/usuarios/usuario-login/usuario-login.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsuarioLoginComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UsuarioLoginComponent = /** @class */ (function () {
+    function UsuarioLoginComponent() {
+    }
+    UsuarioLoginComponent.prototype.ngOnInit = function () {
+    };
+    UsuarioLoginComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-usuario-login',
+            template: __webpack_require__("../../../../../src/app/usuarios/usuario-login/usuario-login.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/usuarios/usuario-login/usuario-login.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], UsuarioLoginComponent);
+    return UsuarioLoginComponent;
 }());
 
 
