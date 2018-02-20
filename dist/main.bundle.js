@@ -1373,7 +1373,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/usuarios/usuario-login/usuario-login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  usuario-login works!\n</p>\n"
+module.exports = "<div class=\"text-center\" style=\"padding:50px 0\">\n\t<div class=\"logo\">login</div>\n\t<!-- Main Form -->\n\t<div class=\"login-form-1\">\n\t\t<form id=\"login-form\" class=\"text-left\">\n\t\t\t<div class=\"login-form-main-message\"></div>\n\t\t\t<div class=\"main-login-form\">\n\t\t\t\t<div class=\"login-group\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_username\" class=\"sr-only\">Username</label>\n\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"lg_username\" name=\"lg_username\" placeholder=\"username\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_password\" class=\"sr-only\">Password</label>\n\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" id=\"lg_password\" name=\"lg_password\" placeholder=\"password\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group login-group-checkbox\">\n\t\t\t\t\t\t<input type=\"checkbox\" id=\"lg_remember\" name=\"lg_remember\">\n\t\t\t\t\t\t<label for=\"lg_remember\">remember</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<button type=\"submit\" class=\"login-button\"><i class=\"fa fa-chevron-right\"></i></button>\n\t\t\t</div>\n\t\t\t<div class=\"etc-login-form\">\n\t\t\t\t<p>forgot your password? <a href=\"#\">click here</a></p>\n\t\t\t\t<p>new user? <a href=\"#\">create new account</a></p>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n\t<!-- end:Main Form -->\n</div>"
 
 /***/ }),
 
