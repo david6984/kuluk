@@ -39,16 +39,6 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label class="center-block">Nombre de Usuario
-			<input class="form-control" formControlName="username">
-		</label>
-		<div *ngIf="usuarioForm.controls['username'].errors && (usuarioForm.controls['username'].dirty || usuarioForm.controls['username'].touched)" class="alert alert-danger">
-			<div *ngIf="usuarioForm.controls['username'].errors.required">
-				El Nombre de usuario es requerido
-			</div>
-		</div>
-	</div>
-	<div class="form-group">
 		<label class="center-block">Correo
 			<input class="form-control" formControlName="correo">
 		</label>

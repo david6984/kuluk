@@ -22,6 +22,7 @@ import { UsuarioLoginComponent } from './usuarios/usuario-login/usuario-login.co
 //servicios creados deben ser agregados en los providers 
 import { ProductosService } from './services/productos.service';
 import { UsuariosService } from './services/usuarios.service';
+import { LugaresService } from './services/lugares.service';
 import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
 import { TextContainsValidator } from './shared/text-contains.directive';
@@ -58,6 +59,7 @@ import { LugaresAgregarComponent } from './lugares/lugares-agregar/lugares-agreg
   providers: [
     ProductosService,
     UsuariosService,
+    LugaresService,
     DataService,
     AuthService
   ],

@@ -19,6 +19,7 @@ function getUser(id) {
     var user = await(dbase.collection("users").findOne({_id: new ObjectId(id)}));
     db.close();
     return user;
+}
 
 function getUserByUserName(username) {
     var db = await(MongoClient.connect(url)); 
@@ -59,7 +60,7 @@ function addUser(user) {
 
 module.exports = {
     getUsers: async(getUsers),
-    getUsersByUserName: async(getUsersByUserName),
+    getUserByUserName: async(getUserByUserName),
     getUser: async(getUser),
     deleteUser: async(deleteUser),
     updateUser: async(updateUser),

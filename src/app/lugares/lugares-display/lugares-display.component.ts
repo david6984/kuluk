@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Lugar } from '../../models/lugar';
+import { LugaresService } from '../../services/lugares.service';
 
 @Component({
   selector: 'app-lugares-display',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LugaresDisplayComponent implements OnInit {
 
-  constructor() { }
+  	@Input() lugar : Lugar;
+	@Output() borrarLugar = new EventEmitter<Lugar>();
+	@Output() editarLugar = new EventEmitter<Lugar>();
+	@Output() isEditingOut= new EventEmitter();
+	public isDeleting = false;
+	public isEditing = false;
 
-  ngOnInit() {
-  }
+	constructor(private lugaresService:LugaresService) { }
+
+	ngOnInit() {
+		
+	}
+
+	borrar(){
+		this.isDeleting = true;
+		this.borrarLugar.emit(this.lugar);
+	}
+
+
+	editar(){
+		this.editarLugar.emit(this.lugar);
+	}
 
 }

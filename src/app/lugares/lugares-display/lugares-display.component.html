@@ -1,3 +1,25 @@
-<p>
-  lugares-display works!
-</p>
+<div class="row">
+	<!-- <div class="col-5 col-lg-2">Precio: </div>  -->
+	<div class="col-12 col-lg-6" > <span>{{lugar.provincia}}</span><span>', '</span><span>{{lugar.pais}}</span></div>
+</div>
+<div class="row">
+	<!-- <div class="col-5 col-lg-2" >Nombre: </div>  -->
+	<div class="col-12 col-lg-6"><a href="{{lugar.facebook}}"> <strong>{{lugar.nombre}}</strong> </a> </div>
+</div>
+<div class="row">
+	<!-- <div class="col-5 col-lg-2"  >Descripcion: </div> -->
+	<div class="col-12 col-lg-6" ><a href="{{luagr.instagram}}"> <pre>Instagram</pre></a> </div>
+</div>
+<div class="row">
+	<div class="col-12 actions">
+		<div class="row">
+			<div class="col-3 text-center">
+				<button type="button" class="btn btn-primary" (click)="editar()">Editar</button>
+			</div>
+			<div class="col-6 text-center">
+				<button type="button" class="btn btn-danger" (click)="borrar()"><span *ngIf="isDeleting">...</span><span *ngIf="!isDeleting">Eliminar</span></button>
+			</div>
+		</div>
+	</div>	
+</div>
+

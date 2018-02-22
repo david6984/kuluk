@@ -11,7 +11,6 @@ export class UsuarioDisplayComponent implements OnInit {
 	@Input() usuario : Usuario;
 	@Output() borrarUsuario = new EventEmitter<Usuario>();
 	@Output() editarUsuario = new EventEmitter<Usuario>();
-	@Output() obtenerUsuarioByUserName = new EventEmitter<Usuario>();
 	public isDeleting = false;
 
 	constructor(private usuariosService:UsuariosService) { }
@@ -28,10 +27,6 @@ export class UsuarioDisplayComponent implements OnInit {
 
 	editar(){
 		this.editarUsuario.emit(this.usuario);
-	}
-
-	obtener(){
-		this.obtenerUsuarioByUserName.emit(this.usuario);
 	}
 
 }

@@ -164,12 +164,13 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__usuarios_usuario_login_usuario_login_component__ = __webpack_require__("../../../../../src/app/usuarios/usuario-login/usuario-login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_productos_service__ = __webpack_require__("../../../../../src/app/services/productos.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_usuarios_service__ = __webpack_require__("../../../../../src/app/services/usuarios.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_data_service__ = __webpack_require__("../../../../../src/app/services/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__shared_text_contains_directive__ = __webpack_require__("../../../../../src/app/shared/text-contains.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__lugares_lugares_component__ = __webpack_require__("../../../../../src/app/lugares/lugares.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__lugares_lugares_display_lugares_display_component__ = __webpack_require__("../../../../../src/app/lugares/lugares-display/lugares-display.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__lugares_lugares_agregar_lugares_agregar_component__ = __webpack_require__("../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_lugares_service__ = __webpack_require__("../../../../../src/app/services/lugares.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_data_service__ = __webpack_require__("../../../../../src/app/services/data.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__shared_text_contains_directive__ = __webpack_require__("../../../../../src/app/shared/text-contains.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__lugares_lugares_component__ = __webpack_require__("../../../../../src/app/lugares/lugares.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__lugares_lugares_display_lugares_display_component__ = __webpack_require__("../../../../../src/app/lugares/lugares-display/lugares-display.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__lugares_lugares_agregar_lugares_agregar_component__ = __webpack_require__("../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -203,6 +204,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -220,10 +222,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_13__usuarios_usuario_display_usuario_display_component__["a" /* UsuarioDisplayComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__usuarios_usuario_agregar_usuario_agregar_component__["a" /* UsuarioAgregarComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__usuarios_usuario_login_usuario_login_component__["a" /* UsuarioLoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__shared_text_contains_directive__["a" /* TextContainsValidator */],
-                __WEBPACK_IMPORTED_MODULE_21__lugares_lugares_component__["a" /* LugaresComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__lugares_lugares_display_lugares_display_component__["a" /* LugaresDisplayComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__lugares_lugares_agregar_lugares_agregar_component__["a" /* LugaresAgregarComponent */]
+                __WEBPACK_IMPORTED_MODULE_21__shared_text_contains_directive__["a" /* TextContainsValidator */],
+                __WEBPACK_IMPORTED_MODULE_22__lugares_lugares_component__["a" /* LugaresComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__lugares_lugares_display_lugares_display_component__["a" /* LugaresDisplayComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__lugares_lugares_agregar_lugares_agregar_component__["a" /* LugaresAgregarComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -235,8 +237,9 @@ var AppModule = /** @class */ (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_16__services_productos_service__["a" /* ProductosService */],
                 __WEBPACK_IMPORTED_MODULE_17__services_usuarios_service__["a" /* UsuariosService */],
-                __WEBPACK_IMPORTED_MODULE_18__services_data_service__["a" /* DataService */],
-                __WEBPACK_IMPORTED_MODULE_19__services_auth_service__["a" /* AuthService */]
+                __WEBPACK_IMPORTED_MODULE_18__services_lugares_service__["a" /* LugaresService */],
+                __WEBPACK_IMPORTED_MODULE_19__services_data_service__["a" /* DataService */],
+                __WEBPACK_IMPORTED_MODULE_20__services_auth_service__["a" /* AuthService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
@@ -412,7 +415,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  lugares-agregar works!\n</p>\n"
+module.exports = "<form (ngSubmit)=\"onSubmit(lugarForm)\" #lugarForm=\"ngForm\">\n\t<div class=\"form-group\">\n\t\t<label for=\"nombre\">Nombre</label>\n\t\t<input type=\"text\" class=\"form-control \" id=\"nombre\"\n\t\trequired\n\t\t[text-contains-validator]=\"requiredText\"\n\t\t[(ngModel)]=\"lugar.nombre\" name=\"nombre\"\n\t\t#nombre=\"ngModel\">\n\t\t<div [hidden]=\"nombre.valid || nombre.pristine\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"nombre.errors && nombre.errors.required\">\n\t\t\t\tEl Nombre es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"nombre.errors && nombre.errors.textContains\">\n\t\t\t\tEl texto no incluye {{requiredText}}\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label for=\"provincia\">Provincia</label>\n\t\t<input type=\"text\" class=\"form-control\" id=\"provincia\"\n\t\t[(ngModel)]=\"lugar.provincia\" name=\"provincia\" #provincia=\"ngModel\" required>\n\t\t<div [hidden]=\"provincia.valid || provincia.pristine\" class=\"alert alert-danger\">\n\t\t\tLa provincia es requerida\n\t\t</div>\n\t</div>\n\n\t<div class=\"form-group\">\n\t\t<label for=\"facebook\">Facebook</label>\n\t\t<input type=\"text\" class=\"form-control\" id=\"facebook\"\n\t\t[(ngModel)]=\"lugar.facebook\" name=\"faceboook\" #facebook=\"ngModel\" >\n\t</div>\n\n\t<div class=\"form-group\">\n\t\t<label for=\"instagram\">Instagram</label>\n\t\t<input type=\"text\" class=\"form-control\" id=\"instagram\"\n\t\t[(ngModel)]=\"lugar.instagram\" name=\"instagram\" #instagram=\"ngModel\">\t\n\t</div>\n\n\t<button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!lugarForm.form.valid || !canAdd\"><span *ngIf=\"!isEditing\">Agregar</span><span *ngIf=\"isEditing\">Editar</span></button>\n\t<button type=\"button\" class=\"btn btn-danger\" (click)=\"newLugar(); lugarForm.reset()\">Revert</button>\n</form>"
 
 /***/ }),
 
@@ -422,6 +425,7 @@ module.exports = "<p>\n  lugares-agregar works!\n</p>\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LugaresAgregarComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_lugar__ = __webpack_require__("../../../../../src/app/models/lugar.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -432,11 +436,63 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var LugaresAgregarComponent = /** @class */ (function () {
     function LugaresAgregarComponent() {
+        this.agregarLugar = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.editarLugar = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.canAdd = true;
+        this.lugar = new __WEBPACK_IMPORTED_MODULE_1__models_lugar__["a" /* Lugar */]();
+        this.submitted = false;
+        this.requiredText = 'lugar';
+        this.isEditing = false;
     }
+    LugaresAgregarComponent.prototype.onSubmit = function (lugarForm) {
+        if (this.isEditing) {
+            this.editarLugar.emit({
+                'lugar': this.lugar,
+                'form': lugarForm
+            });
+            this.isEditing = false;
+        }
+        else {
+            this.agregarLugar.emit({
+                'lugar': this.lugar,
+                'form': lugarForm
+            });
+        }
+        this.submitted = true;
+    };
     LugaresAgregarComponent.prototype.ngOnInit = function () {
     };
+    LugaresAgregarComponent.prototype.ngOnChanges = function (changes) {
+        console.log('changes', changes);
+        if (changes.lugar && changes.lugar.currentValue._id) {
+            console.log('is editing');
+            this.isEditing = true;
+        }
+    };
+    LugaresAgregarComponent.prototype.newLugar = function () {
+        this.submitted = false;
+        this.isEditing = false;
+        this.lugar = new __WEBPACK_IMPORTED_MODULE_1__models_lugar__["a" /* Lugar */]();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        __metadata("design:type", Object)
+    ], LugaresAgregarComponent.prototype, "agregarLugar", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        __metadata("design:type", Object)
+    ], LugaresAgregarComponent.prototype, "editarLugar", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Boolean)
+    ], LugaresAgregarComponent.prototype, "canAdd", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('selectedPlace'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_lugar__["a" /* Lugar */])
+    ], LugaresAgregarComponent.prototype, "lugar", void 0);
     LugaresAgregarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-lugares-agregar',
@@ -473,7 +529,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/lugares/lugares-display/lugares-display.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  lugares-display works!\n</p>\n"
+module.exports = "<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\">Precio: </div>  -->\n\t<div class=\"col-12 col-lg-6\" > <span>{{lugar.provincia}}</span><span>', '</span><span>{{lugar.pais}}</span></div>\n</div>\n<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\" >Nombre: </div>  -->\n\t<div class=\"col-12 col-lg-6\"><a href=\"{{lugar.facebook}}\"> <strong>{{lugar.nombre}}</strong> </a> </div>\n</div>\n<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\"  >Descripcion: </div> -->\n\t<div class=\"col-12 col-lg-6\" ><a href=\"{{luagr.instagram}}\"> <pre>Instagram</pre></a> </div>\n</div>\n<div class=\"row\">\n\t<div class=\"col-12 actions\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-3 text-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" (click)=\"editar()\">Editar</button>\n\t\t\t</div>\n\t\t\t<div class=\"col-6 text-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-danger\" (click)=\"borrar()\"><span *ngIf=\"isDeleting\">...</span><span *ngIf=\"!isDeleting\">Eliminar</span></button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t\n</div>\n\n"
 
 /***/ }),
 
@@ -483,6 +539,8 @@ module.exports = "<p>\n  lugares-display works!\n</p>\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LugaresDisplayComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_lugar__ = __webpack_require__("../../../../../src/app/models/lugar.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_lugares_service__ = __webpack_require__("../../../../../src/app/services/lugares.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -493,18 +551,49 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var LugaresDisplayComponent = /** @class */ (function () {
-    function LugaresDisplayComponent() {
+    function LugaresDisplayComponent(lugaresService) {
+        this.lugaresService = lugaresService;
+        this.borrarLugar = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.editarLugar = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.isEditingOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.isDeleting = false;
+        this.isEditing = false;
     }
     LugaresDisplayComponent.prototype.ngOnInit = function () {
     };
+    LugaresDisplayComponent.prototype.borrar = function () {
+        this.isDeleting = true;
+        this.borrarLugar.emit(this.lugar);
+    };
+    LugaresDisplayComponent.prototype.editar = function () {
+        this.editarLugar.emit(this.lugar);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_lugar__["a" /* Lugar */])
+    ], LugaresDisplayComponent.prototype, "lugar", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        __metadata("design:type", Object)
+    ], LugaresDisplayComponent.prototype, "borrarLugar", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        __metadata("design:type", Object)
+    ], LugaresDisplayComponent.prototype, "editarLugar", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        __metadata("design:type", Object)
+    ], LugaresDisplayComponent.prototype, "isEditingOut", void 0);
     LugaresDisplayComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-lugares-display',
             template: __webpack_require__("../../../../../src/app/lugares/lugares-display/lugares-display.component.html"),
             styles: [__webpack_require__("../../../../../src/app/lugares/lugares-display/lugares-display.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_lugares_service__["a" /* LugaresService */]])
     ], LugaresDisplayComponent);
     return LugaresDisplayComponent;
 }());
@@ -534,7 +623,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/lugares/lugares.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  lugares works!\n</p>\n"
+module.exports = "<div class=\"lugares\">\n\t<div class=\"page-title row\">\n\t\t<h2 class=\"col-5\">Encuentranos</h2>\n\t</div>\n\t<div class=\"places row\">\n\t\t<ul class=\"col-12\">\n\t\t\t<li *ngFor=\"let lugar of lugares\" class=\"row lugar-display\">\n\t\t\t\t<app-lugares-display [lugar]='lugar' (borrarLugar)=\"borrarLugar($event)\" (editarLugar)=\"editarLugar($event)\" class=\"col-12 card col-lg-8\"  ></app-lugares-display>\n\t\t\t</li>\n\t\t</ul>\t\n\t\t<ul class=\"col-12 col-lg-8\">\n\t\t\t<app-lugares-agregar (agregarLugar)=\"agregarLugar($event)\" (editarLugar)=\"editarLugarSave($event)\" [selectedPlace]=\"selectedPlace\" [canAdd]='!loading'></app-lugares-agregar>\n\t\t\t<div *ngIf=\"loading\">\n\t\t\t\tloading...\n\t\t\t</div>\n\t\t</ul>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -544,6 +633,8 @@ module.exports = "<p>\n  lugares works!\n</p>\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LugaresComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_lugar__ = __webpack_require__("../../../../../src/app/models/lugar.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_lugares_service__ = __webpack_require__("../../../../../src/app/services/lugares.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -554,10 +645,68 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var LugaresComponent = /** @class */ (function () {
-    function LugaresComponent() {
+    function LugaresComponent(lugaresService) {
+        this.lugaresService = lugaresService;
+        this.selectedPlace = new __WEBPACK_IMPORTED_MODULE_1__models_lugar__["a" /* Lugar */];
+        this.loading = false;
     }
     LugaresComponent.prototype.ngOnInit = function () {
+        this.obtenerLugares();
+    };
+    LugaresComponent.prototype.editarLugar = function (lugar) {
+        console.log('edit', lugar);
+        this.selectedPlace = Object.assign({}, lugar);
+    };
+    LugaresComponent.prototype.editarLugarSave = function (lugar) {
+        var _this = this;
+        this.lugaresService.editarLugar(lugar.lugar)
+            .then(function (data) {
+            _this.obtenerLugares();
+        })
+            .catch(function (error) {
+            console.log('error', error);
+        });
+    };
+    LugaresComponent.prototype.borrarLugar = function (lugar) {
+        var _this = this;
+        this.lugaresService.borrarLugar(lugar)
+            .then(function (data) {
+            _this.obtenerLugares();
+        })
+            .catch(function (error) {
+            console.log('error', error);
+        });
+    };
+    LugaresComponent.prototype.obtenerLugares = function () {
+        var _this = this;
+        this.lugaresService.obtenerLugares().subscribe(function (data) {
+            _this.lugares = data.lugar;
+        }, function (error) {
+            console.log('error', error);
+        });
+        // .then(data => {
+        // 	this.productos = data.product;
+        // })
+        // .catch(error => {
+        // 	console.log('error',error);
+        // });
+    };
+    LugaresComponent.prototype.agregarLugar = function (lugar) {
+        var _this = this;
+        this.loading = true;
+        this.lugaresService.agregarLugar(lugar.lugar)
+            .then(function (data) {
+            console.log('lugar agregado');
+            lugar.form.reset();
+            _this.loading = false;
+            _this.obtenerLugares();
+        })
+            .catch(function (error) {
+            console.log('error', error);
+        });
     };
     LugaresComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -565,9 +714,30 @@ var LugaresComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/lugares/lugares.component.html"),
             styles: [__webpack_require__("../../../../../src/app/lugares/lugares.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_lugares_service__["a" /* LugaresService */]])
     ], LugaresComponent);
     return LugaresComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/models/lugar.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Lugar; });
+var Lugar = /** @class */ (function () {
+    function Lugar() {
+        this._id = undefined;
+        this.nombre = '';
+        this.provincia = '';
+        this.pais = 'Costa Rica';
+        this.facebook = '';
+        this.instagram = '';
+    }
+    return Lugar;
 }());
 
 
@@ -1167,6 +1337,51 @@ var DataService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/services/lugares.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LugaresService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service__ = __webpack_require__("../../../../../src/app/services/data.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LugaresService = /** @class */ (function () {
+    function LugaresService(dataService) {
+        this.dataService = dataService;
+    }
+    LugaresService.prototype.obtenerLugares = function () {
+        return this.dataService.get('/api/places');
+    };
+    LugaresService.prototype.agregarLugar = function (lugar) {
+        return this.dataService.post('/api/places', { 'place': lugar });
+    };
+    LugaresService.prototype.borrarLugar = function (lugar) {
+        return this.dataService.delete('/api/places/' + lugar._id);
+    };
+    LugaresService.prototype.editarLugar = function (lugar) {
+        return this.dataService.put('/api/places/' + lugar._id, { 'place': lugar });
+    };
+    LugaresService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_data_service__["a" /* DataService */]])
+    ], LugaresService);
+    return LugaresService;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/services/productos.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1359,7 +1574,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/usuarios/usuario-agregar/usuario-agregar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"usuarioForm\" (ngSubmit)=\"onSubmit()\" novalidate>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Usuario\n\t\t\t<input class=\"form-control\" formControlName=\"usuario\" [attr.disabled]=\"isEditing?'':null\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['usuario'].valid && (usuarioForm.controls['usuario'].dirty || usuarioForm.controls['usuario'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['usuario'].errors.required\">\n\t\t\t\tEl usuario es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Nombre\n\t\t\t<input class=\"form-control\" formControlName=\"nombre\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['nombre'].valid && (usuarioForm.controls['nombre'].dirty || usuarioForm.controls['nombre'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.required\">\n\t\t\t\tEl nombre es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.minlength\">\n\t\t\t\tEl nombre debe tener al menos 2 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.maxlength\">\n\t\t\t\tEl nombre debe tener al maximo 3 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.forbiddenName\">\n\t\t\t\tEl nombre no puede ser Juan.\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Apellido1\n\t\t\t<input class=\"form-control\" formControlName=\"apellido1\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors && (usuarioForm.controls['apellido1'].dirty || usuarioForm.controls['apellido1'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors.required\">\n\t\t\t\tEl Apellido1 es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Nombre de Usuario\n\t\t\t<input class=\"form-control\" formControlName=\"username\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['username'].errors && (usuarioForm.controls['username'].dirty || usuarioForm.controls['username'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['username'].errors.required\">\n\t\t\t\tEl Nombre de usuario es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Correo\n\t\t\t<input class=\"form-control\" formControlName=\"correo\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['correo'].invalid && (usuarioForm.controls['correo'].dirty || usuarioForm.controls['correo'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.required\">\n\t\t\t\tEl Correo es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.patternInvalid\">\n\t\t\t\tEl Correo es invalido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div>\n\t\t<button type=\"submit\"\n\t\t[disabled]=\"usuarioForm.invalid \" class=\"btn btn-success\"><span *ngIf=\"!isEditing\">Agregar</span><span *ngIf=\"isEditing\">Editar</span></button> &nbsp;\n\t\t<button type=\"reset\" (click)=\"revert()\" class=\"btn btn-danger\">Revert</button>\n\t</div>\n</form>"
+module.exports = "<form [formGroup]=\"usuarioForm\" (ngSubmit)=\"onSubmit()\" novalidate>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Usuario\n\t\t\t<input class=\"form-control\" formControlName=\"usuario\" [attr.disabled]=\"isEditing?'':null\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['usuario'].valid && (usuarioForm.controls['usuario'].dirty || usuarioForm.controls['usuario'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['usuario'].errors.required\">\n\t\t\t\tEl usuario es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Nombre\n\t\t\t<input class=\"form-control\" formControlName=\"nombre\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['nombre'].valid && (usuarioForm.controls['nombre'].dirty || usuarioForm.controls['nombre'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.required\">\n\t\t\t\tEl nombre es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.minlength\">\n\t\t\t\tEl nombre debe tener al menos 2 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.maxlength\">\n\t\t\t\tEl nombre debe tener al maximo 3 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.forbiddenName\">\n\t\t\t\tEl nombre no puede ser Juan.\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Apellido1\n\t\t\t<input class=\"form-control\" formControlName=\"apellido1\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors && (usuarioForm.controls['apellido1'].dirty || usuarioForm.controls['apellido1'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors.required\">\n\t\t\t\tEl Apellido1 es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Correo\n\t\t\t<input class=\"form-control\" formControlName=\"correo\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['correo'].invalid && (usuarioForm.controls['correo'].dirty || usuarioForm.controls['correo'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.required\">\n\t\t\t\tEl Correo es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.patternInvalid\">\n\t\t\t\tEl Correo es invalido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div>\n\t\t<button type=\"submit\"\n\t\t[disabled]=\"usuarioForm.invalid \" class=\"btn btn-success\"><span *ngIf=\"!isEditing\">Agregar</span><span *ngIf=\"isEditing\">Editar</span></button> &nbsp;\n\t\t<button type=\"reset\" (click)=\"revert()\" class=\"btn btn-danger\">Revert</button>\n\t</div>\n</form>"
 
 /***/ }),
 
@@ -1515,7 +1730,6 @@ var UsuarioDisplayComponent = /** @class */ (function () {
         this.usuariosService = usuariosService;
         this.borrarUsuario = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
         this.editarUsuario = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
-        this.obtenerUsuarioByUserName = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
         this.isDeleting = false;
     }
     UsuarioDisplayComponent.prototype.ngOnInit = function () {
@@ -1526,9 +1740,6 @@ var UsuarioDisplayComponent = /** @class */ (function () {
     };
     UsuarioDisplayComponent.prototype.editar = function () {
         this.editarUsuario.emit(this.usuario);
-    };
-    UsuarioDisplayComponent.prototype.obtener = function () {
-        this.obtenerUsuarioByUserName.emit(this.usuario);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
@@ -1542,10 +1753,6 @@ var UsuarioDisplayComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
         __metadata("design:type", Object)
     ], UsuarioDisplayComponent.prototype, "editarUsuario", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", Object)
-    ], UsuarioDisplayComponent.prototype, "obtenerUsuarioByUserName", void 0);
     UsuarioDisplayComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-usuario-display',
