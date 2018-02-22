@@ -19,6 +19,22 @@ function getUser(id) {
     return { user: result };
 }
 
+function getUserByUserName(username) {
+    var result;
+    console.log('get User by ' + username);
+    try {
+        if(username){
+            result = await (UsersRsrc.getUserByUserName(username));
+        } else {
+            result = await (UsersRsrc.getUsers());
+        }
+        console.log('result length ' + result.length);    
+    } catch(error) {
+        throw error;
+    }
+    return { user: result };
+}
+
 function updateUser(user) {
     var result;
     console.log('update User by ' + user.id);
@@ -56,6 +72,7 @@ function postUser(user) {
 }
 
 module.exports.getUser = async(getUser);
+module.exports.getUserByUserName = async(getUserByUserName);
 module.exports.updateUser = async(updateUser);
 module.exports.deleteUser = async(deleteUser);
 module.exports.postUser = async(postUser);

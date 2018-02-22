@@ -167,6 +167,9 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_data_service__ = __webpack_require__("../../../../../src/app/services/data.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__shared_text_contains_directive__ = __webpack_require__("../../../../../src/app/shared/text-contains.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__lugares_lugares_component__ = __webpack_require__("../../../../../src/app/lugares/lugares.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__lugares_lugares_display_lugares_display_component__ = __webpack_require__("../../../../../src/app/lugares/lugares-display/lugares-display.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__lugares_lugares_agregar_lugares_agregar_component__ = __webpack_require__("../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -197,6 +200,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -214,7 +220,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_13__usuarios_usuario_display_usuario_display_component__["a" /* UsuarioDisplayComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__usuarios_usuario_agregar_usuario_agregar_component__["a" /* UsuarioAgregarComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__usuarios_usuario_login_usuario_login_component__["a" /* UsuarioLoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__shared_text_contains_directive__["a" /* TextContainsValidator */]
+                __WEBPACK_IMPORTED_MODULE_20__shared_text_contains_directive__["a" /* TextContainsValidator */],
+                __WEBPACK_IMPORTED_MODULE_21__lugares_lugares_component__["a" /* LugaresComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__lugares_lugares_display_lugares_display_component__["a" /* LugaresDisplayComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__lugares_lugares_agregar_lugares_agregar_component__["a" /* LugaresAgregarComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -252,12 +261,14 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__usuarios_usuarios_component__ = __webpack_require__("../../../../../src/app/usuarios/usuarios.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__usuarios_usuario_login_usuario_login_component__ = __webpack_require__("../../../../../src/app/usuarios/usuario-login/usuario-login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__lugares_lugares_component__ = __webpack_require__("../../../../../src/app/lugares/lugares.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -277,6 +288,10 @@ var ROUTES = [
     {
         path: 'usuarios',
         component: __WEBPACK_IMPORTED_MODULE_5__usuarios_usuarios_component__["a" /* UsuariosComponent */]
+    },
+    {
+        path: 'lugares',
+        component: __WEBPACK_IMPORTED_MODULE_7__lugares_lugares_component__["a" /* LugaresComponent */]
     },
     {
         path: 'usuariologin',
@@ -376,6 +391,189 @@ var HomeComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  lugares-agregar works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LugaresAgregarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LugaresAgregarComponent = /** @class */ (function () {
+    function LugaresAgregarComponent() {
+    }
+    LugaresAgregarComponent.prototype.ngOnInit = function () {
+    };
+    LugaresAgregarComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-lugares-agregar',
+            template: __webpack_require__("../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LugaresAgregarComponent);
+    return LugaresAgregarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/lugares/lugares-display/lugares-display.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/lugares/lugares-display/lugares-display.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  lugares-display works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/lugares/lugares-display/lugares-display.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LugaresDisplayComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LugaresDisplayComponent = /** @class */ (function () {
+    function LugaresDisplayComponent() {
+    }
+    LugaresDisplayComponent.prototype.ngOnInit = function () {
+    };
+    LugaresDisplayComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-lugares-display',
+            template: __webpack_require__("../../../../../src/app/lugares/lugares-display/lugares-display.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/lugares/lugares-display/lugares-display.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LugaresDisplayComponent);
+    return LugaresDisplayComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/lugares/lugares.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/lugares/lugares.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  lugares works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/lugares/lugares.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LugaresComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LugaresComponent = /** @class */ (function () {
+    function LugaresComponent() {
+    }
+    LugaresComponent.prototype.ngOnInit = function () {
+    };
+    LugaresComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-lugares',
+            template: __webpack_require__("../../../../../src/app/lugares/lugares.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/lugares/lugares.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LugaresComponent);
+    return LugaresComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/models/producto.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -437,7 +635,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/nav/nav.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" routerLink=\"/usuariologin\" routerLinkActive=\"active\">Login</a>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\"  routerLink=\"/\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\" >Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/productos\" routerLinkActive=\"active\">Productos</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/about\" routerLinkActive=\"active\">About</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/info\" routerLinkActive=\"active\">Info</a>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav>"
+module.exports = "\n<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" routerLink=\"/usuariologin\" routerLinkActive=\"active\">Login</a>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\"  routerLink=\"/\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\" >Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/productos\" routerLinkActive=\"active\">Productos</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/usuarios\" routerLinkActive=\"active\">Usuarios</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/lugares\" routerLinkActive=\"active\">Encuentranos</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/about\" routerLinkActive=\"active\">About</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/info\" routerLinkActive=\"active\">Info</a>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav>"
 
 /***/ }),
 
@@ -1039,6 +1237,9 @@ var UsuariosService = /** @class */ (function () {
     UsuariosService.prototype.obtenerUsuarios = function () {
         return this.dataService.get('/api/users');
     };
+    UsuariosService.prototype.obtenerUsuariosByUserName = function (usuario) {
+        return this.dataService.get('/api/users' + usuario.usuario);
+    };
     UsuariosService.prototype.agregarUsuario = function (usuario) {
         console.log('usuario');
         return this.dataService.post('/api/users', { 'user': usuario });
@@ -1158,7 +1359,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/usuarios/usuario-agregar/usuario-agregar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"usuarioForm\" (ngSubmit)=\"onSubmit()\" novalidate>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Usuario\n\t\t\t<input class=\"form-control\" formControlName=\"usuario\" [attr.disabled]=\"isEditing?'':null\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['usuario'].valid && (usuarioForm.controls['usuario'].dirty || usuarioForm.controls['usuario'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['usuario'].errors.required\">\n\t\t\t\tEl usuario es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Nombre\n\t\t\t<input class=\"form-control\" formControlName=\"nombre\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['nombre'].valid && (usuarioForm.controls['nombre'].dirty || usuarioForm.controls['nombre'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.required\">\n\t\t\t\tEl nombre es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.minlength\">\n\t\t\t\tEl nombre debe tener al menos 2 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.maxlength\">\n\t\t\t\tEl nombre debe tener al maximo 3 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.forbiddenName\">\n\t\t\t\tEl nombre no puede ser Juan.\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Apellido1\n\t\t\t<input class=\"form-control\" formControlName=\"apellido1\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors && (usuarioForm.controls['apellido1'].dirty || usuarioForm.controls['apellido1'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors.required\">\n\t\t\t\tEl Apellido1 es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Correo\n\t\t\t<input class=\"form-control\" formControlName=\"correo\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['correo'].invalid && (usuarioForm.controls['correo'].dirty || usuarioForm.controls['correo'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.required\">\n\t\t\t\tEl Correo es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.patternInvalid\">\n\t\t\t\tEl Correo es invalido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div>\n\t\t<button type=\"submit\"\n\t\t[disabled]=\"usuarioForm.invalid \" class=\"btn btn-success\"><span *ngIf=\"!isEditing\">Agregar</span><span *ngIf=\"isEditing\">Editar</span></button> &nbsp;\n\t\t<button type=\"reset\" (click)=\"revert()\" class=\"btn btn-danger\">Revert</button>\n\t</div>\n</form>"
+module.exports = "<form [formGroup]=\"usuarioForm\" (ngSubmit)=\"onSubmit()\" novalidate>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Usuario\n\t\t\t<input class=\"form-control\" formControlName=\"usuario\" [attr.disabled]=\"isEditing?'':null\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['usuario'].valid && (usuarioForm.controls['usuario'].dirty || usuarioForm.controls['usuario'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['usuario'].errors.required\">\n\t\t\t\tEl usuario es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Nombre\n\t\t\t<input class=\"form-control\" formControlName=\"nombre\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['nombre'].valid && (usuarioForm.controls['nombre'].dirty || usuarioForm.controls['nombre'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.required\">\n\t\t\t\tEl nombre es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.minlength\">\n\t\t\t\tEl nombre debe tener al menos 2 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.maxlength\">\n\t\t\t\tEl nombre debe tener al maximo 3 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.forbiddenName\">\n\t\t\t\tEl nombre no puede ser Juan.\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Apellido1\n\t\t\t<input class=\"form-control\" formControlName=\"apellido1\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors && (usuarioForm.controls['apellido1'].dirty || usuarioForm.controls['apellido1'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors.required\">\n\t\t\t\tEl Apellido1 es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Nombre de Usuario\n\t\t\t<input class=\"form-control\" formControlName=\"username\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['username'].errors && (usuarioForm.controls['username'].dirty || usuarioForm.controls['username'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['username'].errors.required\">\n\t\t\t\tEl Nombre de usuario es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Correo\n\t\t\t<input class=\"form-control\" formControlName=\"correo\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['correo'].invalid && (usuarioForm.controls['correo'].dirty || usuarioForm.controls['correo'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.required\">\n\t\t\t\tEl Correo es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.patternInvalid\">\n\t\t\t\tEl Correo es invalido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div>\n\t\t<button type=\"submit\"\n\t\t[disabled]=\"usuarioForm.invalid \" class=\"btn btn-success\"><span *ngIf=\"!isEditing\">Agregar</span><span *ngIf=\"isEditing\">Editar</span></button> &nbsp;\n\t\t<button type=\"reset\" (click)=\"revert()\" class=\"btn btn-danger\">Revert</button>\n\t</div>\n</form>"
 
 /***/ }),
 
@@ -1314,6 +1515,7 @@ var UsuarioDisplayComponent = /** @class */ (function () {
         this.usuariosService = usuariosService;
         this.borrarUsuario = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
         this.editarUsuario = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.obtenerUsuarioByUserName = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
         this.isDeleting = false;
     }
     UsuarioDisplayComponent.prototype.ngOnInit = function () {
@@ -1324,6 +1526,9 @@ var UsuarioDisplayComponent = /** @class */ (function () {
     };
     UsuarioDisplayComponent.prototype.editar = function () {
         this.editarUsuario.emit(this.usuario);
+    };
+    UsuarioDisplayComponent.prototype.obtener = function () {
+        this.obtenerUsuarioByUserName.emit(this.usuario);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
@@ -1337,6 +1542,10 @@ var UsuarioDisplayComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
         __metadata("design:type", Object)
     ], UsuarioDisplayComponent.prototype, "editarUsuario", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        __metadata("design:type", Object)
+    ], UsuarioDisplayComponent.prototype, "obtenerUsuarioByUserName", void 0);
     UsuarioDisplayComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-usuario-display',
@@ -1373,7 +1582,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/usuarios/usuario-login/usuario-login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-center\" style=\"padding:50px 0\">\n\t<div class=\"logo\">login</div>\n\t<!-- Main Form -->\n\t<div class=\"login-form-1\">\n\t\t<form id=\"login-form\" class=\"text-left\">\n\t\t\t<div class=\"login-form-main-message\"></div>\n\t\t\t<div class=\"main-login-form\">\n\t\t\t\t<div class=\"login-group\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_username\" class=\"sr-only\">Username</label>\n\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"lg_username\" name=\"lg_username\" placeholder=\"username\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_password\" class=\"sr-only\">Password</label>\n\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" id=\"lg_password\" name=\"lg_password\" placeholder=\"password\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group login-group-checkbox\">\n\t\t\t\t\t\t<input type=\"checkbox\" id=\"lg_remember\" name=\"lg_remember\">\n\t\t\t\t\t\t<label for=\"lg_remember\">remember</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<button type=\"submit\" class=\"login-button\"><i class=\"fa fa-chevron-right\"></i></button>\n\t\t\t</div>\n\t\t\t<div class=\"etc-login-form\">\n\t\t\t\t<p>forgot your password? <a href=\"#\">click here</a></p>\n\t\t\t\t<p>new user? <a href=\"#\">create new account</a></p>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n\t<!-- end:Main Form -->\n</div>"
+module.exports = "<div class=\"text-center\" style=\"padding:50px 0\">\n\t<div class=\"logo\">login</div>\n\t<!-- Main Form -->\n\t<div class=\"login-form-1\">\n\t\t<form id=\"login-form\" class=\"text-left\">\n\t\t\t<div class=\"login-form-main-message\"></div>\n\t\t\t<div class=\"main-login-form\">\n\t\t\t\t<div class=\"login-group\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_username\" class=\"sr-only\">Username</label>\n\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"lg_username\" name=\"lg_username\" placeholder=\"username\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_password\" class=\"sr-only\">Password</label>\n\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" id=\"lg_password\" name=\"lg_password\" placeholder=\"password\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group login-group-checkbox\">\n\t\t\t\t\t\t<input type=\"checkbox\" id=\"lg_remember\" name=\"lg_remember\">\n\t\t\t\t\t\t<label for=\"lg_remember\">remember</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<button type=\"submit\" class=\"login-button\"  (click)=\"obtener()\"><i class=\"fa fa-chevron-right\"></i></button>\n\t\t\t</div>\n\t\t\t<div class=\"etc-login-form\">\n\t\t\t\t<p>forgot your password? <a href=\"#\">click here</a></p>\n\t\t\t\t<p>new user? <a href=\"#\">create new account</a></p>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n\t<!-- end:Main Form -->\n</div>"
 
 /***/ }),
 
@@ -1383,6 +1592,8 @@ module.exports = "<div class=\"text-center\" style=\"padding:50px 0\">\n\t<div c
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsuarioLoginComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_usuario__ = __webpack_require__("../../../../../src/app/models/usuario.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_usuarios_service__ = __webpack_require__("../../../../../src/app/services/usuarios.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1393,18 +1604,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var UsuarioLoginComponent = /** @class */ (function () {
-    function UsuarioLoginComponent() {
+    function UsuarioLoginComponent(usuariosService) {
+        this.usuariosService = usuariosService;
+        this.obtenerUsuarioByUserName = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
     }
     UsuarioLoginComponent.prototype.ngOnInit = function () {
     };
+    UsuarioLoginComponent.prototype.obtener = function () {
+        this.obtenerUsuarioByUserName.emit(this.usuario);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_usuario__["a" /* Usuario */])
+    ], UsuarioLoginComponent.prototype, "usuario", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        __metadata("design:type", Object)
+    ], UsuarioLoginComponent.prototype, "obtenerUsuarioByUserName", void 0);
     UsuarioLoginComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-usuario-login',
             template: __webpack_require__("../../../../../src/app/usuarios/usuario-login/usuario-login.component.html"),
             styles: [__webpack_require__("../../../../../src/app/usuarios/usuario-login/usuario-login.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_usuarios_service__["a" /* UsuariosService */]])
     ], UsuarioLoginComponent);
     return UsuarioLoginComponent;
 }());
@@ -1497,6 +1723,12 @@ var UsuariosComponent = /** @class */ (function () {
         this.usuariosService.obtenerUsuarios().subscribe(function (data) {
             console.log('data', data);
             _this.usuarios = data.user;
+        });
+    };
+    UsuariosComponent.prototype.obtenerUsuariosByUserName = function (usuario) {
+        this.usuariosService.obtenerUsuariosByUserName(usuario.usuario).subscribe(function (data) {
+            console.log('data', data);
+            alert('El usuario logeo correctamente');
         });
     };
     UsuariosComponent.prototype.agregarUsuario = function (usuario) {

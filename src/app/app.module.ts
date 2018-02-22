@@ -25,6 +25,9 @@ import { UsuariosService } from './services/usuarios.service';
 import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
 import { TextContainsValidator } from './shared/text-contains.directive';
+import { LugaresComponent } from './lugares/lugares.component';
+import { LugaresDisplayComponent } from './lugares/lugares-display/lugares-display.component';
+import { LugaresAgregarComponent } from './lugares/lugares-agregar/lugares-agregar.component';
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import { TextContainsValidator } from './shared/text-contains.directive';
     UsuarioDisplayComponent,
     UsuarioAgregarComponent,
     UsuarioLoginComponent,
-    TextContainsValidator
+    TextContainsValidator,
+    LugaresComponent,
+    LugaresDisplayComponent,
+    LugaresAgregarComponent
   ],
   imports: [
     BrowserModule,

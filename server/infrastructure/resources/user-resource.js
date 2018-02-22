@@ -19,7 +19,15 @@ function getUser(id) {
     var user = await(dbase.collection("users").findOne({_id: new ObjectId(id)}));
     db.close();
     return user;
+
+function getUserByUserName(username) {
+    var db = await(MongoClient.connect(url)); 
+    var dbase = db.db("heroku_p2cqk5m3");
+    var user = await(dbase.collection("users").findOne({usuario: new ObjectId(usuario)}));
+    db.close();
+    return user;
 }
+
 
 function deleteUser(id) {
     var db = await(MongoClient.connect(url)); 
@@ -51,6 +59,7 @@ function addUser(user) {
 
 module.exports = {
     getUsers: async(getUsers),
+    getUsersByUserName: async(getUsersByUserName),
     getUser: async(getUser),
     deleteUser: async(deleteUser),
     updateUser: async(updateUser),

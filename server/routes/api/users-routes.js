@@ -18,6 +18,18 @@ function getUsers(request, response) {
     }
 }
 
+function getUsersByUserName(request, response) {
+    console.log('GET User By User Name');
+    var result;
+    try {
+        result = await (service.usersService.getUser(request.params.usuario));
+        return handlers.successResponseHandler(response, result);
+    } catch (error) {
+        console.log('error',error);
+        return handlers.errorResponseHandler(response, error);
+    }
+}
+
 function deleteUser(request, response) {
     console.log('DELETE User');
     var result;
@@ -55,6 +67,7 @@ function postUser(request, response) {
 }
 
 routes.get('/:id', async(getUsers));
+routes.get('/:username', async(getUsersByUserName));
 routes.get('/', async(getUsers));
 routes.delete('/:id', async(deleteUser));
 routes.put('/:id', async(updateUser));
