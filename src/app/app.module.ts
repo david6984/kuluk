@@ -18,6 +18,9 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { UsuarioDisplayComponent } from './usuarios/usuario-display/usuario-display.component';
 import { UsuarioAgregarComponent } from './usuarios/usuario-agregar/usuario-agregar.component';
 import { UsuarioLoginComponent } from './usuarios/usuario-login/usuario-login.component';
+import { LugaresComponent } from './lugares/lugares.component';
+import { LugaresDisplayComponent } from './lugares/lugares-display/lugares-display.component';
+import { LugaresAgregarComponent } from './lugares/lugares-agregar/lugares-agregar.component';
 
 //servicios creados deben ser agregados en los providers 
 import { ProductosService } from './services/productos.service';
@@ -26,9 +29,7 @@ import { LugaresService } from './services/lugares.service';
 import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
 import { TextContainsValidator } from './shared/text-contains.directive';
-import { LugaresComponent } from './lugares/lugares.component';
-import { LugaresDisplayComponent } from './lugares/lugares-display/lugares-display.component';
-import { LugaresAgregarComponent } from './lugares/lugares-agregar/lugares-agregar.component';
+
 
 
 @NgModule({

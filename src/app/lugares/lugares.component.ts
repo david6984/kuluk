@@ -11,7 +11,7 @@ import { LugaresService } from '../services/lugares.service';
 export class LugaresComponent implements OnInit {
 
  	public lugares : Lugar[];
-	public selectedPlace : Lugar= new Lugar;
+	public selectedPlace : Lugar = new Lugar;
 	public loading : boolean = false;
 	constructor(private lugaresService: LugaresService) { }
 
@@ -46,7 +46,7 @@ export class LugaresComponent implements OnInit {
 
 	public obtenerLugares(){
 		this.lugaresService.obtenerLugares().subscribe((data) => {
-				this.lugares = data.lugar;
+				this.lugares = data.place;
 			},(error)=>{
 				console.log('error',error);
 			});

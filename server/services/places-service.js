@@ -20,8 +20,10 @@ function getPlace(id) {
 
 function updatePlace(place) {
     var result;
-    console.log('update place by ' + place.id);
+    console.log('update place by ' + product.id);
     try {
+        console.log('test');
+        console.log(PlacesRsrc);
         result = await (PlacesRsrc.updatePlace(place));
     } catch(error) {
         throw error;
@@ -44,6 +46,8 @@ function postPlace(place) {
     var result;
     console.log('post place');
     try {
+        console.log('places');
+        console.log(PlacesRsrc);
         result = await (PlacesRsrc.addPlace(place));
     } catch(error) {
         throw error;

@@ -5,20 +5,20 @@ var url="mongodb://kulukdatabaseuser:.Kuluk28@ds139138.mlab.com:39138/heroku_p2c
 var async = require('asyncawait/async');
 var await = require('asyncawait/await');
 
-function getPlaces() {
-    var db = await(MongoClient.connect(url)); 
-    var dbase = db.db("heroku_p2cqk5m3");
-    var Places = await(dbase.collection("places").find({}).toArray());
-    db.close();
-    return Places;
-}
-
 function getPlace(id) {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
     var Place = await(dbase.collection("places").findOne({_id: new ObjectId(id)}));
     db.close();
     return Place;
+}
+
+function getPlaces() {
+    var db = await(MongoClient.connect(url)); 
+    var dbase = db.db("heroku_p2cqk5m3");
+    var Places = await(dbase.collection("places").find({}).toArray());
+    db.close();
+    return Places;
 }
 
 function deletePlace(id) {
@@ -40,16 +40,18 @@ function updatePlace(Place) {
 }
 
 function addPlace(Place) {
+    console.log('addPlace');
+    console.log(Place);
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
-    var Place = await(dbase.collection("places").insertOne(Product));
+    var Place = await(dbase.collection("places").insertOne(Place));
     db.close();
     return Place;
 }
 
 module.exports = {
-    getPlaces: async(getPlaces),
     getPlace: async(getPlace),
+    getPlaces: async(getPlaces),
     deletePlace: async(deletePlace),
     updatePlace: async(updatePlace),
     addPlace: async(addPlace)

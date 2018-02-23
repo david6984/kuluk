@@ -162,15 +162,15 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__usuarios_usuario_display_usuario_display_component__ = __webpack_require__("../../../../../src/app/usuarios/usuario-display/usuario-display.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__usuarios_usuario_agregar_usuario_agregar_component__ = __webpack_require__("../../../../../src/app/usuarios/usuario-agregar/usuario-agregar.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__usuarios_usuario_login_usuario_login_component__ = __webpack_require__("../../../../../src/app/usuarios/usuario-login/usuario-login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_productos_service__ = __webpack_require__("../../../../../src/app/services/productos.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_usuarios_service__ = __webpack_require__("../../../../../src/app/services/usuarios.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_lugares_service__ = __webpack_require__("../../../../../src/app/services/lugares.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_data_service__ = __webpack_require__("../../../../../src/app/services/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__shared_text_contains_directive__ = __webpack_require__("../../../../../src/app/shared/text-contains.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__lugares_lugares_component__ = __webpack_require__("../../../../../src/app/lugares/lugares.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__lugares_lugares_display_lugares_display_component__ = __webpack_require__("../../../../../src/app/lugares/lugares-display/lugares-display.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__lugares_lugares_agregar_lugares_agregar_component__ = __webpack_require__("../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__lugares_lugares_component__ = __webpack_require__("../../../../../src/app/lugares/lugares.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__lugares_lugares_display_lugares_display_component__ = __webpack_require__("../../../../../src/app/lugares/lugares-display/lugares-display.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__lugares_lugares_agregar_lugares_agregar_component__ = __webpack_require__("../../../../../src/app/lugares/lugares-agregar/lugares-agregar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_productos_service__ = __webpack_require__("../../../../../src/app/services/productos.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_usuarios_service__ = __webpack_require__("../../../../../src/app/services/usuarios.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_lugares_service__ = __webpack_require__("../../../../../src/app/services/lugares.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_data_service__ = __webpack_require__("../../../../../src/app/services/data.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__shared_text_contains_directive__ = __webpack_require__("../../../../../src/app/shared/text-contains.directive.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -195,10 +195,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 //servicios creados deben ser agregados en los providers 
-
-
-
 
 
 
@@ -222,10 +222,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_13__usuarios_usuario_display_usuario_display_component__["a" /* UsuarioDisplayComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__usuarios_usuario_agregar_usuario_agregar_component__["a" /* UsuarioAgregarComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__usuarios_usuario_login_usuario_login_component__["a" /* UsuarioLoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__shared_text_contains_directive__["a" /* TextContainsValidator */],
-                __WEBPACK_IMPORTED_MODULE_22__lugares_lugares_component__["a" /* LugaresComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__lugares_lugares_display_lugares_display_component__["a" /* LugaresDisplayComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__lugares_lugares_agregar_lugares_agregar_component__["a" /* LugaresAgregarComponent */]
+                __WEBPACK_IMPORTED_MODULE_24__shared_text_contains_directive__["a" /* TextContainsValidator */],
+                __WEBPACK_IMPORTED_MODULE_16__lugares_lugares_component__["a" /* LugaresComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__lugares_lugares_display_lugares_display_component__["a" /* LugaresDisplayComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__lugares_lugares_agregar_lugares_agregar_component__["a" /* LugaresAgregarComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -235,11 +235,11 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_16__services_productos_service__["a" /* ProductosService */],
-                __WEBPACK_IMPORTED_MODULE_17__services_usuarios_service__["a" /* UsuariosService */],
-                __WEBPACK_IMPORTED_MODULE_18__services_lugares_service__["a" /* LugaresService */],
-                __WEBPACK_IMPORTED_MODULE_19__services_data_service__["a" /* DataService */],
-                __WEBPACK_IMPORTED_MODULE_20__services_auth_service__["a" /* AuthService */]
+                __WEBPACK_IMPORTED_MODULE_19__services_productos_service__["a" /* ProductosService */],
+                __WEBPACK_IMPORTED_MODULE_20__services_usuarios_service__["a" /* UsuariosService */],
+                __WEBPACK_IMPORTED_MODULE_21__services_lugares_service__["a" /* LugaresService */],
+                __WEBPACK_IMPORTED_MODULE_22__services_data_service__["a" /* DataService */],
+                __WEBPACK_IMPORTED_MODULE_23__services_auth_service__["a" /* AuthService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
@@ -516,7 +516,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".actions {\n\tmargin-top: 8px;\n}\n\n.actions .text-center {\n\tmargin-bottom: 5px;\n}\n\n.actions .text-center button{\n\twidth: 85px;\n}", ""]);
 
 // exports
 
@@ -529,7 +529,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/lugares/lugares-display/lugares-display.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\">Precio: </div>  -->\n\t<div class=\"col-12 col-lg-6\" > <span>{{lugar.provincia}}</span><span>', '</span><span>{{lugar.pais}}</span></div>\n</div>\n<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\" >Nombre: </div>  -->\n\t<div class=\"col-12 col-lg-6\"><a href=\"{{lugar.facebook}}\"> <strong>{{lugar.nombre}}</strong> </a> </div>\n</div>\n<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\"  >Descripcion: </div> -->\n\t<div class=\"col-12 col-lg-6\" ><a href=\"{{luagr.instagram}}\"> <pre>Instagram</pre></a> </div>\n</div>\n<div class=\"row\">\n\t<div class=\"col-12 actions\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-3 text-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" (click)=\"editar()\">Editar</button>\n\t\t\t</div>\n\t\t\t<div class=\"col-6 text-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-danger\" (click)=\"borrar()\"><span *ngIf=\"isDeleting\">...</span><span *ngIf=\"!isDeleting\">Eliminar</span></button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t\n</div>\n\n"
+module.exports = "<div class=\"row\">\n\t<div class=\"col-5 col-lg-2\">Provincia: </div> \n\t<div class=\"col-12 col-lg-6\" > <span>{{lugar.provincia}}</span><span>, </span><span>{{lugar.pais}}</span></div>\n</div>\n<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\" >Nombre: </div>  -->\n\t<div class=\"col-12 col-lg-6\"><a href=\"{{lugar.facebook}}\"> <strong>{{lugar.nombre}}</strong> </a> </div>\n</div>\n<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\"  >Descripcion: </div> -->\n\t<div class=\"col-12 col-lg-6\" ><a href=\"{{luagr.instagram}}\"> <pre>Instagram</pre></a> </div>\n</div>\n<div class=\"row\">\n\t<div class=\"col-12 actions\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-3 text-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" (click)=\"editar()\">Editar</button>\n\t\t\t</div>\n\t\t\t<div class=\"col-6 text-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-danger\" (click)=\"borrar()\"><span *ngIf=\"isDeleting\">...</span><span *ngIf=\"!isDeleting\">Eliminar</span></button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t\n</div>\n\n"
 
 /***/ }),
 
@@ -683,7 +683,7 @@ var LugaresComponent = /** @class */ (function () {
     LugaresComponent.prototype.obtenerLugares = function () {
         var _this = this;
         this.lugaresService.obtenerLugares().subscribe(function (data) {
-            _this.lugares = data.lugar;
+            _this.lugares = data.place;
         }, function (error) {
             console.log('error', error);
         });
@@ -805,7 +805,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/nav/nav.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" routerLink=\"/usuariologin\" routerLinkActive=\"active\">Login</a>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\"  routerLink=\"/\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\" >Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/productos\" routerLinkActive=\"active\">Productos</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/usuarios\" routerLinkActive=\"active\">Usuarios</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/lugares\" routerLinkActive=\"active\">Encuentranos</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/about\" routerLinkActive=\"active\">About</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/info\" routerLinkActive=\"active\">Info</a>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav>"
+module.exports = "\n<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" routerLink=\"/usuariologin\" routerLinkActive=\"active\">Login</a>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\"  routerLink=\"/\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\" >Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/productos\" routerLinkActive=\"active\">Productos</a>\n      </li>\n<!--       <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/usuarios\" routerLinkActive=\"active\">Usuarios</a>\n      </li>\n -->      <li class=\"nav-item\">\n        <a class=\"nav-link\"  routerLink=\"/lugares\" routerLinkActive=\"active\">Encuentranos</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/about\" routerLinkActive=\"active\">About</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" routerLink=\"/info\" routerLinkActive=\"active\">Info</a>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav>"
 
 /***/ }),
 
@@ -1789,7 +1789,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/usuarios/usuario-login/usuario-login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-center\" style=\"padding:50px 0\">\n\t<div class=\"logo\">login</div>\n\t<!-- Main Form -->\n\t<div class=\"login-form-1\">\n\t\t<form id=\"login-form\" class=\"text-left\">\n\t\t\t<div class=\"login-form-main-message\"></div>\n\t\t\t<div class=\"main-login-form\">\n\t\t\t\t<div class=\"login-group\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_username\" class=\"sr-only\">Username</label>\n\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"lg_username\" name=\"lg_username\" placeholder=\"username\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_password\" class=\"sr-only\">Password</label>\n\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" id=\"lg_password\" name=\"lg_password\" placeholder=\"password\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group login-group-checkbox\">\n\t\t\t\t\t\t<input type=\"checkbox\" id=\"lg_remember\" name=\"lg_remember\">\n\t\t\t\t\t\t<label for=\"lg_remember\">remember</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<button type=\"submit\" class=\"login-button\"  (click)=\"obtener()\"><i class=\"fa fa-chevron-right\"></i></button>\n\t\t\t</div>\n\t\t\t<div class=\"etc-login-form\">\n\t\t\t\t<p>forgot your password? <a href=\"#\">click here</a></p>\n\t\t\t\t<p>new user? <a href=\"#\">create new account</a></p>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n\t<!-- end:Main Form -->\n</div>"
+module.exports = "<div class=\"text-center\" style=\"padding:50px 0\">\n\t<div class=\"logo\">login</div>\n\t<!-- Main Form -->\n\t<div class=\"login-form-1\">\n\t\t<form id=\"login-form\" class=\"text-left\">\n\t\t\t<div class=\"login-form-main-message\"></div>\n\t\t\t<div class=\"main-login-form\">\n\t\t\t\t<div class=\"login-group\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_username\" class=\"sr-only\">Username</label>\n\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"lg_username\" name=\"lg_username\" placeholder=\"username\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_password\" class=\"sr-only\">Password</label>\n\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" id=\"lg_password\" name=\"lg_password\" placeholder=\"password\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group login-group-checkbox\">\n\t\t\t\t\t\t<input type=\"checkbox\" id=\"lg_remember\" name=\"lg_remember\">\n\t\t\t\t\t\t<label for=\"lg_remember\">remember</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<button type=\"submit\" class=\"login-button\"  (click)=\"obtener()\"><i class=\"fa fa-chevron-right\"></i></button>\n\t\t\t</div>\n\t\t\t<div class=\"etc-login-form\">\n\t\t\t\t<p>forgot your password? <a href=\"#\">click here</a></p>\n\t\t\t\t<p>new user? <a routerLink=\"/usuarios\" routerLinkActive=\"active\">create new account</a></p>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n\t<!-- end:Main Form -->\n</div>"
 
 /***/ }),
 
