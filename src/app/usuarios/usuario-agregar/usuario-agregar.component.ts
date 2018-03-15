@@ -33,6 +33,7 @@ export class UsuarioAgregarComponent implements OnInit {
 				Validators.maxLength(7)
 			]),
 			apellido1: new FormControl('', [Validators.required]),
+			passw: new FormControl('', [Validators.required]),
 			correo: new FormControl('', [Validators.required,patternValidator(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i)])
 		});
 	}

@@ -4,11 +4,11 @@
 </div>
 <div class="row">
 	<!-- <div class="col-5 col-lg-2" >Nombre: </div>  -->
-	<div class="col-12 col-lg-6"><a href="{{lugar.facebook}}"> <strong>{{lugar.nombre}}</strong> </a> </div>
+	<div class="col-12 col-lg-6"><a href="{{lugar.facebook}}" target="_blank"> <strong>{{lugar.nombre}}</strong> </a> </div>
 </div>
 <div class="row">
 	<!-- <div class="col-5 col-lg-2"  >Descripcion: </div> -->
-	<div class="col-12 col-lg-6" ><a href="{{luagr.instagram}}"> <pre>Instagram</pre></a> </div>
+	<div class="col-12 col-lg-6" *ngIf="lugar.instagram"><a href="{{lugar.instagram}}" target="_blank"> <pre>Instagram</pre></a> </div>
 </div>
 <div class="row">
 	<div class="col-12 actions">

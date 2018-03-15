@@ -99,7 +99,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-12\">\n\t<!-- app-nav es el componente que contiene la navegacion -->\n\t<div class=\"app-nav-cont\">\n\t\t<app-nav></app-nav>\n\t</div>\n\t<!-- router-outlet es el componente que despliega el contenido dependiendo de la ruta/URL -->\n\t<router-outlet></router-outlet> \n</div>"
+module.exports = "<div class=\"col-12\">\n\t<!-- app-nav es el componente que contiene la navegacion -->\n\t<div class=\"app-nav-cont\">\n\t\t<app-nav></app-nav>\n\t</div>\n\t<!-- router-outlet es el componente que despliega el contenido dependiendo de la ruta/URL -->\n\t<div>\n\t\t<router-outlet></router-outlet> \n\t</div>\n\t\n\t<div>\n\t\t<app-footer></app-footer>\t\n\t</div>\n\t\n</div>"
 
 /***/ }),
 
@@ -171,6 +171,8 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_data_service__ = __webpack_require__("../../../../../src/app/services/data.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__shared_text_contains_directive__ = __webpack_require__("../../../../../src/app/shared/text-contains.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__slider_slider_component__ = __webpack_require__("../../../../../src/app/slider/slider.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -205,6 +207,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -225,7 +229,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_24__shared_text_contains_directive__["a" /* TextContainsValidator */],
                 __WEBPACK_IMPORTED_MODULE_16__lugares_lugares_component__["a" /* LugaresComponent */],
                 __WEBPACK_IMPORTED_MODULE_17__lugares_lugares_display_lugares_display_component__["a" /* LugaresDisplayComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__lugares_lugares_agregar_lugares_agregar_component__["a" /* LugaresAgregarComponent */]
+                __WEBPACK_IMPORTED_MODULE_18__lugares_lugares_agregar_lugares_agregar_component__["a" /* LugaresAgregarComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__slider_slider_component__["a" /* SliderComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -265,12 +271,16 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__usuarios_usuarios_component__ = __webpack_require__("../../../../../src/app/usuarios/usuarios.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__usuarios_usuario_login_usuario_login_component__ = __webpack_require__("../../../../../src/app/usuarios/usuario-login/usuario-login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__lugares_lugares_component__ = __webpack_require__("../../../../../src/app/lugares/lugares.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__slider_slider_component__ = __webpack_require__("../../../../../src/app/slider/slider.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -305,6 +315,14 @@ var ROUTES = [
         component: __WEBPACK_IMPORTED_MODULE_3__about_about_component__["a" /* AboutComponent */]
     },
     {
+        path: 'slider',
+        component: __WEBPACK_IMPORTED_MODULE_9__slider_slider_component__["a" /* SliderComponent */]
+    },
+    {
+        path: 'footer',
+        component: __WEBPACK_IMPORTED_MODULE_8__footer_footer_component__["a" /* FooterComponent */]
+    },
+    {
         path: '**',
         redirectTo: ''
     }
@@ -333,6 +351,67 @@ var AppRoutingModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/footer/footer.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/footer/footer.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--Footer-->\n<footer class=\"page-footer font-small blue-grey lighten-5 pt-0\">\n\n    <div style=\"background-color: #21d192;\">\n        <div class=\"container\">\n            <!--Grid row-->\n            <div class=\"row py-4 d-flex align-items-center\">\n\n                <!--Grid column-->\n                <div class=\"col-12 col-md-5 text-left mb-4 mb-md-0\">\n                    <h6 class=\"mb-0 white-text text-center text-md-left\">\n                        <strong>Get connected with us on social networks!</strong>\n                    </h6>\n                </div>\n                <!--Grid column-->\n\n                <!--Grid column-->\n                <div class=\"col-12 col-md-7 text-center text-md-right\">\n                    <!--Facebook-->\n                    <a class=\"fb-ic ml-0\" href=\"https://www.facebook.com/kulukcostarica/\" target=\"_blank\">\n                        <i class=\"fa fa-facebook white-text mr-lg-4\"> </i>\n                    </a>\n                    <!--Twitter-->\n                    <a class=\"tw-ic\">\n                        <i class=\"fa fa-twitter white-text mr-lg-4\"> </i>\n                    </a>\n                    <!--Google +-->\n                    <a class=\"gplus-ic\">\n                        <i class=\"fa fa-google-plus white-text mr-lg-4\"> </i>\n                    </a>\n                    <!--Linkedin-->\n                    <a class=\"li-ic\">\n                        <i class=\"fa fa-linkedin white-text mr-lg-4\"> </i>\n                    </a>\n                    <!--Instagram-->\n                    <a class=\"ins-ic\" href=\"https://www.instagram.com/kulukcostarica/?hl=en\" target=\"_blank\">\n                        <i class=\"fa fa-instagram white-text mr-lg-4\"> </i>\n                    </a>\n                </div>\n                <!--Grid column-->\n\n            </div>\n            <!--Grid row-->\n        </div>\n    </div>\n\n    <!--Footer Links-->\n    <div class=\"container mt-5 mb-4 text-center text-md-left\">\n        <div class=\"row mt-3\">\n\n            <!--First column-->\n            <div class=\"col-md-3 col-lg-4 col-xl-3 mb-4 dark-grey-text\">\n                <h6 class=\"text-uppercase font-weight-bold\">\n                    <strong>Kuluk</strong>\n                </h6>\n                <hr class=\"teal accent-3 mb-4 mt-0 d-inline-block mx-auto\" style=\"width: 60px;\">\n                <p>Encuentranos en nuestros puntos de venta!!!.</p>\n            </div>\n            <!--/.First column-->\n\n            <!--Second column-->\n            <!-- <div class=\"col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 dark-grey-text\">\n                <h6 class=\"text-uppercase font-weight-bold\">\n                    <strong>Products</strong>\n                </h6>\n                <hr class=\"teal accent-3 mb-4 mt-0 d-inline-block mx-auto\" style=\"width: 60px;\">\n                <p>\n                    <a href=\"#!\" class=\"dark-grey-text\">MDBootstrap</a>\n                </p>\n                <p>\n                    <a href=\"#!\" class=\"dark-grey-text\">MDWordPress</a>\n                </p>\n                <p>\n                    <a href=\"#!\" class=\"dark-grey-text\">BrandFlow</a>\n                </p>\n                <p>\n                    <a href=\"#!\" class=\"dark-grey-text\">Bootstrap Angular</a>\n                </p>\n            </div> -->\n            <!--/.Second column-->\n\n            <!--Third column-->\n            <!-- <div class=\"col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 dark-grey-text\">\n                <h6 class=\"text-uppercase font-weight-bold\">\n                    <strong>Useful links</strong>\n                </h6>\n                <hr class=\"teal accent-3 mb-4 mt-0 d-inline-block mx-auto\" style=\"width: 60px;\">\n                <p>\n                    <a href=\"#!\" class=\"dark-grey-text\">Your Account</a>\n                </p>\n                <p>\n                    <a href=\"#!\" class=\"dark-grey-text\">Become an Affiliate</a>\n                </p>\n                <p>\n                    <a href=\"#!\" class=\"dark-grey-text\">Shipping Rates</a>\n                </p>\n                <p>\n                    <a href=\"#!\" class=\"dark-grey-text\">Help</a>\n                </p>\n            </div> -->\n            <!--/.Third column-->\n\n            <!--Fourth column-->\n            <div class=\"col-md-4 col-lg-4 col-xl-5 dark-grey-text\">\n                <h6 class=\"text-uppercase font-weight-bold\">\n                    <strong>Contact</strong>\n                </h6>\n                <hr class=\"teal accent-3 mb-4 mt-0 d-inline-block mx-auto\" style=\"width: 60px;\">\n                <p>\n                    <i class=\"fa fa-home mr-3\"></i> Zapote, San Jose Costa Rica</p>\n                <p>\n                    <i class=\"fa fa-envelope mr-3\"></i> info@kuluklab.com</p>\n                <p>\n                    <i class=\"fa fa-phone mr-3\"></i> +506 83910720</p>\n            </div>\n            <!--/.Fourth column-->\n\n        </div>\n    </div>\n    <!--/.Footer Links-->\n\n    <!-- Copyright-->\n    <div style=\"background-color: #21d192;\" class=\"footer-copyright py-3 text-center\">\n        © 2018 Copyright:\n        <a href=\"\" target=\"_blank\">\n            <strong> David Villalobos M.</strong>\n        </a>\n    </div>\n    <!--/.Copyright -->\n\n</footer>\n<!--/.Footer-->\n\n                      "
+
+/***/ }),
+
+/***/ "../../../../../src/app/footer/footer.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FooterComponent = /** @class */ (function () {
+    function FooterComponent() {
+    }
+    FooterComponent.prototype.ngOnInit = function () {
+    };
+    FooterComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-footer',
+            template: __webpack_require__("../../../../../src/app/footer/footer.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/footer/footer.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], FooterComponent);
+    return FooterComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/home/home.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -354,7 +433,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n\t<div class=\"page-title row text-center\">\n\t\t<h2 class=\"col-12 col-lg-8 \">Kuluk le da la bienvenida</h2>\n\t</div>\n</div>"
+module.exports = "<app-slider></app-slider>\n<div>\n\t<div class=\"page-title row text-center\">\n\t\t<h2 class=\"col-12 col-lg-8 \">Kuluk le da la bienvenida</h2>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -529,7 +608,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/lugares/lugares-display/lugares-display.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\">Provincia: </div>  -->\n\t<div class=\"col-12 col-lg-6\" > <span>{{lugar.provincia}}</span><span>, </span><span>{{lugar.pais}}</span></div>\n</div>\n<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\" >Nombre: </div>  -->\n\t<div class=\"col-12 col-lg-6\"><a href=\"{{lugar.facebook}}\"> <strong>{{lugar.nombre}}</strong> </a> </div>\n</div>\n<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\"  >Descripcion: </div> -->\n\t<div class=\"col-12 col-lg-6\" ><a href=\"{{luagr.instagram}}\"> <pre>Instagram</pre></a> </div>\n</div>\n<div class=\"row\">\n\t<div class=\"col-12 actions\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-3 text-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" (click)=\"editar()\">Editar</button>\n\t\t\t</div>\n\t\t\t<div class=\"col-6 text-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-danger\" (click)=\"borrar()\"><span *ngIf=\"isDeleting\">...</span><span *ngIf=\"!isDeleting\">Eliminar</span></button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t\n</div>\n\n"
+module.exports = "<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\">Provincia: </div>  -->\n\t<div class=\"col-12 col-lg-6\" > <span>{{lugar.provincia}}</span><span>, </span><span>{{lugar.pais}}</span></div>\n</div>\n<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\" >Nombre: </div>  -->\n\t<div class=\"col-12 col-lg-6\"><a href=\"{{lugar.facebook}}\" target=\"_blank\"> <strong>{{lugar.nombre}}</strong> </a> </div>\n</div>\n<div class=\"row\">\n\t<!-- <div class=\"col-5 col-lg-2\"  >Descripcion: </div> -->\n\t<div class=\"col-12 col-lg-6\" *ngIf=\"lugar.instagram\"><a href=\"{{lugar.instagram}}\" target=\"_blank\"> <pre>Instagram</pre></a> </div>\n</div>\n<div class=\"row\">\n\t<div class=\"col-12 actions\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-3 text-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" (click)=\"editar()\">Editar</button>\n\t\t\t</div>\n\t\t\t<div class=\"col-6 text-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-danger\" (click)=\"borrar()\"><span *ngIf=\"isDeleting\">...</span><span *ngIf=\"!isDeleting\">Eliminar</span></button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t\n</div>\n\n"
 
 /***/ }),
 
@@ -623,7 +702,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/lugares/lugares.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lugares\">\n\t<div class=\"page-title row\">\n\t\t<h2 class=\"col-5\">Encuentranos</h2>\n\t</div>\n\t<div class=\"places row\">\n\t\t<ul class=\"col-12\">\n\t\t\t<li *ngFor=\"let lugar of lugares\" class=\"row lugar-display\">\n\t\t\t\t<app-lugares-display [lugar]='lugar' (borrarLugar)=\"borrarLugar($event)\" (editarLugar)=\"editarLugar($event)\" class=\"col-12 card col-lg-8\"  ></app-lugares-display>\n\t\t\t</li>\n\t\t</ul>\t\n\t\t<ul class=\"col-12 col-lg-8\">\n\t\t\t<app-lugares-agregar (agregarLugar)=\"agregarLugar($event)\" (editarLugar)=\"editarLugarSave($event)\" [selectedPlace]=\"selectedPlace\" [canAdd]='!loading'></app-lugares-agregar>\n\t\t\t<div *ngIf=\"loading\">\n\t\t\t\tloading...\n\t\t\t</div>\n\t\t</ul>\n\t</div>\n</div>"
+module.exports = "<div class=\"lugares\">\n\t<div class=\"page-title row text-center\">\n\t\t<h2 class=\"col-5\">Encuentranos</h2>\n\t</div>\n\t<div class=\"places row\">\n\t\t<ul class=\"col-12\">\n\t\t\t<li *ngFor=\"let lugar of lugares\" class=\"row lugar-display\">\n\t\t\t\t<app-lugares-display [lugar]='lugar' (borrarLugar)=\"borrarLugar($event)\" (editarLugar)=\"editarLugar($event)\" class=\"col-12 col-lg-8\"  ></app-lugares-display>\n\t\t\t</li>\n\t\t</ul>\t\n\t\t<ul class=\"col-12 col-lg-8\">\n\t\t\t<app-lugares-agregar (agregarLugar)=\"agregarLugar($event)\" (editarLugar)=\"editarLugarSave($event)\" [selectedPlace]=\"selectedPlace\" [canAdd]='!loading'></app-lugares-agregar>\n\t\t\t<div *ngIf=\"loading\">\n\t\t\t\tloading...\n\t\t\t</div>\n\t\t</ul>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -776,6 +855,7 @@ var Usuario = /** @class */ (function () {
         this.nombre = '';
         this.apellido1 = '';
         this.correo = '';
+        this.passw = '';
     }
     return Usuario;
 }());
@@ -1452,7 +1532,7 @@ var UsuariosService = /** @class */ (function () {
     UsuariosService.prototype.obtenerUsuarios = function () {
         return this.dataService.get('/api/users');
     };
-    UsuariosService.prototype.obtenerUsuariosByUserName = function (usuario) {
+    UsuariosService.prototype.obtenerUsuarioByUserName = function (usuario) {
         return this.dataService.get('/api/users' + usuario.usuario);
     };
     UsuariosService.prototype.agregarUsuario = function (usuario) {
@@ -1553,6 +1633,67 @@ var TextContainsValidator = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/slider/slider.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/slider/slider.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\n  <!-- Indicators -->\n  <ol class=\"carousel-indicators\">\n    <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\n    <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\n    <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\n  </ol>\n\n  <!-- Wrapper for slides -->\n  <div class=\"carousel-inner\">\n    <div class=\"item active\">\n      <img src=\"http://res.cloudinary.com/kuluk/image/upload/v1520619509/28701033_1670724599673367_2486273112074060735_o.jpg\" alt=\"p1\">\n    </div>\n\n    <div class=\"item\">\n      <img src=\"http://res.cloudinary.com/kuluk/image/upload/v1520619504/21077731_1488414601237702_4096480052720430901_n.jpg\" alt=\"p2\">\n    </div>\n\n    <div class=\"item\">\n      <img src=\"http://res.cloudinary.com/kuluk/image/upload/v1519266841/Kuluk_foto_producto.jpg\" alt=\"p3\">\n    </div>\n  </div>\n\n  <!-- Left and right controls -->\n  <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\n    <span class=\"glyphicon glyphicon-chevron-left\"></span>\n    <span class=\"sr-only\">Previous</span>\n  </a>\n  <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\n    <span class=\"glyphicon glyphicon-chevron-right\"></span>\n    <span class=\"sr-only\">Next</span>\n  </a>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/slider/slider.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SliderComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SliderComponent = /** @class */ (function () {
+    function SliderComponent() {
+    }
+    SliderComponent.prototype.ngOnInit = function () {
+    };
+    SliderComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-slider',
+            template: __webpack_require__("../../../../../src/app/slider/slider.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/slider/slider.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SliderComponent);
+    return SliderComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/usuarios/usuario-agregar/usuario-agregar.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1574,7 +1715,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/usuarios/usuario-agregar/usuario-agregar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"usuarioForm\" (ngSubmit)=\"onSubmit()\" novalidate>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Usuario\n\t\t\t<input class=\"form-control\" formControlName=\"usuario\" [attr.disabled]=\"isEditing?'':null\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['usuario'].valid && (usuarioForm.controls['usuario'].dirty || usuarioForm.controls['usuario'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['usuario'].errors.required\">\n\t\t\t\tEl usuario es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Nombre\n\t\t\t<input class=\"form-control\" formControlName=\"nombre\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['nombre'].valid && (usuarioForm.controls['nombre'].dirty || usuarioForm.controls['nombre'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.required\">\n\t\t\t\tEl nombre es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.minlength\">\n\t\t\t\tEl nombre debe tener al menos 2 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.maxlength\">\n\t\t\t\tEl nombre debe tener al maximo 3 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.forbiddenName\">\n\t\t\t\tEl nombre no puede ser Juan.\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Apellido1\n\t\t\t<input class=\"form-control\" formControlName=\"apellido1\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors && (usuarioForm.controls['apellido1'].dirty || usuarioForm.controls['apellido1'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors.required\">\n\t\t\t\tEl Apellido1 es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Correo\n\t\t\t<input class=\"form-control\" formControlName=\"correo\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['correo'].invalid && (usuarioForm.controls['correo'].dirty || usuarioForm.controls['correo'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.required\">\n\t\t\t\tEl Correo es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.patternInvalid\">\n\t\t\t\tEl Correo es invalido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div>\n\t\t<button type=\"submit\"\n\t\t[disabled]=\"usuarioForm.invalid \" class=\"btn btn-success\"><span *ngIf=\"!isEditing\">Agregar</span><span *ngIf=\"isEditing\">Editar</span></button> &nbsp;\n\t\t<button type=\"reset\" (click)=\"revert()\" class=\"btn btn-danger\">Revert</button>\n\t</div>\n</form>"
+module.exports = "<form [formGroup]=\"usuarioForm\" (ngSubmit)=\"onSubmit()\" novalidate>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Usuario\n\t\t\t<input class=\"form-control\" formControlName=\"usuario\" [attr.disabled]=\"isEditing?'':null\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['usuario'].valid && (usuarioForm.controls['usuario'].dirty || usuarioForm.controls['usuario'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['usuario'].errors.required\">\n\t\t\t\tEl usuario es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Nombre\n\t\t\t<input class=\"form-control\" formControlName=\"nombre\">\n\t\t</label>\n\t\t<div *ngIf=\"!usuarioForm.controls['nombre'].valid && (usuarioForm.controls['nombre'].dirty || usuarioForm.controls['nombre'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.required\">\n\t\t\t\tEl nombre es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.minlength\">\n\t\t\t\tEl nombre debe tener al menos 2 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.maxlength\">\n\t\t\t\tEl nombre debe tener al maximo 3 digitos.\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['nombre'].errors.forbiddenName\">\n\t\t\t\tEl nombre no puede ser Juan.\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Apellido1\n\t\t\t<input class=\"form-control\" formControlName=\"apellido1\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors && (usuarioForm.controls['apellido1'].dirty || usuarioForm.controls['apellido1'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['apellido1'].errors.required\">\n\t\t\t\tEl Apellido1 es requerido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Contraseña\n\t\t\t<input class=\"form-control\" formControlName=\"passw\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['passw'].errors && (usuarioForm.controls['passw'].dirty || usuarioForm.controls['passw'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['passw'].errors.required\">\n\t\t\t\tLa Contraseña es requerida\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label class=\"center-block\">Correo\n\t\t\t<input class=\"form-control\" formControlName=\"correo\">\n\t\t</label>\n\t\t<div *ngIf=\"usuarioForm.controls['correo'].invalid && (usuarioForm.controls['correo'].dirty || usuarioForm.controls['correo'].touched)\" class=\"alert alert-danger\">\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.required\">\n\t\t\t\tEl Correo es requerido\n\t\t\t</div>\n\t\t\t<div *ngIf=\"usuarioForm.controls['correo'].errors.patternInvalid\">\n\t\t\t\tEl Correo es invalido\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div>\n\t\t<button type=\"submit\"\n\t\t[disabled]=\"usuarioForm.invalid \" class=\"btn btn-success\"><span *ngIf=\"!isEditing\">Agregar</span><span *ngIf=\"isEditing\">Editar</span></button> &nbsp;\n\t\t<button type=\"reset\" (click)=\"revert()\" class=\"btn btn-danger\">Revert</button>\n\t</div>\n</form>"
 
 /***/ }),
 
@@ -1623,6 +1764,7 @@ var UsuarioAgregarComponent = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].maxLength(7)
             ]),
             apellido1: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required]),
+            passw: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required]),
             correo: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required, Object(__WEBPACK_IMPORTED_MODULE_3__shared_pattern_validator__["a" /* patternValidator */])(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i)])
         });
     };
@@ -1789,7 +1931,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/usuarios/usuario-login/usuario-login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-center\" style=\"padding:50px 0\">\n\t<div class=\"logo\">login</div>\n\t<!-- Main Form -->\n\t<div class=\"login-form-1\">\n\t\t<form id=\"login-form\" class=\"text-left\">\n\t\t\t<div class=\"login-form-main-message\"></div>\n\t\t\t<div class=\"main-login-form\">\n\t\t\t\t<div class=\"login-group\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_username\" class=\"sr-only\">Username</label>\n\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"lg_username\" name=\"lg_username\" placeholder=\"username\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"lg_password\" class=\"sr-only\">Password</label>\n\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" id=\"lg_password\" name=\"lg_password\" placeholder=\"password\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-group login-group-checkbox\">\n\t\t\t\t\t\t<input type=\"checkbox\" id=\"lg_remember\" name=\"lg_remember\">\n\t\t\t\t\t\t<label for=\"lg_remember\">remember</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<button type=\"submit\" class=\"login-button\"  (click)=\"obtener()\"><i class=\"fa fa-chevron-right\"></i></button>\n\t\t\t</div>\n\t\t\t<div class=\"etc-login-form\">\n\t\t\t\t<p>forgot your password? <a href=\"#\">click here</a></p>\n\t\t\t\t<p>new user? <a routerLink=\"/usuarios\" routerLinkActive=\"active\">create new account</a></p>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n\t<!-- end:Main Form -->\n</div>"
+module.exports = "<div class=\"col-md-6 col-md-offset-3\">\n    <h2>Login</h2>\n    <form name=\"form\" ng-submit=\"vm.login()\" role=\"form\">\n        <div class=\"form-group\" ng-class=\"{ 'has-error': form.username.$dirty && form.username.$error.required }\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" name=\"username\" id=\"username\" class=\"form-control\" ng-model=\"vm.username\" required />\n            <span ng-show=\"form.username.$dirty && form.username.$error.required\" class=\"help-block\">Username is required</span>\n        </div>\n        <div class=\"form-group\" ng-class=\"{ 'has-error': form.password.$dirty && form.password.$error.required }\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" name=\"password\" id=\"password\" class=\"form-control\" ng-model=\"vm.password\" required />\n            <span ng-show=\"form.password.$dirty && form.password.$error.required\" class=\"help-block\">Password is required</span>\n        </div>\n        <div class=\"form-actions\">\n            <button type=\"submit\" ng-disabled=\"form.$invalid || vm.dataLoading\" class=\"btn btn-primary\">Login</button>\n            <img ng-if=\"vm.dataLoading\" src=\"data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==\" />\n            <a href=\"#!/register\" class=\"btn btn-link\">Register</a>\n        </div>\n    </form>\n</div>"
 
 /***/ }),
 
@@ -1820,8 +1962,17 @@ var UsuarioLoginComponent = /** @class */ (function () {
     }
     UsuarioLoginComponent.prototype.ngOnInit = function () {
     };
-    UsuarioLoginComponent.prototype.obtener = function () {
-        this.obtenerUsuarioByUserName.emit(this.usuario);
+    UsuarioLoginComponent.prototype.obtener = function (e) {
+        console.log("prueba");
+        console.log(e);
+        e.preventDefault();
+        var user = e.target.elements[0].value;
+        console.log(user);
+        var that = this;
+        this.usuariosService.obtenerUsuarioByUserName(that.usuario).subscribe(function (data) {
+            console.log('data', data);
+            alert('El usuario logeo correctamente');
+        });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
@@ -1932,8 +2083,9 @@ var UsuariosComponent = /** @class */ (function () {
             _this.usuarios = data.user;
         });
     };
-    UsuariosComponent.prototype.obtenerUsuariosByUserName = function (usuario) {
-        this.usuariosService.obtenerUsuariosByUserName(usuario.usuario).subscribe(function (data) {
+    UsuariosComponent.prototype.obtenerUsuarioByUserName = function (usuario) {
+        console.log("usuario padre", usuario);
+        this.usuariosService.obtenerUsuarioByUserName(usuario.usuario).subscribe(function (data) {
             console.log('data', data);
             alert('El usuario logeo correctamente');
         });

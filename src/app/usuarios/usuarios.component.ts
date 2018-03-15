@@ -51,8 +51,9 @@ export class UsuariosComponent implements OnInit {
 			});
 	}
 
-	public obtenerUsuariosByUserName(usuario){
-		this.usuariosService.obtenerUsuariosByUserName(usuario.usuario).subscribe((data)=>{
+	public obtenerUsuarioByUserName(usuario){
+		console.log("usuario padre",usuario);
+		this.usuariosService.obtenerUsuarioByUserName(usuario.usuario).subscribe((data)=>{
 		console.log('data',data);
 		alert('El usuario logeo correctamente');
 			});

@@ -10,7 +10,7 @@ export class UsuariosService {
 		return this.dataService.get('/api/users');
 	}
 
-	public obtenerUsuariosByUserName(usuario:Usuario){
+	public obtenerUsuarioByUserName(usuario:Usuario){
 		return this.dataService.get('/api/users'+usuario.usuario);
 	}
 

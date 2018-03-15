@@ -29,6 +29,8 @@ import { LugaresService } from './services/lugares.service';
 import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
 import { TextContainsValidator } from './shared/text-contains.directive';
+import { FooterComponent } from './footer/footer.component';
+import { SliderComponent } from './slider/slider.component';
 
 
 
@@ -48,7 +50,9 @@ import { TextContainsValidator } from './shared/text-contains.directive';
     TextContainsValidator,
     LugaresComponent,
     LugaresDisplayComponent,
-    LugaresAgregarComponent
+    LugaresAgregarComponent,
+    FooterComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
