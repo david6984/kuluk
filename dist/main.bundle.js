@@ -1657,7 +1657,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/slider/slider.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"container\">\n    <div ng2-carouselamos class=\"slides-wrapper\"\n    [items]=\"items\"\n    [width]=\"900\"\n    [$prev]=\"prev\"\n    [$next]=\"next\"\n    [$item]=\"item\"\n    >  \n    </div>\n    <ng-template #prev>\n        <img src=\"assets/left-arrow.png\" id=\"left\">\n    </ng-template>\n    <ng-template #next>\n        <img src=\"assets/right-arrow.png\" id=\"right\">\n    </ng-template>\n    <ng-template #item let-item let-i=\"index\">\n        <div class=\"items col-12 col-lg-6\">\n            <img src=\"{{item.name}}\" class=\"items\">\n        </div>\n    </ng-template>\n</div>\n"
+module.exports = "<div id=\"container\">\n    <div ng2-carouselamos class=\"slides-wrapper\"\n    [items]=\"items\"\n    [width]=\"900\"\n    [$prev]=\"prev\"\n    [$next]=\"next\"\n    [$item]=\"item\"\n    >  \n    </div>\n    <ng-template #prev>\n        <img src=\"assets/left-arrow.png\" id=\"left\">\n    </ng-template>\n    <ng-template #next>\n        <img src=\"assets/right-arrow.png\" id=\"right\">\n    </ng-template>\n    <ng-template #item let-item let-i=\"index\">\n        <div class=\"items col-12 col-lg-6\">\n            <img src=\"{{item.name}}\" class=\"items col-12 col-lg-6\">\n        </div>\n    </ng-template>\n</div>\n"
 
 /***/ }),
 
