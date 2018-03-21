@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
 
 
+
 export const ROUTES: Routes = [
     { 
         path: '',  

@@ -173,6 +173,7 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__shared_text_contains_directive__ = __webpack_require__("../../../../../src/app/shared/text-contains.directive.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__slider_slider_component__ = __webpack_require__("../../../../../src/app/slider/slider.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ng2_carouselamos__ = __webpack_require__("../../../../ng2-carouselamos/dist/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -201,6 +202,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //servicios creados deben ser agregados en los providers 
+
 
 
 
@@ -238,7 +240,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__app_routes_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */]
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_27_ng2_carouselamos__["a" /* Ng2CarouselamosModule */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_19__services_productos_service__["a" /* ProductosService */],
@@ -1641,7 +1644,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "#container{\n\twidth: 100%;\n\tmargin: 5em auto;\n\tpadding: 0;\n\tbackground: #fff;\n}\n\n.items{\n\twidth: max;\n\theight: 300px;\n\tbackground: ECECEC;\n}\n\n#left, #right{\n\tmargin: 30px;\n}", ""]);
 
 // exports
 
@@ -1654,7 +1657,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/slider/slider.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\n  <!-- Indicators -->\n  <ol class=\"carousel-indicators\">\n    <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\n    <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\n    <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\n  </ol>\n\n  <!-- Wrapper for slides -->\n  <div class=\"carousel-inner\">\n    <div class=\"item active\">\n      <img src=\"http://res.cloudinary.com/kuluk/image/upload/v1520619509/28701033_1670724599673367_2486273112074060735_o.jpg\" alt=\"p1\">\n    </div>\n\n    <div class=\"item\">\n      <img src=\"http://res.cloudinary.com/kuluk/image/upload/v1520619504/21077731_1488414601237702_4096480052720430901_n.jpg\" alt=\"p2\">\n    </div>\n\n    <div class=\"item\">\n      <img src=\"http://res.cloudinary.com/kuluk/image/upload/v1519266841/Kuluk_foto_producto.jpg\" alt=\"p3\">\n    </div>\n  </div>\n\n  <!-- Left and right controls -->\n  <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\n    <span class=\"glyphicon glyphicon-chevron-left\"></span>\n    <span class=\"sr-only\">Previous</span>\n  </a>\n  <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\n    <span class=\"glyphicon glyphicon-chevron-right\"></span>\n    <span class=\"sr-only\">Next</span>\n  </a>\n</div>\n"
+module.exports = "<div id=\"container\">\n    <div ng2-carouselamos class=\"slides-wrapper\"\n    [items]=\"items\"\n    [width]=\"900\"\n    [$prev]=\"prev\"\n    [$next]=\"next\"\n    [$item]=\"item\"\n    >  \n    </div>\n    <ng-template #prev>\n        <img src=\"assets/left-arrow.png\" id=\"left\">\n    </ng-template>\n    <ng-template #next>\n        <img src=\"assets/right-arrow.png\" id=\"right\">\n    </ng-template>\n    <ng-template #item let-item let-i=\"index\">\n        <div class=\"items\">\n            <img src=\"{{item.name}}\" class=\"items\">\n        </div>\n    </ng-template>\n</div>\n"
 
 /***/ }),
 
@@ -1676,6 +1679,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var SliderComponent = /** @class */ (function () {
     function SliderComponent() {
+        this.items = [];
+        this.items = [
+            { name: 'http://res.cloudinary.com/kuluk/image/upload/v1520619509/28701033_1670724599673367_2486273112074060735_o.jpg' },
+            { name: 'http://res.cloudinary.com/kuluk/image/upload/v1520619504/21077731_1488414601237702_4096480052720430901_n.jpg' },
+            { name: 'http://res.cloudinary.com/kuluk/image/upload/v1519266841/Kuluk_foto_producto.jpg' },
+            { name: 'http://res.cloudinary.com/kuluk/image/upload/v1520619509/28701033_1670724599673367_2486273112074060735_o.jpg' },
+            { name: 'http://res.cloudinary.com/kuluk/image/upload/v1520619504/21077731_1488414601237702_4096480052720430901_n.jpg' },
+            { name: 'http://res.cloudinary.com/kuluk/image/upload/v1519266841/Kuluk_foto_producto.jpg' },
+        ];
     }
     SliderComponent.prototype.ngOnInit = function () {
     };

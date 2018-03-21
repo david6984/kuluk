@@ -31,6 +31,8 @@ import { AuthService } from './services/auth.service';
 import { TextContainsValidator } from './shared/text-contains.directive';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
+import {Ng2CarouselamosModule} from 'ng2-carouselamos';
+
 
 
 
@@ -59,7 +61,8 @@ import { SliderComponent } from './slider/slider.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    Ng2CarouselamosModule
   ],
   providers: [
     ProductosService,
