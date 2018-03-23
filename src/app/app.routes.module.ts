@@ -10,7 +10,6 @@ import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
 
 
-
 export const ROUTES: Routes = [
     { 
         path: '',  
@@ -36,7 +35,7 @@ export const ROUTES: Routes = [
         path: 'about',
         component: AboutComponent
     },
-        { 
+    { 
         path: 'slider',  
         component: SliderComponent
     },

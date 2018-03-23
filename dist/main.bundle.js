@@ -436,7 +436,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-slider></app-slider>\n<div>\n\t<div class=\"page-title row text-center\">\n\t\t<h2 class=\"col-12 col-lg-8 \">Kuluk le da la bienvenida</h2>\n\t</div>\n</div>"
+module.exports = "<app-slider></app-slider>\n<!-- <app-carousel></app-carousel> -->"
 
 /***/ }),
 
@@ -1644,7 +1644,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#container{\n\twidth: 100%;\n\tmargin: 5em auto;\n\tpadding: 0;\n\tbackground: #fff;\n}\n\n.items{\n\ttext-align: center;\n\theight: 300px;\n\tbackground: ECECEC;\n}\n\n#left, #right{\n\tmargin: 30px;\n}", ""]);
+exports.push([module.i, "#container{\n\twidth: 100%;\n\tmargin: 5em auto;\n\tpadding: 0;\n\tbackground: #fff;\n}\n\n.items{\n\ttext-align: center;\n\tmax-height: 500px;\n\tbackground: ECECEC;\n}\n\n#left, #right{\n\tmargin: 30px;\n}\n\n.items-img{\n\tmax-width: 100%;\n\tmax-height: 300px;\n\tmargin: 0 auto;\n}", ""]);
 
 // exports
 
@@ -1657,7 +1657,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/slider/slider.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"container\">\n    <div ng2-carouselamos class=\"slides-wrapper\"\n    [items]=\"items\"\n    [width]=\"900\"\n    [$prev]=\"prev\"\n    [$next]=\"next\"\n    [$item]=\"item\"\n    >  \n    </div>\n    <ng-template #prev>\n        <img src=\"assets/left-arrow.png\" id=\"left\">\n    </ng-template>\n    <ng-template #next>\n        <img src=\"assets/right-arrow.png\" id=\"right\">\n    </ng-template>\n    <ng-template #item let-item let-i=\"index\">\n        <div class=\"items col-12 col-lg-12\">\n            <img src=\"{{item.name}}\" class=\"items\">\n        </div>\n    </ng-template>\n</div>\n"
+module.exports = "<div id=\"container\">\n    <div ng2-carouselamos class=\"slides-wrapper\"\n    [items]=\"items\"\n    [width]=\"900\"\n    [$prev]=\"prev\"\n    [$next]=\"next\"\n    [$item]=\"item\"\n    >  \n    </div>\n    <ng-template #prev>\n        <img src=\"assets/left-arrow.png\" id=\"left\">\n    </ng-template>\n    <ng-template #next>\n        <img src=\"assets/right-arrow.png\" id=\"right\">\n    </ng-template>\n    <ng-template #item let-item let-i=\"index\">\n        <div class=\"items col-12 col-lg-12\">\n            <img src=\"{{item.name}}\"  class=\"items-img\" />\n        </div>\n    </ng-template>\n</div>\n"
 
 /***/ }),
 

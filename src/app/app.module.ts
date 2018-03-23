@@ -35,7 +35,6 @@ import {Ng2CarouselamosModule} from 'ng2-carouselamos';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +54,7 @@ import {Ng2CarouselamosModule} from 'ng2-carouselamos';
     LugaresAgregarComponent,
     FooterComponent,
     SliderComponent
+
   ],
   imports: [
     BrowserModule,

@@ -7,10 +7,15 @@
 
 .items{
 	text-align: center;
-	height: 300px;
+	max-height: 500px;
 	background: ECECEC;
 }
 
 #left, #right{
 	margin: 30px;
+}
+.items-img{
+	max-width: 100%;
+	max-height: 300px;
+	margin: 0 auto;
 }
