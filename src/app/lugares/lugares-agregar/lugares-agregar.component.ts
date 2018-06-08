@@ -15,7 +15,7 @@ export class LugaresAgregarComponent implements OnInit,OnChanges {
 	@Input() canAdd : boolean = true;
 	@Input('selectedPlace') lugar : Lugar = new Lugar();
 	submitted = false;
-	requiredText : string = 'lugar';
+	requiredText : string = '';
 	isEditing = false;
 
 	onSubmit(lugarForm) {
