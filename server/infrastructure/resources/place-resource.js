@@ -24,8 +24,11 @@ function getPlaces() {
 function deletePlace(id) {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
-    var Place = await(dbase.collection("places").deleteOne({_id: new ObjectId(id)}));
-    await(dbase.collection("places")).drop();
+    try{
+        var Place = await(dbase.collection("places").deleteOne({_id: new ObjectId(id)}));
+    }catch(e){
+        console.log(e);
+    }
     db.close();
     return Place;
 }
