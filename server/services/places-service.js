@@ -20,7 +20,7 @@ function getPlace(id) {
 
 function updatePlace(place) {
     var result;
-    console.log('update place by ' + product.id);
+    console.log('update place by ' + place.id);
     try {
         console.log('test');
         console.log(PlacesRsrc);
