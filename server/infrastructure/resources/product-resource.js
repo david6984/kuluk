@@ -24,7 +24,12 @@ function getProduct(id) {
 function deleteProduct(id) {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
-    var Product = await(dbase.collection("products").deleteOne({_id: new ObjectId(id)}));
+    try{
+        var Product = await(dbase.collection("products").deleteOne({_id: new ObjectId(id)}));    
+    }catch(e){
+        console.log(e);
+    }
+    
     db.close();
     return Product;
 }

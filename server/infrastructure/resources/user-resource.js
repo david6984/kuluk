@@ -33,7 +33,12 @@ function getUserByUserName(username) {
 function deleteUser(id) {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
-    var user = await(dbase.collection("users").deleteOne({_id: new ObjectId(id)}));
+    try{
+        var user = await(dbase.collection("users").deleteOne({_id: new ObjectId(id)}));    
+    }catch(e){
+        console.log(e);
+    }
+    
     db.close();
     return user;
 }
