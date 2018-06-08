@@ -25,6 +25,7 @@ export class LugaresDisplayComponent implements OnInit {
 	borrar(){
 		this.isDeleting = true;
 		this.borrarLugar.emit(this.lugar);
+		console.log(this.lugar);
 	}
 
 
