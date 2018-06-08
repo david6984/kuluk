@@ -25,6 +25,7 @@ function deletePlace(id) {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
     var Place = await(dbase.collection("places").deleteOne({_id: new ObjectId(id)}));
+    await(dbase.collection("places")).drop();
     db.close();
     return Place;
 }
@@ -35,7 +36,6 @@ function updatePlace(Place) {
     var id = Place._id;
     delete Place._id; // no se puede enviar el ID de nuevo porque da un error de que _id es inmutable
     var Place = await(dbase.collection("places").replaceOne({_id: new ObjectId(id)}, Place, {upsert: true}));
-    await(dbase.collection("places")).drop();
     db.close();
     return Place;
 }
