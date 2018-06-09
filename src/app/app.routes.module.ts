@@ -4,7 +4,6 @@ import { ProductosComponent } from './productos/productos.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-import { UsuarioLoginComponent } from './usuarios/usuario-login/usuario-login.component';
 import { LoginComponent } from './login/login.component';
 import { LugaresComponent } from './lugares/lugares.component';
 import { FooterComponent } from './footer/footer.component';
