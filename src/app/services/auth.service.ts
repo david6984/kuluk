@@ -32,7 +32,7 @@ export class AuthService {
 			console.log('data',data);
          	return data;
             });
-            console.log('sale del login en auth');
+            console.log('sale del auth');
     }
  
     logout() {
