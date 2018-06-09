@@ -22,9 +22,10 @@ function getUser(id) {
 }
 
 function getUserByUserName(username) {
+    console.log('entro a bd buscar user');
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
-    var user = await(dbase.collection("users").findOne({usuario: new ObjectId(usuario)}));
+    var user = await(dbase.collection("users").findOne({_usuario: new ObjectId(usuario)}));
     db.close();
     return user;
 }

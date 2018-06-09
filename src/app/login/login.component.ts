@@ -22,11 +22,13 @@ export class LoginComponent implements OnInit {
 
     login() {
         this.loading = true;
+        console.log('entra al login del component')
         this.authservice.login(this.usuario).subscribe(data=>{
         	console.log('Entro al subscribe');
         },Error=>{
         	this.loading=false;
         });
         console.log(this.usuario);
+        console.log('termina login en component');
     }
 }
