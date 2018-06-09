@@ -67,7 +67,6 @@ function addUser(user) {
 module.exports = {
     getUsers: async(getUsers),
     getUserByUserName: async(getUserByUserName),
-    getUserByUserNamePassw: async(getUserByUserNamePassw),
     getUser: async(getUser),
     deleteUser: async(deleteUser),
     updateUser: async(updateUser),

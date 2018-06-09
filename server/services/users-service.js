@@ -73,7 +73,6 @@ function postUser(user) {
 
 module.exports.getUser = async(getUser);
 module.exports.getUserByUserName = async(getUserByUserName);
-module.exports.getUserByUserNamePassw = async(getUserByUserNamePassw);
 module.exports.updateUser = async(updateUser);
 module.exports.deleteUser = async(deleteUser);
 module.exports.postUser = async(postUser);
