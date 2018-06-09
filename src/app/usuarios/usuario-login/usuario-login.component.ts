@@ -9,8 +9,9 @@ import { UsuariosService } from '../../services/usuarios.service';
   styleUrls: ['./usuario-login.component.css']
 })
 export class UsuarioLoginComponent implements OnInit {
-	@Input('selectedUsuario') usuario: Usuario = new Usuario();
 	@Output() obtenerUsuarioByUserName = new EventEmitter<Usuario>();
+  @Input() canAdd : boolean = true;
+  @Input('selectedUsuario') usuario: Usuario = new Usuario();
   public isloading:boolean =false;
 
 
@@ -21,6 +22,6 @@ export class UsuarioLoginComponent implements OnInit {
 
   newUsuario(){
     this.isloading=false;
-    console.log(this.isloading);
+    console.log('entro al crear nuevo usuaro');
   }
 }
