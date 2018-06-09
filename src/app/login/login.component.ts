@@ -23,15 +23,6 @@ export class LoginComponent implements OnInit {
     login() {
         this.loading = true;
         this.loading = true;
-        (Usuario)
-            .subscribe(
-                data => {
-                    //this.router.navigate([this.returnUrl]);
-                },
-                error => {
-                    //this.alertService.error(error);
-                    this.loading = false;
-                });
 
     }
 }
