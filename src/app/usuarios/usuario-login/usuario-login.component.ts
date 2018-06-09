@@ -19,7 +19,7 @@ export class UsuarioLoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  Usuario(){
+  newUsuario(){
     this.isloading=false;
     console.log(this.isloading);
   }
