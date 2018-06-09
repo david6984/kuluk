@@ -28,10 +28,10 @@ export class AuthService {
 
 	   public login(usuario: Usuario) {
 	   		console.log('entro al login en auth');
-	    	/*return this.dataService.get('/api/users'+usuario.usuario).map((data)=>{
+	    	return this.dataService.get('/api/users'+usuario.usuario).map((data)=>{
 			console.log('data',data);
          	return data;
-            });*/
+            });
             console.log('sale del login en auth');
     }
  
