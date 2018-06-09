@@ -13,7 +13,7 @@ export class ProductoAgregarComponent implements OnInit, OnChanges {
 	@Input() canAdd : boolean = true;
 	@Input('selectedProduct') producto : Producto = new Producto();
 	submitted = false;
-	requiredText : string = 'producto';
+	requiredText : string = '';
 	isEditing = false;
 
 	onSubmit(productoForm) {
