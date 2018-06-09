@@ -59,6 +59,14 @@ export class UsuariosComponent implements OnInit {
 			});
 	}
 
+		public obtenerUsuarioByUserNamePassw(usuario){
+		console.log("usuario padre",usuario);
+		this.usuariosService.obtenerUsuarioByUserName(usuario.usuario).subscribe((data)=>{
+		console.log('data',data);
+		alert('El usuario logeo correctamente');
+			});
+	}
+
 	public agregarUsuario(usuario:any){
 		this.loading = true;
 		delete usuario.usuario._id;

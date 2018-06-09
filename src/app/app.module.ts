@@ -17,7 +17,6 @@ import { ProductoAgregarComponent } from './productos/producto-agregar/producto-
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { UsuarioDisplayComponent } from './usuarios/usuario-display/usuario-display.component';
 import { UsuarioAgregarComponent } from './usuarios/usuario-agregar/usuario-agregar.component';
-import { UsuarioLoginComponent } from './usuarios/usuario-login/usuario-login.component';
 import { LugaresComponent } from './lugares/lugares.component';
 import { LugaresDisplayComponent } from './lugares/lugares-display/lugares-display.component';
 import { LugaresAgregarComponent } from './lugares/lugares-agregar/lugares-agregar.component';
@@ -32,6 +31,7 @@ import { TextContainsValidator } from './shared/text-contains.directive';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
 import {Ng2CarouselamosModule} from 'ng2-carouselamos';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -47,13 +47,13 @@ import {Ng2CarouselamosModule} from 'ng2-carouselamos';
     UsuariosComponent,
     UsuarioDisplayComponent,
     UsuarioAgregarComponent,
-    UsuarioLoginComponent,
     TextContainsValidator,
     LugaresComponent,
     LugaresDisplayComponent,
     LugaresAgregarComponent,
     FooterComponent,
-    SliderComponent
+    SliderComponent,
+    LoginComponent
 
   ],
   imports: [
