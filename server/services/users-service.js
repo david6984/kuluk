@@ -35,22 +35,6 @@ function getUserByUserName(username) {
     return { user: result };
 }
 
-function getUserByUserNamePassw(username,passw) {
-    var result;
-    console.log('get User by ' + username + ' '+ passw);
-    try {
-        if(username){
-            result = await (UsersRsrc.getUserByUserNamePassw(username,passw));
-        } else {
-            result = await (UsersRsrc.getUsers());
-        }
-        console.log('result length ' + result.length);    
-    } catch(error) {
-        throw error;
-    }
-    return { user: result };
-}
-
 function updateUser(user) {
     var result;
     console.log('update User by ' + user.id);

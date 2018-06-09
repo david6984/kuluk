@@ -2,7 +2,6 @@ import { Component, OnInit ,Input, Output, EventEmitter} from '@angular/core';
 import { Usuario } from '../models/usuario';
 import { UsuariosService } from '../services/usuarios.service';
 import { AuthService } from '../services/auth.service';
-import { RouterLinkActive, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
