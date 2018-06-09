@@ -2,6 +2,7 @@ import { Component, OnInit ,Input, Output, EventEmitter} from '@angular/core';
 import { Usuario } from '../models/usuario';
 import { UsuariosService } from '../services/usuarios.service';
 import { AuthService } from '../services/auth.service';
+import { RouterLinkActive, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -21,9 +22,11 @@ export class LoginComponent implements OnInit {
 
     login() {
         this.loading = true;
-        this.loading = true;
-        this.authservice.login(this.usuario);
+        this.authservice.login(this.usuario).subscribe(data=>{
+        	console.log('Entro al subscribe');
+        },Error=>{
+        	this.loading=false;
+        });
         console.log(this.usuario);
-
     }
 }
