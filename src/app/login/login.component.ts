@@ -23,20 +23,19 @@ export class LoginComponent implements OnInit {
 
     login() {
         this.loading = true;
-        console.log('entra al login del component')
         this.usuariosService.obtenerUsuarios().subscribe((data)=>{
         	this.usuarios=data.user;
         	for(let i=0;i<this.usuarios.length;i++){
-        		console.log('entro al for');
         		this.userprueba=this.usuarios[i];
         		if(this.userprueba.usuario===this.usuario.usuario&&this.userprueba.passw===this.usuario.passw){
         			console.log('el usuario logeo correctamente');
+        		}else{
+        			console.log('usuario invalido');
         		}
         	}
         },(error)=>{
+        	this.loading=false;
         	console.log('error',error);
         });
-        this.loading=false;
-        console.log('termina login en component');
     }
 }
