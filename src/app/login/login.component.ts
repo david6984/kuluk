@@ -26,8 +26,7 @@ export class LoginComponent implements OnInit {
         console.log('entra al login del component')
         this.usuariosService.obtenerUsuarios().subscribe((data)=>{
         	this.usuarios=data.user;
-        	this.lstuser=data.user;
-        	for(let i=this.usuarios.length;i=0;i++){
+        	for(let i=0;i<this.usuarios.length;i++){
         		console.log('entro al for');
         		this.userprueba=this.usuarios[i];
         		if(this.userprueba.usuario===this.usuario.usuario&&this.userprueba.passw===this.usuario.passw){
@@ -37,7 +36,6 @@ export class LoginComponent implements OnInit {
         },(error)=>{
         	console.log('error',error);
         });
-        console.log('lst',this.lstuser.length);
         this.loading=false;
         console.log('termina login en component');
     }
