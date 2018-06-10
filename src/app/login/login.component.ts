@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 	public usuarios : Usuario[];
   @Input() canAdd : boolean = true;
   @Input('selectedUsuario') usuario: Usuario = new Usuario();
+  userprueba:Usuario=new Usuario();
   public loading:boolean =false;
 
   constructor(private usuariosService:UsuariosService) { }
