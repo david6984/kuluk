@@ -25,11 +25,10 @@ export class LoginComponent implements OnInit {
         console.log('entra al login del component')
         this.usuariosService.obtenerUsuarios().subscribe((data)=>{
         	this.usuarios=data.user;
-        	console.log('numero de usuarios en el arreglo',this.usuarios.length);
-        	console.log(data.user);
         },(error)=>{
         	console.log('error',error);
         });
+        console.log(this.usuarios.length);
         this.loading=false;
         console.log('termina login en component');
     }
