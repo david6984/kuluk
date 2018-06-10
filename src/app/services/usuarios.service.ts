@@ -10,10 +10,6 @@ export class UsuariosService {
 		return this.dataService.get('/api/users');
 	}
 
-	public obtenerUsuarioByUserName(usuario:Usuario){
-		return this.dataService.get('/api/users'+usuario.usuario);
-	}
-
 	public agregarUsuario(usuario:Usuario){
 		console.log('usuario');
 		return this.dataService.post('/api/users',{'user':usuario});

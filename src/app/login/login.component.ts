@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     login() {
         this.loading = true;
         console.log('entra al login del component')
-        this.usuariosService.obtenerUsuarioByUserName(this.usuario).subscribe((data)=>{
+        this.usuariosService.obtenerUsuarios().subscribe((data)=>{
         	this.usuarios=data.user;
         	console.log(data.user);
         },(error)=>{
