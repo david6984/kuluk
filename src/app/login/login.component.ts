@@ -10,7 +10,6 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 	public usuarios : Usuario[];
-	public lstuser: any[];
   @Input() canAdd : boolean = true;
   @Input('selectedUsuario') usuario: Usuario = new Usuario();
   userprueba:Usuario=new Usuario();
@@ -29,6 +28,7 @@ export class LoginComponent implements OnInit {
         		this.userprueba=this.usuarios[i];
         		if(this.userprueba.usuario===this.usuario.usuario&&this.userprueba.passw===this.usuario.passw){
         			console.log('el usuario logeo correctamente');
+        			this.usuariosService.usuarioLogin();
         		}else{
         			console.log('usuario invalido');
         			this.loading=false;
