@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { RequestOptions } from '@angular/http';
 import { DataService } from './data.service';
-import { Usuario } from '../models/usuario';
 
 @Injectable()
 export class AuthService {
@@ -25,18 +24,5 @@ export class AuthService {
             		console.log('error code',err.status)
             	});
 	}
-
-	   public login(usuario: Usuario) {
-	   		console.log('entro al login en auth');
-	    	return this.dataService.get('/api/users'+usuario.usuario).subscribe((data)=>{
-			console.log('data',data);
-         	return data;
-            });
-    }
- 
-    logout() {
-        // remove user from local storage to log user out
-        localStorage.removeItem('currentUser');
-    }
 
 }

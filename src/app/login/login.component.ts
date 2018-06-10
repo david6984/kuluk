@@ -9,12 +9,12 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  @Output() obtenerUsuarioByUserName = new EventEmitter<Usuario>();
+	public usuarios : Usuario[];
   @Input() canAdd : boolean = true;
   @Input('selectedUsuario') usuario: Usuario = new Usuario();
   public loading:boolean =false;
 
-  constructor(private authservice:AuthService) { }
+  constructor(private usuariosService:UsuariosService) { }
 
  ngOnInit() {
   }
@@ -22,12 +22,15 @@ export class LoginComponent implements OnInit {
     login() {
         this.loading = true;
         console.log('entra al login del component')
-        /*this.authservice.login(this.usuario).subscribe(data=>{
-        	console.log('Entro al subscribe');
-        },Error=>{
-        	this.loading=false;
-        });*/
+        this.usuariosService.obtenerUsuarioByUserName(this.usuario).subscribe((data)=>{
+        	this.usuarios=data.user;
+        	console.log(data.user);
+        },(error)=>{
+        	console.log('error',error);
+        });
+        this.loading=false;
         console.log(this.usuario);
+        console.log(this.usuarios);
         console.log('termina login en component');
     }
 }
