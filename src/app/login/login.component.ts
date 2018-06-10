@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
         			console.log('el usuario logeo correctamente');
         		}else{
         			console.log('usuario invalido');
+        			this.loading=false;
         		}
         	}
         },(error)=>{
