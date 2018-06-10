@@ -10,6 +10,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 	public usuarios : Usuario[];
+	public lstuser: any[];
   @Input() canAdd : boolean = true;
   @Input('selectedUsuario') usuario: Usuario = new Usuario();
   userprueba:Usuario=new Usuario();
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit {
         this.loading = true;
         console.log('entra al login del component')
         this.usuariosService.obtenerUsuarios().subscribe((data)=>{
-        	this.usuarios==data.user;
+        	this.usuarios=data.user;
+        	this.lstuser=data.user;
         	for(let i=this.usuarios.length;i=0;i++){
         		console.log('entro al for');
         		this.userprueba=this.usuarios[i];
@@ -35,6 +37,7 @@ export class LoginComponent implements OnInit {
         },(error)=>{
         	console.log('error',error);
         });
+        console.log('lst',this.lstuser.length);
         this.loading=false;
         console.log('termina login en component');
     }
