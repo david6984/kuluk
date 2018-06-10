@@ -29,9 +29,8 @@ export class LoginComponent implements OnInit {
         	console.log('error',error);
         });
         this.loading=false;
-        for (var i = this.usuarios.length - 1; i >= 0; i--) {
-        console.log(this.usuarios.indexOf[i]);
-        }
+        console.log('numero de usuarios en el arreglo',this.usuarios.length);
+
         console.log('termina login en component');
     }
 }
