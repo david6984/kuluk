@@ -14,6 +14,7 @@ export class AuthService {
 	}
 
 	loadToken(usuario){
+		console.log('desde el auth inicio',this.islogged);
 		this.dataService
 			.get('/token').subscribe(
 				(result) => {
@@ -24,6 +25,7 @@ export class AuthService {
 	            		this.loggeduser=usuario;
 	            		this.islogged=true;
 	            	}
+	            	console.log('desde el auth final',this.islogged);
 	            },
             	(err) => {
             		console.log('error code',err.status)
