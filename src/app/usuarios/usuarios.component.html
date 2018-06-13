@@ -2,9 +2,9 @@
 	<div class="page-title row">
 		<h2 class="col-5">Usuarios</h2>
 	</div>
-	<div class="products row">
+	<div class="products row" *ngif="islogged">
 		<ul class="col-6">
-			<li *ngif="islogged" *ngFor="let usuario of usuarios" class="row usuario-display">
+			<li *ngFor="let usuario of usuarios" class="row usuario-display">
 				<app-usuario-display [usuario]='usuario' 
 				(borrarUsuario)="borrarUsuario($event)" 
 				(editarUsuario)="editarUsuario($event)" class="col-12 card">
@@ -12,7 +12,7 @@
 			</li>
 		</ul>	
 		<ul class="col-4 offset-1">
-			<app-usuario-agregar  *ngif="islogged" (agregarUsuario)="agregarUsuario($event)" (editarUsuario)="editarUsuarioSave($event)" [selectedUsuario]="selectedUsuario" [canAdd]='!loading'></app-usuario-agregar>
+			<app-usuario-agregar   (agregarUsuario)="agregarUsuario($event)" (editarUsuario)="editarUsuarioSave($event)" [selectedUsuario]="selectedUsuario" [canAdd]='!loading'></app-usuario-agregar>
 			<div *ngIf="loading">
 				loading...
 			</div>
