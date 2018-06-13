@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { LugaresComponent } from './lugares/lugares.component';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
+import { NavComponent } from './nav/nav.component';
 
 
 export const ROUTES: Routes = [
@@ -38,6 +39,10 @@ export const ROUTES: Routes = [
     { 
         path: 'slider',  
         component: SliderComponent
+    },
+    { 
+        path: 'nav',  
+        component: NavComponent
     },
     { 
         path: 'footer',  
