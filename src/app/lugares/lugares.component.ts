@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Lugar } from '../models/lugar';
 import { LugaresService } from '../services/lugares.service';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -13,11 +14,20 @@ export class LugaresComponent implements OnInit {
  	public lugares : Lugar[];
 	public selectedPlace : Lugar = new Lugar;
 	public loading : boolean = false;
-	constructor(private lugaresService: LugaresService) { }
+	public islogged : boolean = false;
+	constructor(private lugaresService: LugaresService, private authService:AuthService) { }
 
 	ngOnInit() {
 		this.obtenerLugares();
+		this.refrescar();
 	}
+
+	refrescar(){
+  		this.islogged=false;
+  		if(this.authService.islogged==true){
+  		this.islogged=true;
+  		}
+  	}
 
 	public editarLugar(lugar){
 		console.log('edit',lugar);

@@ -9,7 +9,7 @@
 			</li>
 		</ul>	
 		<ul class="col-12 col-lg-8">
-			<app-lugares-agregar (agregarLugar)="agregarLugar($event)" (editarLugar)="editarLugarSave($event)" [selectedPlace]="selectedPlace" [canAdd]='!loading'></app-lugares-agregar>
+			<app-lugares-agregar *ngIf="islogged" (agregarLugar)="agregarLugar($event)" (editarLugar)="editarLugarSave($event)" [selectedPlace]="selectedPlace" [canAdd]='!loading'></app-lugares-agregar>
 			<div *ngIf="loading">
 				loading...
 			</div>
