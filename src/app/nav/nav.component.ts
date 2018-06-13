@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { RouterLinkActive, RouterLink } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,8 +8,10 @@ import { RouterLinkActive, RouterLink } from '@angular/router';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+	public islogged:boolean;
 
-  constructor() { }
+  constructor(private authService:AuthService) {
+  this.islogged=this.authService.islogged; }
 
   ngOnInit() {
   }
