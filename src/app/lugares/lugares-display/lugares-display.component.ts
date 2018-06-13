@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Lugar } from '../../models/lugar';
 import { LugaresService } from '../../services/lugares.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-lugares-display',
@@ -15,12 +16,20 @@ export class LugaresDisplayComponent implements OnInit {
 	@Output() isEditingOut= new EventEmitter();
 	public isDeleting = false;
 	public isEditing = false;
+	public islogged = false;
 
-	constructor(private lugaresService:LugaresService) { }
+	constructor(private lugaresService:LugaresService, private authService:AuthService) { }
 
 	ngOnInit() {
-		
+		this.refrescar();
 	}
+
+		refrescar(){
+  		this.islogged=false;
+  		if(this.authService.islogged==true){
+  		this.islogged=true;
+  		}
+  	}
 
 	borrar(){
 		this.isDeleting = true;

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Producto } from '../../models/producto';
 import { ProductosService } from '../../services/productos.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-producto-display',
@@ -14,12 +15,21 @@ export class ProductoDisplayComponent implements OnInit {
 	@Output() isEditingOut= new EventEmitter();
 	public isDeleting = false;
 	public isEditing = false;
+	public islogged=false;
 
-	constructor(private productosService:ProductosService) { }
+
+	constructor(private productosService:ProductosService, private authService:AuthService) { }
 
 	ngOnInit() {
-		
+		this.refrescar();
 	}
+
+	refrescar(){
+  		this.islogged=false;
+  		if(this.authService.islogged==true){
+  		this.islogged=true;
+  		}
+  	}
 
 	borrar(){
 		this.isDeleting = true;
