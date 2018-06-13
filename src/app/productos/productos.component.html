@@ -9,7 +9,7 @@
 			</li>
 		</ul>	
 		<ul class="col-12 col-lg-8">
-			<app-producto-agregar (agregarProducto)="agregarProducto($event)" (editarProducto)="editarProductoSave($event)" [selectedProduct]="selectedProduct" [canAdd]='!loading'></app-producto-agregar>
+			<app-producto-agregar *ngIf="islogged" (agregarProducto)="agregarProducto($event)" (editarProducto)="editarProductoSave($event)" [selectedProduct]="selectedProduct" [canAdd]='!loading'></app-producto-agregar>
 			<div *ngIf="loading">
 				loading...
 			</div>
