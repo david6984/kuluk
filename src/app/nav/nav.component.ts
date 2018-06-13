@@ -15,8 +15,8 @@ export class NavComponent implements OnInit {
     this.router.routeReuseStrategy.shouldReuseRoute=function(){
       return false;
     }
-    this.router.events.subscribe((event)=>{
-      if(event instanceof Navigator){
+    this.router.events.subscribe((evnt)=>{
+      if(evnt instanceof Navigator){
         this.router.navigated=false;
         this.router.navigate([this.router.url]);
       }

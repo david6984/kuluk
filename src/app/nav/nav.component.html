@@ -17,8 +17,8 @@
       <li class="nav-item">
         <a class="nav-link"  routerLink="/productos" routerLinkActive="active">Productos</a>
       </li>
-      <li class="nav-item"  *ngIf="islogged">
-        <a class="nav-link"  routerLink="/usuarios" routerLinkActive="active">Usuarios</a>
+      <li class="nav-item"  >
+        <a class="nav-link"  routerLink="/usuarios" *ngIf="islogged" routerLinkActive="active">Usuarios</a>
       </li>
       <li class="nav-item">
         <a class="nav-link"  routerLink="/lugares" routerLinkActive="active">Encuentranos</a>
