@@ -20,11 +20,9 @@ export class NavComponent implements OnInit {
 
   refrescar(){
   	this.islogged=false;
-  	console.log('entro al nav oninit');
   	if(this.authService.islogged==true){
   		this.islogged=true;
   	}
-  	console.log('is logged:',this.islogged);
   }
 
 }

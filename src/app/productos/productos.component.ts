@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../models/producto';
 import { ProductosService } from '../services/productos.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
 	selector: 'app-productos',
@@ -11,10 +12,13 @@ export class ProductosComponent implements OnInit {
 	public productos : Producto[];
 	public selectedProduct : Producto = new Producto;
 	public loading : boolean = false;
-	constructor(private productosService: ProductosService) { }
+	public islogged : boolean = false;
+
+	constructor(private productosService: ProductosService, private authService:AuthService) { }
 
 	ngOnInit() {
 		this.obtenerProductos();
+		this.refrescar();
 	}
 
 	public editarProducto(producto){
@@ -69,4 +73,11 @@ export class ProductosComponent implements OnInit {
 				console.log('error',error);
 			});
 	}
+
+	  refrescar(){
+  		this.islogged=false;
+  		if(this.authService.islogged==true){
+  			this.islogged=true;
+  		}
+  	}
 }
