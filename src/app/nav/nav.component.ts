@@ -8,9 +8,10 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-	public islogged:boolean;
+	public islogged:boolean=false;
 
   constructor(private authService:AuthService) {
+  	this.ngOnInit();
    }
 
   ngOnInit() {
