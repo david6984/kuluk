@@ -15,6 +15,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
   	this.islogged=false;
+  	console.log('entro al nav oninit');
   	if(this.authService.islogged==true){
   		this.islogged=true;
   	}
