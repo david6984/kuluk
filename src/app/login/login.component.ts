@@ -2,7 +2,7 @@ import { Component, OnInit ,Input, Output, EventEmitter} from '@angular/core';
 import { Usuario } from '../models/usuario';
 import { UsuariosService } from '../services/usuarios.service';
 import { AuthService } from '../services/auth.service';
-import { RouterLinkActive, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   userprueba:Usuario=new Usuario();
   public loading:boolean =false;
 
-  constructor(private usuariosService:UsuariosService, private authService:AuthService, private router:RouterLink) { }
+  constructor(private usuariosService:UsuariosService, private authService:AuthService, private router:Router) { }
 
  ngOnInit() {
   }
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
         			this.usuariosService.usuarioLogin();
               this.authService.loadToken(this.userprueba);
               this.authService.islogged=true;
-              this.router.routerLink="/usuarios";
+              this.router.navigate(['/nav']);
 
         		}else{
         			console.log('usuario invalido');
