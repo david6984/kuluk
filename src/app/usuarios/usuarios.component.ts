@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../models/usuario';
 import { UsuariosService } from '../services/usuarios.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
 	selector: 'app-usuarios',
@@ -11,11 +12,13 @@ export class UsuariosComponent implements OnInit {
 	public usuarios : Usuario[];
 	public selectedUsuario : Usuario = new Usuario;
 	public loading : boolean = false;
+	public islogged : boolean = false;
 
-	constructor(private usuariosService:UsuariosService) { }
+	constructor(private usuariosService:UsuariosService, private authService:AuthService) { }
 
 	ngOnInit() {
 		this.obtenerUsuarios();
+		this.refrescar();
 	}
 
 	public editarUsuario(usuario){
@@ -68,5 +71,14 @@ export class UsuariosComponent implements OnInit {
 				alert('El usuario seleccionado ya existe, por favor seleccione otro');
 			});
 	}
+
+	refrescar(){
+  	this.islogged=false;
+  	console.log('entro al usuario oninit');
+  	if(this.authService.islogged==true){
+  		this.islogged=true;
+  	}
+  	console.log('usuario is logged:',this.islogged);
+  }
 
 }
