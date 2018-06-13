@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
     login() {
+        console.log('login loged antes',this.authService.islogged)
         this.loading = true;
         this.usuariosService.obtenerUsuarios().subscribe((data)=>{
         	this.usuarios=data.user;
@@ -36,6 +37,7 @@ export class LoginComponent implements OnInit {
         			console.log('usuario invalido');
         			this.loading=false;
         		}
+            console.log('login loged despues',this.authService.islogged)
         	}
         },(error)=>{
         	this.loading=false;
