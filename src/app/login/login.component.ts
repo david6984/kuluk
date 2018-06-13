@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   userprueba:Usuario=new Usuario();
   public loading:boolean =false;
 
-  constructor(private usuariosService:UsuariosService) { }
+  constructor(private usuariosService:UsuariosService, private authService:AuthService) { }
 
  ngOnInit() {
   }
@@ -29,6 +29,9 @@ export class LoginComponent implements OnInit {
         		if(this.userprueba.usuario===this.usuario.usuario&&this.userprueba.passw===this.usuario.passw){
         			console.log('el usuario logeo correctamente');
         			this.usuariosService.usuarioLogin();
+              this.authService.loadToken(this.userprueba);
+              this.authService.islogged=true;
+
         		}else{
         			console.log('usuario invalido');
         			this.loading=false;
