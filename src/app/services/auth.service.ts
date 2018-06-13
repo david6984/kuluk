@@ -34,4 +34,9 @@ export class AuthService {
             	});
 	}
 
+	logout(){
+		this.islogged=false;
+		this.loggeduser=null;
+	}
+
 }
