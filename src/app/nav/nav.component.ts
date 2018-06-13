@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input, OnChanges } from '@angular/core';
-import { RouterLinkActive, RouterLink,Router} from '@angular/router';
+import { RouterLinkActive, RouterLink} from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { AuthService } from '../services/auth.service';
 export class NavComponent implements OnInit {
 	public islogged:boolean=false;
 
-  constructor(private authService:AuthService,private router:Router) {
+  constructor(private authService:AuthService) {
   	this.ngOnInit();
 
    }
@@ -22,6 +22,7 @@ export class NavComponent implements OnInit {
   refrescar(){
   	this.islogged=false;
   	if(this.authService.islogged==true){
+      console.log('if del nav');
   		this.islogged=true;
   	}
   }
