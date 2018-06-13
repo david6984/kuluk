@@ -18,6 +18,7 @@ export class NavComponent implements OnInit {
     this.router.events.subscribe((event)=>{
       if(event instanceof Navigator){
         this.router.navigated=false;
+        this.router.navigate(['/nav']);
       }
     });
    }
