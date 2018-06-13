@@ -21,8 +21,10 @@ export class AuthService {
 	            	console.log('response here',result);
 	            	this.requestOptions.headers.set('X-CSRF-TOKEN', result.csrfToken as string);
 	            	this.requestOptions.headers.set('Content-type', 'application/json');
-	            	if(usuario!=""){
-	            		this.loggeduser=usuario;
+	            	if(usuario!=""||this.loggeduser!=null){
+	            		if(usuario!=""){
+	            			this.loggeduser=usuario;	
+	            		}	            		
 	            		this.islogged=true;
 	            	}
 	            	console.log('desde el auth final',this.islogged);
