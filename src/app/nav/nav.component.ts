@@ -12,15 +12,7 @@ export class NavComponent implements OnInit {
 
   constructor(private authService:AuthService,private router:Router) {
   	this.ngOnInit();
-    this.router.routeReuseStrategy.shouldReuseRoute=function(){
-      return false;
-    }
-    this.router.events.subscribe((evnt)=>{
-      if(evnt instanceof Navigator){
-        this.router.navigated=false;
-        this.router.navigate([this.router.url]);
-      }
-    });
+
    }
 
   ngOnInit() {
