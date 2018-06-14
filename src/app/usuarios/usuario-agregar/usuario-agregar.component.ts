@@ -29,8 +29,8 @@ export class UsuarioAgregarComponent implements OnInit {
 			usuario: new FormControl('', [Validators.required]),
 			nombre: new FormControl('', [
 				Validators.required, 
-				Validators.minLength(2), 
-				Validators.maxLength(7)
+				Validators.minLength(1), 
+				Validators.maxLength(999)
 			]),
 			apellido1: new FormControl('', [Validators.required]),
 			passw: new FormControl('', [Validators.required]),
