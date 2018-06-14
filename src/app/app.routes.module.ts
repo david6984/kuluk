@@ -40,6 +40,10 @@ export const ROUTES: Routes = [
         path: 'slider',  
         component: SliderComponent
     },
+        { 
+        path: 'nav',  
+        component: NavComponent
+    },
     { 
         path: 'footer',  
         component: FooterComponent
