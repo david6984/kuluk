@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
     }
 
     logout(){
+      console.log('logout');
       this.authService.logout();
     }
 }
