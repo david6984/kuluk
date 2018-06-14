@@ -16,17 +16,21 @@ export class NavComponent implements OnInit {
    }
 
   ngOnInit() {
-      // override the route reuse strategy
+
+  	this.refrescar();
+          // override the route reuse strategy
      this.router.routeReuseStrategy.shouldReuseRoute = function(){
         return false;
      }
 
      this.router.events.subscribe((evt) => {
            // trick the Router into believing it's last link wasn't previously loaded
-           this.router.navigated = false;
-           this.router.navigate([this.router.url]);
+           if (evt instanceof Navigator){
+             this.router.navigated = false;
+             this.router.navigate([this.router.url]);  
+           }
+           
     });
-  	this.refrescar();
   }
 
   refrescar(){
