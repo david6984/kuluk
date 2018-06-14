@@ -15,7 +15,7 @@
          <a class="nav-link"  routerLink="/lugares" routerLinkActive="active">Encuentranos</a>
       </li>   
       <li class="nav-item">
-          <a class="nav-link"  routerLink="/usuarios"  routerLinkActive="active">Usuarios</a>
+          <a *ngIf="islogged" class="nav-link"  routerLink="/usuarios"  routerLinkActive="active">Usuarios</a>
       </li>    
       <li class="nav-item">
           <a class="nav-link disabled" routerLink="/about" routerLinkActive="active">About</a>
