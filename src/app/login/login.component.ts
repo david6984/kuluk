@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
               this.authService.islogged=true;
               this.dataSharing.isUserLoggedIn.next(true);
               this.router.navigate(['/Home']);
+              break;
         		}else{
         			console.log('usuario invalido');
               this.dataSharing.isUserLoggedIn.next(false);
