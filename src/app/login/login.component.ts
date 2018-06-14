@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
               this.authService.loadToken(this.userprueba);
               this.authService.islogged=true;
               this.router.navigate(['/home']);
-              this.nav.refrescar();
+              this.nav.ngOnInit();
         		}else{
         			console.log('usuario invalido');
         			this.loading=false;
@@ -56,6 +56,6 @@ export class LoginComponent implements OnInit {
     logout(){
       console.log('logout');
       this.authService.logout();
-      this.nav.refrescar();
+      this.nav.ngOnInit();
     }
 }
