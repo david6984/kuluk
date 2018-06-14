@@ -12,8 +12,7 @@ export class NavComponent implements OnInit {
 	public islogged:boolean=false;
 
   constructor(private authService:AuthService,private router:Router ) {
-  	this.ngOnInit();
-         // override the route reuse strategy
+      // override the route reuse strategy
      this.router.routeReuseStrategy.shouldReuseRoute = function(){
         return false;
      }
@@ -26,6 +25,9 @@ export class NavComponent implements OnInit {
            window.scrollTo(0, 0);
         }
     });
+
+  	this.ngOnInit();
+         
 
    }
 
