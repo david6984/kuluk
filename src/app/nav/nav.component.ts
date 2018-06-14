@@ -16,6 +16,7 @@ export class NavComponent implements OnInit {
    }
 
   ngOnInit() {
+        this.refrescar();
       // override the route reuse strategy
      this.router.routeReuseStrategy.shouldReuseRoute = function(){
         return false;
