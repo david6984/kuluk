@@ -24,10 +24,7 @@
          <a class="nav-link disabled" routerLink="/info" routerLinkActive="active">Info</a>
       </li>
       <li class="nav-item">
-         <a *ngIf="!islogged" class="nav-link" routerLink="/usuariologin" routerLinkActive="active">Login</a> 
-      </li>  
-      <li class="nav-item">
-         <a *ngIf="!islogged" class="nav-link" routerLink="/usuariologin" routerLinkActive="active">Logout</a> 
+         <a class="nav-link" routerLink="/usuariologin" routerLinkActive="active"><span *ngIf="!islogged">Login</span><span *ngIf="islogged">LogOut</span></a> 
       </li>            
     </ul>
   </div>  
