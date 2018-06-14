@@ -23,12 +23,10 @@ export class LoginComponent implements OnInit {
 
  ngOnInit() {
    this.loading=false;
-   console.log('entro al init del Login');
    this.logout();
   }
 
     login() {
-        console.log('login loged antes',this.authService.islogged)
         this.loading = true;
         this.usuariosService.obtenerUsuarios().subscribe((data)=>{
         	this.usuarios=data.user;
@@ -46,7 +44,6 @@ export class LoginComponent implements OnInit {
               this.dataSharing.isUserLoggedIn.next(false);
         			this.loading=false;
         		}
-            console.log('login loged despues',this.authService.islogged)
         	}
         },(error)=>{
         	this.loading=false;
