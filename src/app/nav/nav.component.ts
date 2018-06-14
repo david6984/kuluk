@@ -9,14 +9,13 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-	public islogged:boolean=true;
+	public islogged:boolean=false;
 
   constructor(private authService:AuthService,private router:Router ) {
   	this.ngOnInit();
    }
 
   ngOnInit() {
-        this.refrescar();
       // override the route reuse strategy
      this.router.routeReuseStrategy.shouldReuseRoute = function(){
         return false;
@@ -31,11 +30,12 @@ export class NavComponent implements OnInit {
   }
 
   refrescar(){
-  	this.islogged=false;
   	if(this.authService.islogged==true){
       console.log('if del nav');
   		this.islogged=true;
-  	}
+  	}else{
+      this.islogged=false;
+    }
   }
 
 }
