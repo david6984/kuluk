@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
 
  ngOnInit() {
    this.loading=false;
+   console.log('entro al init del Login');
    this.logout();
   }
 
