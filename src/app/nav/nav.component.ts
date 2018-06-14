@@ -22,11 +22,9 @@ export class NavComponent implements OnInit {
      }
 
      this.router.events.subscribe((evt) => {
-        if (evt instanceof Navigator) {
            // trick the Router into believing it's last link wasn't previously loaded
            this.router.navigated = false;
            this.router.navigate([this.router.url]);
-        }
     });
   	this.refrescar();
   }
