@@ -14,23 +14,8 @@ export class NavComponent implements OnInit {
   constructor(private authService:AuthService,private router:Router ) {
   	this.ngOnInit();
    }
-
+   
   ngOnInit() {
-
-  	this.refrescar();
-          // override the route reuse strategy
-     this.router.routeReuseStrategy.shouldReuseRoute = function(){
-        return false;
-     }
-
-     this.router.events.subscribe((evt) => {
-           // trick the Router into believing it's last link wasn't previously loaded
-           if (evt instanceof Navigator){
-             this.router.navigated = false;
-             this.router.navigate([this.router.url]);  
-           }
-           
-    });
   }
 
   refrescar(){

@@ -32,6 +32,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
 import {Ng2CarouselamosModule} from 'ng2-carouselamos';
 import { LoginComponent } from './login/login.component';
+import { DatasharingService } from './services/datasharing.service';
+
 
 
 
@@ -69,7 +71,8 @@ import { LoginComponent } from './login/login.component';
     UsuariosService,
     LugaresService,
     DataService,
-    AuthService
+    AuthService,
+    DatasharingService
   ],
   bootstrap: [AppComponent]
 })

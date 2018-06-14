@@ -3,6 +3,7 @@ import { Usuario } from '../models/usuario';
 import { UsuariosService } from '../services/usuarios.service';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { DatasharingService } from '../services/datasharing.service';
 
 
 
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   userprueba:Usuario=new Usuario();
   public loading:boolean =false;
 
-  constructor(private usuariosService:UsuariosService, private authService:AuthService, private router:Router) { }
+  constructor(private usuariosService:UsuariosService, private authService:AuthService, private router:Router, private dataSharing:DatasharingService) { }
 
  ngOnInit() {
    this.loading=false;
@@ -38,15 +39,18 @@ export class LoginComponent implements OnInit {
         			this.usuariosService.usuarioLogin();
               this.authService.loadToken(this.userprueba);
               this.authService.islogged=true;
-              this.router.navigate(['/nav']);
+              this.dataSharing.isUserLoggedIn.next(true);
+              this.router.navigate(['/Home']);
         		}else{
         			console.log('usuario invalido');
+              this.dataSharing.isUserLoggedIn.next(false);
         			this.loading=false;
         		}
             console.log('login loged despues',this.authService.islogged)
         	}
         },(error)=>{
         	this.loading=false;
+          this.dataSharing.isUserLoggedIn.next(false);
         	console.log('error',error);
         });
     }
