@@ -3,7 +3,6 @@ import { Usuario } from '../models/usuario';
 import { UsuariosService } from '../services/usuarios.service';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
-import {NavComponent } from '../nav/nav.component';
 
 
 @Component({
@@ -18,7 +17,7 @@ export class LoginComponent implements OnInit {
   userprueba:Usuario=new Usuario();
   public loading:boolean =false;
 
-  constructor(private usuariosService:UsuariosService, private authService:AuthService, private router:Router,private nav:NavComponent) { }
+  constructor(private usuariosService:UsuariosService, private authService:AuthService, private router:Router) { }
 
  ngOnInit() {
    this.loading=false;
@@ -48,7 +47,7 @@ export class LoginComponent implements OnInit {
         	}
         },(error)=>{
         	this.loading=false;
-          this.nav.islogged=false;
+          //this.nav.islogged=false;
         	console.log('error',error);
         });
     }
