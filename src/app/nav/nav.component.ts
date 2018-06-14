@@ -18,7 +18,6 @@ export class NavComponent implements OnInit {
         this.dataSharing.isUserLoggedIn.subscribe( value => {
             this.islogged = value;
         });
-  	this.ngOnInit();
    }
 
   ngOnInit() {
