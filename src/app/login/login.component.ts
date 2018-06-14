@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
         			this.usuariosService.usuarioLogin();
               this.authService.loadToken(this.userprueba);
               this.authService.islogged=true;
+              this.router.navigate(['/home']);
         		}else{
         			console.log('usuario invalido');
         			this.loading=false;
