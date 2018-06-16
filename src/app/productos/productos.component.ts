@@ -21,6 +21,13 @@ export class ProductosComponent implements OnInit {
 		this.refrescar();
 	}
 
+	refrescar(){
+  		this.islogged=false;
+  		if(this.authService.islogged==true){
+  			this.islogged=true;
+  		}
+  	}
+
 	public editarProducto(producto){
 		console.log('edit',producto);
 		this.selectedProduct = Object.assign({}, producto);
@@ -74,10 +81,5 @@ export class ProductosComponent implements OnInit {
 			});
 	}
 
-	  refrescar(){
-  		this.islogged=false;
-  		if(this.authService.islogged==true){
-  			this.islogged=true;
-  		}
-  	}
+
 }
