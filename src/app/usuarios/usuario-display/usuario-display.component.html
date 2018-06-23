@@ -25,12 +25,12 @@
 			<div class="col-12 col-lg-6"> {{usuario.correo}}</div>
 		</div>
 	</div>
-	<div class="col-3 actions">
+	<div class="col-12 actions">
 		<div class="row">
-			<div class="col-12 text-center">
+			<div class="col-3 text-center">
 				<button type="button" class="btn btn-primary" (click)="editar()">Editar</button>
 			</div>
-			<div class="col-12 text-center">
+			<div class="col-6 text-center">
 				<button type="button" class="btn btn-danger" (click)="borrar()"><span *ngIf="isDeleting">...</span><span *ngIf="!isDeleting">Eliminar</span></button>
 			</div>
 		</div>

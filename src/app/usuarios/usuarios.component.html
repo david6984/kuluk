@@ -3,7 +3,7 @@
 		<h2 class="col-5">Usuarios</h2>
 	</div>
 	<div class="usuarios row" *ngIf="islogged">
-		<ul class="col-12">
+		<ul class="col-12 col-8" >
 			<app-usuario-agregar   (agregarUsuario)="agregarUsuario($event)" (editarUsuario)="editarUsuarioSave($event)" [selectedUsuario]="selectedUsuario" [canAdd]='!loading'></app-usuario-agregar>
 			<div *ngIf="loading">
 				loading...
@@ -13,7 +13,7 @@
 			<li *ngFor="let usuario of usuarios" class="row usuario-display">
 				<app-usuario-display [usuario]='usuario' 
 				(borrarUsuario)="borrarUsuario($event)" 
-				(editarUsuario)="editarUsuario($event)" class="col-12 card">
+				(editarUsuario)="editarUsuario($event)" class="col-12 col-8 card">
 				</app-usuario-display>
 			</li>
 		</ul>	
