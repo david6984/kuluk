@@ -1,7 +1,7 @@
 <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()" novalidate>
 	<div class="form-group">
 		<label class="center-block">Usuario
-			<input class="form-control" formControlName="usuario" [attr.disabled]="isEditing?'':null">
+			<input type="text" class="form-control" formControlName="usuario" [attr.disabled]="isEditing?'':null">
 		</label>
 		<div *ngIf="!usuarioForm.controls['usuario'].valid && (usuarioForm.controls['usuario'].dirty || usuarioForm.controls['usuario'].touched)" class="alert alert-danger">
 			<div *ngIf="usuarioForm.controls['usuario'].errors.required">
@@ -11,7 +11,7 @@
 	</div>
 	<div class="form-group">
 		<label class="center-block">Nombre
-			<input class="form-control" formControlName="nombre">
+			<input type="text" class="form-control" formControlName="nombre">
 		</label>
 		<div *ngIf="!usuarioForm.controls['nombre'].valid && (usuarioForm.controls['nombre'].dirty || usuarioForm.controls['nombre'].touched)" class="alert alert-danger">
 			<div *ngIf="usuarioForm.controls['nombre'].errors.required">
@@ -29,7 +29,7 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label class="center-block">Apellido1
+		<label type="text" class="center-block">Apellido1
 			<input class="form-control" formControlName="apellido1">
 		</label>
 		<div *ngIf="usuarioForm.controls['apellido1'].errors && (usuarioForm.controls['apellido1'].dirty || usuarioForm.controls['apellido1'].touched)" class="alert alert-danger">
@@ -40,7 +40,7 @@
 	</div>
 	<div class="form-group">
 		<label class="center-block">Contraseña
-			<input class="form-control" formControlName="passw">
+			<input type="password" class="form-control" formControlName="passw">
 		</label>
 		<div *ngIf="usuarioForm.controls['passw'].errors && (usuarioForm.controls['passw'].dirty || usuarioForm.controls['passw'].touched)" class="alert alert-danger">
 			<div *ngIf="usuarioForm.controls['passw'].errors.required">
@@ -50,7 +50,7 @@
 	</div>
 	<div class="form-group">
 		<label class="center-block">Correo
-			<input class="form-control" formControlName="correo">
+			<input type="email" class="form-control" formControlName="correo">
 		</label>
 		<div *ngIf="usuarioForm.controls['correo'].invalid && (usuarioForm.controls['correo'].dirty || usuarioForm.controls['correo'].touched)" class="alert alert-danger">
 			<div *ngIf="usuarioForm.controls['correo'].errors.required">
