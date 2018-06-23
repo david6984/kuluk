@@ -1,7 +1,7 @@
 <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()" novalidate>
 	<div class="form-group col-12">
 		<label>Usuario</label>
-		<input type="text" class="form-control" formControlName="usuario" [attr.disabled]="isEditing?'':null">
+		<input type="text" class="form-control" placeholder="Ingrese el nombre del usuario.." formControlName="usuario" [attr.disabled]="isEditing?'':null">
 		<div *ngIf="!usuarioForm.controls['usuario'].valid && (usuarioForm.controls['usuario'].dirty || usuarioForm.controls['usuario'].touched)" class="alert alert-danger">
 			<div *ngIf="usuarioForm.controls['usuario'].errors.required">
 				El usuario es requerido
