@@ -1,8 +1,7 @@
 <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()" novalidate>
-	<div class="form-group col-12 col-lg-6">
-		<label>Usuario
-			<input type="text" class="form-control" formControlName="usuario" [attr.disabled]="isEditing?'':null">
-		</label>
+	<div class="form-group col-12">
+		<label>Usuario</label>
+		<input type="text" class="form-control" formControlName="usuario" [attr.disabled]="isEditing?'':null">
 		<div *ngIf="!usuarioForm.controls['usuario'].valid && (usuarioForm.controls['usuario'].dirty || usuarioForm.controls['usuario'].touched)" class="alert alert-danger">
 			<div *ngIf="usuarioForm.controls['usuario'].errors.required">
 				El usuario es requerido
@@ -10,9 +9,8 @@
 		</div>
 	</div>
 	<div class="form-group col-12 col-lg-6">
-		<label>Nombre
-			<input type="text" class="form-control" formControlName="nombre">
-		</label>
+		<label>Nombre</label>
+		<input type="text" class="form-control" formControlName="nombre">
 		<div *ngIf="!usuarioForm.controls['nombre'].valid && (usuarioForm.controls['nombre'].dirty || usuarioForm.controls['nombre'].touched)" class="alert alert-danger">
 			<div *ngIf="usuarioForm.controls['nombre'].errors.required">
 				El nombre es requerido
@@ -29,19 +27,17 @@
 		</div>
 	</div>
 	<div class="form-group col-12 col-lg-6">
-		<label>Apellido1
-			<input type="text" class="form-control" formControlName="apellido1">
-		</label>
+		<label>Apellido</label>
+		<input type="text" class="form-control" formControlName="apellido1">
 		<div *ngIf="usuarioForm.controls['apellido1'].errors && (usuarioForm.controls['apellido1'].dirty || usuarioForm.controls['apellido1'].touched)" class="alert alert-danger">
 			<div *ngIf="usuarioForm.controls['apellido1'].errors.required">
-				El Apellido1 es requerido
+				El Apellido es requerido
 			</div>
 		</div>
 	</div>
 	<div class="form-group col-12 col-lg-6">
-		<label>Contraseña
-			<input type="password" class="form-control" formControlName="passw">
-		</label>
+		<label>Contraseña</label>
+		<input type="password" class="form-control" formControlName="passw">
 		<div *ngIf="usuarioForm.controls['passw'].errors && (usuarioForm.controls['passw'].dirty || usuarioForm.controls['passw'].touched)" class="alert alert-danger">
 			<div *ngIf="usuarioForm.controls['passw'].errors.required">
 				La Contraseña es requerida
@@ -49,9 +45,8 @@
 		</div>
 	</div>
 	<div class="form-group col-12 col-lg-6">
-		<label>Correo
-			<input type="email" class="form-control" formControlName="correo">
-		</label>
+		<label>Correo</label>
+		<input type="email" class="form-control" formControlName="correo">
 		<div *ngIf="usuarioForm.controls['correo'].invalid && (usuarioForm.controls['correo'].dirty || usuarioForm.controls['correo'].touched)" class="alert alert-danger">
 			<div *ngIf="usuarioForm.controls['correo'].errors.required">
 				El Correo es requerido
