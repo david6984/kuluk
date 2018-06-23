@@ -33,6 +33,7 @@ import { SliderComponent } from './slider/slider.component';
 import {Ng2CarouselamosModule} from 'ng2-carouselamos';
 import { LoginComponent } from './login/login.component';
 import { DatasharingService } from './services/datasharing.service';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 
@@ -55,7 +56,8 @@ import { DatasharingService } from './services/datasharing.service';
     LugaresAgregarComponent,
     FooterComponent,
     SliderComponent,
-    LoginComponent
+    LoginComponent,
+    CarouselComponent
 
   ],
   imports: [
