@@ -3,16 +3,16 @@
 		<h2 class="col-5">Encuentranos</h2>
 	</div>
 	<div class="places row">
-		<ul class="col-12">
-			<li *ngFor="let lugar of lugares" class="row lugar-display">
-				<app-lugares-display [lugar]='lugar' (borrarLugar)="borrarLugar($event)" (editarLugar)="editarLugar($event)" class="col-12 col-lg-8"  ></app-lugares-display>
-			</li>
-		</ul>	
 		<ul class="col-12 col-lg-8">
 			<app-lugares-agregar *ngIf="islogged" (agregarLugar)="agregarLugar($event)" (editarLugar)="editarLugarSave($event)" [selectedPlace]="selectedPlace" [canAdd]='!loading'></app-lugares-agregar>
 			<div *ngIf="loading">
 				loading...
 			</div>
 		</ul>
+		<ul class="col-12">
+			<li *ngFor="let lugar of lugares" class="row lugar-display">
+				<app-lugares-display [lugar]='lugar' (borrarLugar)="borrarLugar($event)" (editarLugar)="editarLugar($event)" class="col-12 col-lg-8"  ></app-lugares-display>
+			</li>
+		</ul>	
 	</div>
 </div>
