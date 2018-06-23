@@ -20,6 +20,10 @@ import { UsuarioAgregarComponent } from './usuarios/usuario-agregar/usuario-agre
 import { LugaresComponent } from './lugares/lugares.component';
 import { LugaresDisplayComponent } from './lugares/lugares-display/lugares-display.component';
 import { LugaresAgregarComponent } from './lugares/lugares-agregar/lugares-agregar.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { FooterComponent } from './footer/footer.component';
+import { SliderComponent } from './slider/slider.component';
+import { LoginComponent } from './login/login.component';
 
 //servicios creados deben ser agregados en los providers 
 import { ProductosService } from './services/productos.service';
@@ -28,12 +32,9 @@ import { LugaresService } from './services/lugares.service';
 import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
 import { TextContainsValidator } from './shared/text-contains.directive';
-import { FooterComponent } from './footer/footer.component';
-import { SliderComponent } from './slider/slider.component';
 import {Ng2CarouselamosModule} from 'ng2-carouselamos';
-import { LoginComponent } from './login/login.component';
 import { DatasharingService } from './services/datasharing.service';
-import { CarouselComponent } from './carousel/carousel.component';
+
 
 
 
