@@ -1,5 +1,5 @@
 <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()" novalidate>
-	<div class="form-group">
+	<div class="form-group col-12 col-lg-6">
 		<label>Usuario
 			<input type="text" class="form-control" formControlName="usuario" [attr.disabled]="isEditing?'':null">
 		</label>
@@ -9,7 +9,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="form-group">
+	<div class="form-group col-12 col-lg-6">
 		<label>Nombre
 			<input type="text" class="form-control" formControlName="nombre">
 		</label>
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="form-group">
+	<div class="form-group col-12 col-lg-6">
 		<label>Apellido1
 			<input type="text" class="form-control" formControlName="apellido1">
 		</label>
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="form-group">
+	<div class="form-group col-12 col-lg-6">
 		<label>Contraseña
 			<input type="password" class="form-control" formControlName="passw">
 		</label>
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="form-group">
+	<div class="form-group col-12 col-lg-6">
 		<label>Correo
 			<input type="email" class="form-control" formControlName="correo">
 		</label>
