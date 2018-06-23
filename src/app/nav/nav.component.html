@@ -21,8 +21,8 @@
           <a class="nav-link disabled" routerLink="/about" routerLinkActive="active">About</a>
       </li>    
             <!-- Dropdown -->
-            <li class="nav-item dropdown" >
-              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" *ngif="islogged">
+            <li class="nav-item dropdown"  *ngIf="islogged">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" >
                 Mantenimiento
               </a>
               <div class="dropdown-menu">
