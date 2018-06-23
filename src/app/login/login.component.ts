@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         	this.usuarios=data.user;
         	for(let i=0;i<this.usuarios.length;i++){
         		this.userprueba=this.usuarios[i];
-        		if(this.userprueba.usuario===this.usuario.usuario&&this.userprueba.passw===this.usuario.passw){
+        		if(this.userprueba.usuario.toUpperCase()===this.usuario.usuario.toUpperCase()&&this.userprueba.passw===this.usuario.passw){
         			console.log('el usuario logeo correctamente');
         			this.usuariosService.usuarioLogin();
               this.authService.loadToken(this.userprueba);
