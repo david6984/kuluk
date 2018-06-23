@@ -3,7 +3,7 @@
 		<h2 class="col-5">Usuarios</h2>
 	</div>
 	<div class="usuarios row" *ngIf="islogged">
-		<ul class="col-12 col-lg-8">
+		<ul class="col-12">
 			<app-usuario-agregar   (agregarUsuario)="agregarUsuario($event)" (editarUsuario)="editarUsuarioSave($event)" [selectedUsuario]="selectedUsuario" [canAdd]='!loading'></app-usuario-agregar>
 			<div *ngIf="loading">
 				loading...
