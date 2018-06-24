@@ -3,13 +3,13 @@
 		<h2 class="col-5">Productos</h2>
 	</div>
 	<div class="products row">
-		<ul class="col-12 col-lg-8">
+		<ul>
 			<app-producto-agregar *ngIf="islogged" (agregarProducto)="agregarProducto($event)" (editarProducto)="editarProductoSave($event)" [selectedProduct]="selectedProduct" [canAdd]='!loading'></app-producto-agregar>
 			<div *ngIf="loading">
 				loading...
 			</div>
 		</ul>
-		<ul class="col-12">
+		<ul>
 			<li *ngFor="let producto of productos" class="row producto-display">
 				<app-producto-display [producto]='producto' (borrarProducto)="borrarProducto($event)" (editarProducto)="editarProducto($event)"  ></app-producto-display>
 			</li>
