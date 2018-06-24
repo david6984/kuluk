@@ -3,7 +3,7 @@
 		<div class="col-md-8">				
 			<div class="panel panel-default  panel--styled">
 				<div class="panel-body">
-					<div class="col-md-12 panelTop">	
+					<div class="col-8 panelTop">	
 						<div class="col-md-4">	
 						<!--	<img class="img-responsive" src="{{producto.imgurl}}" alt=""/>  -->
 						<img class="img-fluid-row" src="{{producto.imgurl}}" alt=""/>
@@ -20,18 +20,17 @@
 							<button class="btn btn-lg btn-add-to-cart"><span class="glyphicon glyphicon-shopping-cart"></span>   Add to Cart</button>						
 						</div>
 					-->
-						<div class="col-md-12 text-left">
+						<div class="col-8 text-left">
 							<h5>Precio <span class="itemPrice">${{producto.precio}}</span></h5>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-12 panelBottom" *ngIf="islogged">
+				<div class="col-8 panelBottom" *ngIf="islogged">
 					<div class="col-md-3 text-center">
 						<button type="button" class="btn btn-primary" (click)="editar()">Editar</button>
-						<button type="button" class="btn btn-danger" (click)="borrar()"><span *ngIf="isDeleting">...</span><span *ngIf="!isDeleting">Eliminar</span></button>
 					</div>
 					<div class="col-md-3 text-center">
-						
+							<button type="button" class="btn btn-danger" (click)="borrar()"><span *ngIf="isDeleting">...</span><span *ngIf="!isDeleting">Eliminar</span></button>
 					</div>
 				</div>
 			</div>
