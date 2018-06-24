@@ -34,7 +34,7 @@ export class AuthService {
 
 	VerifyToken(){
 		this.dataService
-			.get('/login').subscribe(
+			.get('/getCrsfToken').subscribe(
 				(result)=>{
 					console.log('Valida token',result);
 				},
