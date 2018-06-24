@@ -11,7 +11,7 @@
 		</ul>
 		<ul class="col-12">
 			<li *ngFor="let producto of productos" class="row producto-display">
-				<app-producto-display [producto]='producto' (borrarProducto)="borrarProducto($event)" (editarProducto)="editarProducto($event)" class="col-12 card col-lg-8"  ></app-producto-display>
+				<app-producto-display [producto]='producto' (borrarProducto)="borrarProducto($event)" (editarProducto)="editarProducto($event)"  ></app-producto-display>
 			</li>
 		</ul>	
 	</div>
