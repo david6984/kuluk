@@ -5,7 +5,8 @@ import { DataService } from './data.service';
 @Injectable()
 export class AuthService {
     public islogged:boolean=false;
-    public loggeduser: any;
+	public loggeduser: any;
+	public ptoken:string;
 	constructor(
 		public requestOptions:RequestOptions, 
 		public dataService:DataService){
@@ -19,7 +20,9 @@ export class AuthService {
 				(result) => {
 	            	console.log('response here',result);
 	            	this.requestOptions.headers.set('X-CSRF-TOKEN', result.csrfToken as string);
-	            	this.requestOptions.headers.set('Content-type', 'application/json');
+					this.requestOptions.headers.set('Content-type', 'application/json');
+					this.ptoken=this.requestOptions.headers.get('X-CSRF-TOKEN');
+					console.log('leyendo token',this.ptoken);
 	            	if(usuario!=""||this.loggeduser!=null){
 	            		if(usuario!=""){
 	            			this.loggeduser=usuario;	
