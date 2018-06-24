@@ -4,11 +4,11 @@
 			<div class="panel panel-default  panel--styled">
 				<div class="panel-body">
 					<div class="col-12 panelTop">	
-						<div class="col-4">	
+						<div class="col-6">	
 						<!--	<img class="img-responsive img-thumbnail" src="{{producto.imgurl}}" alt=""/>  -->
 						<img class="img-thumbnail" src="{{producto.imgurl}}" alt=""/>
 						</div>
-						<div class="col-8">	
+						<div class="col-6">	
 							<h2>{{producto.nombre}}</h2>
 							<p>{{producto.descripcion}}</p>
 						</div>
@@ -26,10 +26,10 @@
 					</div>
 				</div>
 				<div class="col-8 panelBottom" *ngIf="islogged">
-					<div class="col-md-3 text-center">
+					<div class="col-md-3 text-left">
 						<button type="button" class="btn btn-primary" (click)="editar()">Editar</button>
 					</div>
-					<div class="col-md-3 text-center">
+					<div class="col-md-3 text-right">
 							<button type="button" class="btn btn-danger" (click)="borrar()"><span *ngIf="isDeleting">...</span><span *ngIf="!isDeleting">Eliminar</span></button>
 					</div>
 				</div>
