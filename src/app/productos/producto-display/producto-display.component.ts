@@ -33,7 +33,7 @@ export class ProductoDisplayComponent implements OnInit {
 
 	borrar(){
 		this.isDeleting = true;
-		console.log('borrar lugar',this.producto);
+		console.log('borrar producto',this.producto);
 		this.borrarProducto.emit(this.producto);
 	}
 

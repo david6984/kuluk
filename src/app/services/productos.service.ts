@@ -17,6 +17,7 @@ export class ProductosService {
 
 	public borrarProducto(producto:Producto){
 		return this.dataService.delete('/api/products/'+producto._id);
+		console.log('borrar producto service');
 	}
 
 	public editarProducto(producto:Producto){
