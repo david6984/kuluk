@@ -11,8 +11,8 @@
 }
 
 .img-fluid-row{
-	max-width: 100%;
-	max-height: 50%;
+	max-width: 350px;
+	max-height:350px;
 	margin: 0 auto;
 }
 
