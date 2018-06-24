@@ -2,7 +2,7 @@
 	<div class="page-title row">
 		<h2 class="col-5">Productos</h2>
 	</div>
-	<div class="products row">
+	<div>
 		<ul>
 			<app-producto-agregar *ngIf="islogged" (agregarProducto)="agregarProducto($event)" (editarProducto)="editarProductoSave($event)" [selectedProduct]="selectedProduct" [canAdd]='!loading'></app-producto-agregar>
 			<div *ngIf="loading">
@@ -10,7 +10,7 @@
 			</div>
 		</ul>
 		<ul>
-			<li *ngFor="let producto of productos" class="row producto-display">
+			<li *ngFor="let producto of productos">
 				<app-producto-display [producto]='producto' (borrarProducto)="borrarProducto($event)" (editarProducto)="editarProducto($event)"  ></app-producto-display>
 			</li>
 		</ul>	
