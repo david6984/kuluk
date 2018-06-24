@@ -22,6 +22,7 @@ function getProduct(id) {
 }
 
 function deleteProduct(id) {
+    console.log('db prod delete');
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
     try{

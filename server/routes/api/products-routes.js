@@ -19,7 +19,7 @@ function getProducts(request, response) {
 }
 
 function deleteProducts(request, response) {
-    console.log('DELETE product');
+    console.log('routes/api DELETE product');
     var result;
     try {
         result = await (service.productsService.deleteProduct(request.params.id));
