@@ -2,7 +2,7 @@
 'use strict';
 var jwt = require('jsonwebtoken');
 var TOKEN_ALGO = 'HS256';
-var TOKEN_EXPIRES = '2 days';
+var TOKEN_EXPIRES = '1 minutes';
 var InvalidCredentialsException = require(__base + 'server/exceptions/InvalidCredentials');
 
 function signToken(data) {
