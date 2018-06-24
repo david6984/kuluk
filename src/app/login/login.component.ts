@@ -35,8 +35,8 @@ export class LoginComponent implements OnInit {
         		if(this.userprueba.usuario.toUpperCase()===this.usuario.usuario.toUpperCase()&&this.userprueba.passw===this.usuario.passw){
         			console.log('el usuario logeo correctamente');
         			this.usuariosService.usuarioLogin();
-              this.authService.loadToken(this.userprueba);
-              this.authService.islogged=true;
+              this.authService.loadToken();
+              this.authService.loguser(this.usuario);
               this.dataSharing.isUserLoggedIn.next(true);
               this.router.navigate(['/Home']);
               break;

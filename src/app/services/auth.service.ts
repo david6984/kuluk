@@ -11,10 +11,10 @@ export class AuthService {
 		public requestOptions:RequestOptions, 
 		public dataService:DataService){
 		console.log('authService');
-		this.loadToken("");
+		this.loadToken();
 	}
 
-	loadToken(usuario){
+	loadToken(){
 		this.dataService
 			.get('/token').subscribe(
 				(result) => {
@@ -23,16 +23,15 @@ export class AuthService {
 					this.requestOptions.headers.set('Content-type', 'application/json');
 					this.ptoken=this.requestOptions.headers.get('X-CSRF-TOKEN');
 					console.log('leyendo token',this.ptoken);
-	            	if(usuario!=""||this.loggeduser!=null){
-	            		if(usuario!=""){
-	            			this.loggeduser=usuario;	
-	            		}	            		
-	            		this.islogged=true;
-	            	}
 	            },
             	(err) => {
             		console.log('error code',err.status)
             	});
+	}
+
+	loguser(usuario){
+		this.loggeduser=usuario;
+		this.islogged=true;
 	}
 
 	logout(){
