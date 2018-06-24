@@ -8,12 +8,11 @@
 						<!--	<img class="img-responsive img-thumbnail" src="{{producto.imgurl}}" alt=""/>  -->
 						<img class="img-thumbnail" src="{{producto.imgurl}}" alt=""/>
 						</div>
-						<div class="col-6">	
-							<h2>{{producto.nombre}}</h2>
+						<div class="col-12">	
+							<h4>{{producto.nombre}}</h4>
 							<p>{{producto.descripcion}}</p>
 						</div>
 					</div>
-					
 					<div class="col-12 panelBottom">
 					<!--
 						<div class="col-md-4 text-center">
@@ -29,7 +28,7 @@
 					<div class="col-md-3 text-left">
 						<button type="button" class="btn btn-primary" (click)="editar()">Editar</button>
 					</div>
-					<div class="col-md-3 text-right">
+					<div class="col-md-3 text-left">
 							<button type="button" class="btn btn-danger" (click)="borrar()"><span *ngIf="isDeleting">...</span><span *ngIf="!isDeleting">Eliminar</span></button>
 					</div>
 				</div>
