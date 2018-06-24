@@ -19,7 +19,6 @@ export class ProductosComponent implements OnInit {
 	ngOnInit() {
 		this.obtenerProductos();
 		this.refrescar();
-		this.authService.VerifyToken();
 	}
 
 	refrescar(){

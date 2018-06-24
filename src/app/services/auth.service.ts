@@ -35,17 +35,6 @@ export class AuthService {
             	});
 	}
 
-	VerifyToken(){
-		this.dataService
-			.get('/user').subscribe(
-				(result)=>{
-					console.log('Valida token',result);
-				},
-				(err)=>{
-					console.log('error de token',err.status)
-				});
-	}
-
 	logout(){
 		this.islogged=false;
 		this.loggeduser=null;

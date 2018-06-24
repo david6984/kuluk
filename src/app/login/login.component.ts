@@ -36,7 +36,6 @@ export class LoginComponent implements OnInit {
         			console.log('el usuario logeo correctamente');
         			this.usuariosService.usuarioLogin();
               this.authService.loadToken(this.userprueba);
-              this.authService.VerifyToken();
               this.authService.islogged=true;
               this.dataSharing.isUserLoggedIn.next(true);
               this.router.navigate(['/Home']);
