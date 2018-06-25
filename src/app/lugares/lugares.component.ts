@@ -38,6 +38,7 @@ export class LugaresComponent implements OnInit {
 		this.lugaresService.editarLugar(lugar.lugar)
 			.then(data => {
 				this.obtenerLugares();
+				lugar.form.reset();
 			})
 			.catch(error => {
 				console.log('error',error);
