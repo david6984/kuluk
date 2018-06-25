@@ -34,6 +34,8 @@ import { AuthService } from './services/auth.service';
 import { TextContainsValidator } from './shared/text-contains.directive';
 import {Ng2CarouselamosModule} from 'ng2-carouselamos';
 import { DatasharingService } from './services/datasharing.service';
+import { SliderAgregarComponent } from './slider/slider-agregar/slider-agregar.component';
+import { SliderDisplayComponent } from './slider/slider-display/slider-display.component';
 
 
 
@@ -58,7 +60,9 @@ import { DatasharingService } from './services/datasharing.service';
     FooterComponent,
     SliderComponent,
     LoginComponent,
-    CarouselComponent
+    CarouselComponent,
+    SliderAgregarComponent,
+    SliderDisplayComponent
 
   ],
   imports: [
