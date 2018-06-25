@@ -35,7 +35,7 @@
 	<div class="form-group">
 		<label for="descripcion">descripcion</label>
 		<textarea type="text" rows="4" cols="100" class="form-control" id="descripcion"
-		[(ngModel)]="producto.descripcion" name="descripcion" #descripcion="ngModel" required>
+		[(ngModel)]="producto.descripcion" name="descripcion" #descripcion="ngModel" required></textarea>
 		<div [hidden]="descripcion.valid || descripcion.pristine" class="alert alert-danger">
 			La descripcion es requerida
 		</div>
