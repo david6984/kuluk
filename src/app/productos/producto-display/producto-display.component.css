@@ -16,6 +16,10 @@
 	margin: 0 auto;
 }
 
+.inner{
+    display: inline-block;
+}
+
 /*----------------------
 Product Card Styles 
 ----------------------*/
