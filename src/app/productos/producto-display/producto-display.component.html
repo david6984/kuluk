@@ -21,10 +21,10 @@
 							</div>
 						</div>
 						<div class="col-md-12 panelBottom inner" *ngIf="islogged">
-							<div class="col-md-4">
+							<div class="col-md-4 inner" >
 									<button type="button" class="btn btn-primary" (click)="editar()">Editar</button>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6 inner">
 								<button type="button" class="btn btn-danger" (click)="borrar()"><span *ngIf="isDeleting">...</span><span *ngIf="!isDeleting">Eliminar</span></button>
 							</div>
 						</div>
