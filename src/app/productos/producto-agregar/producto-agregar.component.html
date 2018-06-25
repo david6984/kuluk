@@ -34,7 +34,7 @@
 
 	<div class="form-group">
 		<label for="descripcion">descripcion</label>
-		<input type="text" class="form-control" id="descripcion"
+		<input type="textarea" class="form-control" id="descripcion"
 		[(ngModel)]="producto.descripcion" name="descripcion" #descripcion="ngModel" required>
 		<div [hidden]="descripcion.valid || descripcion.pristine" class="alert alert-danger">
 			La descripcion es requerida
