@@ -26,6 +26,7 @@ function deleteProduct(id) {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
     try{
+        console.log('entro al try del delete');
         var Product = await(dbase.collection("products").deleteOne({_id: new ObjectId(id)}));    
     }catch(e){
         console.log(e);
