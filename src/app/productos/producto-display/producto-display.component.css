@@ -32,8 +32,7 @@ Product Card Styles
 
 .panelBottom {
     border-top: 1px solid #e7e7e7;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
 }
 .btn-add-to-cart {
     background: #FD5A5B;
