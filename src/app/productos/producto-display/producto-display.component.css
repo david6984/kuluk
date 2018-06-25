@@ -27,12 +27,12 @@ Product Card Styles
     background: #F4F2F3;
 }
 .panelTop {
-    padding: 10px;
+    padding: 5px;
 }
 
 .panelBottom {
     border-top: 1px solid #e7e7e7;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 .btn-add-to-cart {
     background: #FD5A5B;
