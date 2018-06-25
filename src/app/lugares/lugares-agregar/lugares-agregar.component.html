@@ -36,6 +36,6 @@
 		[(ngModel)]="lugar.instagram" name="instagram" #instagram="ngModel">	
 	</div>
 
-	<button type="submit" class="btn btn-success" [disabled]="!lugarForm.form.valid || !canAdd"><span *ngIf="!isEditing">Agregar</span><span *ngIf="isEditing">Editar</span></button>
+	<button type="submit" class="btn btn-success" [disabled]="!lugarForm.form.valid || !canAdd"><span *ngIf="!isEditing">Agregar</span><span *ngIf="isEditing">Actualizar</span></button>
 	<button type="button" class="btn btn-danger" (click)="newLugar(); lugarForm.reset()">Revert</button>
 </form>
