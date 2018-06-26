@@ -6,7 +6,7 @@ var service = require(__base + 'server/services');
 var routes = require('express').Router();
 
 
-function getProducts(request, response) {
+function getProduct(request, response) {
     console.log('GET product',request.params.id);
     var result;
     try {
@@ -18,7 +18,7 @@ function getProducts(request, response) {
     }
 }
 
-function deleteProducts(request, response) {
+function deleteProduct(request, response) {
     console.log('routes/api DELETE product');
     var result;
     try {
@@ -29,7 +29,7 @@ function deleteProducts(request, response) {
     }
 }
 
-function updateProducts(request, response) {
+function updateProduct(request, response) {
     console.log('UPDATE product');
     var result;
     try {
@@ -40,7 +40,7 @@ function updateProducts(request, response) {
     }
 }
 
-function postProducts(request, response) {
+function postProduct(request, response) {
     console.log('POST product');
     var result;
     try {
@@ -54,10 +54,10 @@ function postProducts(request, response) {
     }
 }
 
-routes.get('/:id', async(getProducts));
-routes.get('/', async(getProducts));
-routes.delete('/:id', async(deleteProducts));
-routes.put('/:id', async(updateProducts));
-routes.post('/', async(postProducts));
+routes.get('/:id', async(getProduct));
+routes.get('/', async(getProduct));
+routes.delete('/:id', async(deleteProduct));
+routes.put('/:id', async(updateProduct));
+routes.post('/', async(postProduct));
 
 module.exports = routes;
