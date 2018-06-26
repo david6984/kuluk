@@ -10,7 +10,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class ProductosComponent implements OnInit {
 	public productos : Producto[];
-	public selectedProduct : Producto = new Producto;
+	public selectedProduct : Producto = new Producto();
 	public loading : boolean = false;
 	public islogged : boolean = false;
 
@@ -37,7 +37,7 @@ export class ProductosComponent implements OnInit {
 	public editarProductoSave(producto){
 		console.log('antes del try-update el producto es:',producto);
 		try{
-			console.log(producto.producto);
+			console.log('dentro del try antes de la funcion',producto.producto);
 			this.productosService.editarProducto(producto.producto)
 			.then(data => {
 				this.obtenerProductos();
