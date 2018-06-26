@@ -35,13 +35,14 @@ export class ProductosComponent implements OnInit {
 	}
 
 	public editarProductoSave(producto){
-		console.log('antes del try update el producto es:',producto);
+		console.log('antes del try-update el producto es:',producto);
 		try{
 			console.log(producto.producto);
 			this.productosService.editarProducto(producto.producto)
 			.then(data => {
 				this.obtenerProductos();
 				producto.form.reset();
+				console.log('dentro de la funcion');
 			})
 			.catch(error => {
 				console.log('error catch update prod',error);

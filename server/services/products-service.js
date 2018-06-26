@@ -20,7 +20,7 @@ function getProduct(id) {
 
 function updateProduct(product) {
     var result;
-    console.log('update product by ' + product.id);
+    console.log('update product by ' + product._id);
     try {
         result = await (ProductsRsrc.updateProduct(product));
     } catch(error) {
