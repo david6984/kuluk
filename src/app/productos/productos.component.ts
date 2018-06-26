@@ -41,6 +41,7 @@ export class ProductosComponent implements OnInit {
 			this.productosService.editarProducto(producto.producto)
 			.then(data => {
 				this.obtenerProductos();
+				this.loading=false;
 				producto.form.reset();
 				console.log('dentro de la funcion');
 			})
