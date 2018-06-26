@@ -29,12 +29,13 @@ export class ProductosComponent implements OnInit {
   	}
 
 	public editarProducto(producto){
-		console.log('edit',producto);
+		console.log('componente principal prod:',producto);
 		this.selectedProduct = Object.assign({}, producto);
+		console.log('prod seleccionado en principal:',this.selectedProduct);
 	}
 
 	public editarProductoSave(producto){
-		console.log('antes del try update');
+		console.log('antes del try update el producto es:',producto);
 		try{
 			console.log(producto.producto);
 			this.productosService.editarProducto(producto.producto)

@@ -39,6 +39,7 @@ export class ProductoDisplayComponent implements OnInit {
 
 
 	editar(){
+		console.log('producto al click editar para selecionar prod:',this.producto);
 		this.editarProducto.emit(this.producto);
 	}
 
