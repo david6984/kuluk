@@ -29,21 +29,17 @@ export class ProductosComponent implements OnInit {
   	}
 
 	public editarProducto(producto){
-		console.log('componente principal prod:',producto);
 		this.selectedProduct = Object.assign({}, producto);
 		console.log('prod seleccionado en principal:',this.selectedProduct);
 	}
 
 	public editarProductoSave(producto){
-		console.log('antes del try-update el producto es:',producto);
 		try{
-			console.log('dentro del try antes de la funcion',producto.producto);
 			this.productosService.editarProducto(producto.producto)
 			.then(data => {
 				this.obtenerProductos();
 				this.loading=false;
 				producto.form.reset();
-				console.log('dentro de la funcion');
 			})
 			.catch(error => {
 				console.log('error catch update prod',error);

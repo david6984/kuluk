@@ -17,7 +17,7 @@ export class ProductoAgregarComponent implements OnInit, OnChanges {
 	isEditing = false;
 
 	onSubmit(productoForm) {
-		console.log('agregar/edit',this.producto);
+		console.log('agregar/edit',this.producto,'agregar/edit');
 		if(this.isEditing){
 			this.editarProducto.emit({
 				'producto':this.producto,
@@ -40,7 +40,7 @@ export class ProductoAgregarComponent implements OnInit, OnChanges {
 	}
 
 	ngOnChanges(changes){
-		console.log('dentro del changes',changes)
+		console.log('dentro del changes',changes,'',this.producto);
 		if(changes.producto && changes.producto.currentValue._id){
 			console.log('ng on-changes is editing');
 			this.isEditing = true;
