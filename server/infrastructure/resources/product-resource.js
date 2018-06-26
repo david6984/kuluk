@@ -43,7 +43,7 @@ function updateProduct(Product) {
     var id = Product._id;
     delete Product._id; // no se puede enviar el ID de nuevo porque da un error de que _id es inmutable
     //var Product = await(dbase.collection("products").replaceOne({_id: new ObjectId(id)}, Product, {upsert: true}));
-    print (id);
+    print ('update resource prod:',id);
     var Product = await(dbase.collection("products").replaceOne({"_id": ObjectId(id)}, Product, {upsert: true}));
     db.close();
     return Product;

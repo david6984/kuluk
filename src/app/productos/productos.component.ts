@@ -41,7 +41,7 @@ export class ProductosComponent implements OnInit {
 				producto.form.reset();
 			})
 			.catch(error => {
-				console.log('error',error);
+				console.log('error catch update prod',error);
 			});
 		}catch(e){
 			console.log('error update',e);
