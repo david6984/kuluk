@@ -34,7 +34,8 @@ export class ProductosComponent implements OnInit {
 	}
 
 	public editarProductoSave(producto){
-		this.productosService.editarProducto(producto.producto)
+		try{
+			this.productosService.editarProducto(producto.producto)
 			.then(data => {
 				this.obtenerProductos();
 				producto.form.reset();
@@ -42,6 +43,10 @@ export class ProductosComponent implements OnInit {
 			.catch(error => {
 				console.log('error',error);
 			});
+		}catch(e){
+			console.log('error update',e);
+		}
+
 	}
 
 	public borrarProducto(producto){
