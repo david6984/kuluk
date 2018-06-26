@@ -19,6 +19,7 @@ export class ProductosService {
 		try{
 			console.log('prod service',producto._id);
 			console.log('prod service',producto);
+			console.log('prod serv return',this.dataService.delete('/api/products/'+producto._id));
 			return this.dataService.delete('/api/products/'+producto._id);
 		}catch(e){
 			console.log(e);
