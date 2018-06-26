@@ -34,7 +34,9 @@ export class ProductosComponent implements OnInit {
 	}
 
 	public editarProductoSave(producto){
+		console.log('antes del try update');
 		try{
+			console.log(producto.producto);
 			this.productosService.editarProducto(producto.producto)
 			.then(data => {
 				this.obtenerProductos();
@@ -46,7 +48,6 @@ export class ProductosComponent implements OnInit {
 		}catch(e){
 			console.log('error update',e);
 		}
-
 	}
 
 	public borrarProducto(producto){
