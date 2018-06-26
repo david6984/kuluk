@@ -19,9 +19,9 @@ function getProduct(request, response) {
 }
 
 function deleteProduct(request, response) {
-    console.log('routes/api DELETE product');
-    var result;
+    console.log('routes/api DELETE product',request,'-',response);
     try {
+        var result;
         result = await (service.productsService.deleteProduct(request.params.id));
         return handlers.successResponseHandler(response, result);
     } catch (error) {
