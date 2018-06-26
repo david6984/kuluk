@@ -50,13 +50,17 @@ export class ProductosComponent implements OnInit {
 	}
 
 	public borrarProducto(producto){
-		this.productosService.borrarProducto(producto)
+		try{
+			this.productosService.borrarProducto(producto)
 			.then(data => {
 				this.obtenerProductos();
 			})
 			.catch(error => {
 				console.log('error',error);
 			});
+		}catch(e){
+			console.log('main borrar err',e);
+		}
 	}
 
 	public obtenerProductos(){
