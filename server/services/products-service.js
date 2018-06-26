@@ -30,9 +30,9 @@ function updateProduct(product) {
 }
 
 function deleteProduct(id) {
-    var result;
-    console.log('delete product by ' + id);
     try {
+        console.log('delete product service try by ',id);
+        var result;
         result = await (ProductsRsrc.deleteProduct(id));
     } catch(error) {
         throw error;
