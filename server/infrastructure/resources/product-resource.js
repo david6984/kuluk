@@ -41,9 +41,12 @@ function updateProduct(Product) {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
     var id = Product._id;
-    delete Product._id; // no se puede enviar el ID de nuevo porque da un error de que _id es inmutable
-    var Product = await(dbase.collection("products").replaceOne({_id: new ObjectId(id)}, Product, {upsert: true}));
-    print ('update resource prod:',id);
+    try{
+        delete Product._id; // no se puede enviar el ID de nuevo porque da un error de que _id es inmutable
+        var Product = await(dbase.collection("products").replaceOne({_id: new ObjectId(id)}, Product, {upsert: true}));
+    }catch(e){
+        console.log(e);
+    }
     //var Product = await(dbase.collection("products").replaceOne({"_id": ObjectId(id)}, Product, {upsert: true}));
     db.close();
     return Product;
