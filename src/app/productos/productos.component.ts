@@ -37,8 +37,8 @@ export class ProductosComponent implements OnInit {
 	public editarProductoSave(producto){
 		console.log('antes del try-update el producto es:',producto);
 		try{
-			console.log('dentro del try antes de la funcion',producto.producto);
-			this.productosService.editarProducto(producto.producto)
+			console.log('dentro del try antes de la funcion',producto.Producto);
+			this.productosService.editarProducto(producto.Producto)
 			.then(data => {
 				this.obtenerProductos();
 				this.loading=false;
