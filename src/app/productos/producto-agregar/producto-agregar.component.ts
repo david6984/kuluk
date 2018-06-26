@@ -41,7 +41,7 @@ export class ProductoAgregarComponent implements OnInit, OnChanges {
 	ngOnChanges(changes){
 		console.log('changes',changes)
 		if(changes.producto && changes.producto.currentValue._id){
-			console.log('is editing');
+			console.log('ng on changes is editing');
 			this.isEditing = true;
 		}
 	}
