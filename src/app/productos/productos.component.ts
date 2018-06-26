@@ -10,7 +10,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class ProductosComponent implements OnInit {
 	public productos : Producto[];
-	public selectedProduct : Producto = new Producto();
+	public selectedProduct : Producto = new Producto;
 	public loading : boolean = false;
 	public islogged : boolean = false;
 
