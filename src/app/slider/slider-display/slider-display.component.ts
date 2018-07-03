@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Slider} from '../../models/slider';
+import {SliderService} from '../../services/slider.service';
 
 @Component({
   selector: 'app-slider-display',
@@ -6,10 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider-display.component.css']
 })
 export class SliderDisplayComponent implements OnInit {
+	@Input() slider : Slider;
+	@Output() borrarSlider = new EventEmitter<Slider>();
+	@Output() editarSlider = new EventEmitter<Slider>();
+	public isDeleting = false;
 
-  constructor() { }
+	constructor(private sliderService:SliderService) { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		
+	}
+
+	borrar(){
+		this.isDeleting = true;
+		this.borrarSlider.emit(this.slider);
+	}
+
+
+	editar(){
+		this.editarSlider.emit(this.slider);
+	}
 
 }
