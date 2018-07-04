@@ -60,9 +60,10 @@ export class SliderComponent implements OnInit {
 	public agregarSlider(slider:any){
 		this.loading = true;
 		delete slider.slider._id;
+		console.log('slider/c/:',slider.slider);
 		this.sliderService.agregarSlider(slider.slider)
 			.then(data => {
-				console.log('usuario agregado');
+				console.log('slider agregado');
 				slider.form.reset();
 				this.loading = false;
 				this.obtenerSliders();

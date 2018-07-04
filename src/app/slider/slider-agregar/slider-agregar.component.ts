@@ -43,6 +43,7 @@ export class SliderAgregarComponent implements OnInit {
 			this.editarSlider.emit({slider:this.sliderForm.value,form:this.sliderForm});
 			this.isEditing = false;
 		} else {
+			console.log('entro al c/agregar/:', this.sliderForm.value);
 			this.agregarSlider.emit({slider:this.sliderForm.value,form:this.sliderForm});
 		}
 		this.submitted = true; 
