@@ -29,21 +29,21 @@ export class SliderAgregarComponent implements OnInit {
 			imagenUrl: new FormControl('', [Validators.required]),
 			longText: new FormControl('', [
 				Validators.minLength(1), 
-				Validators.maxLength(20)
-      ]),
-      shortText: new FormControl('', [
-				Validators.minLength(1), 
 				Validators.maxLength(50)
-			])
-		});
+      ]),
+			shortText: new FormControl('', [
+						Validators.minLength(1), 
+						Validators.maxLength(20)
+					])
+				});
 	}
 
 	onSubmit() {
 		if(this.isEditing){
-			this.editarSlider.emit({usuario:this.sliderForm.value,form:this.sliderForm});
+			this.editarSlider.emit({slider:this.sliderForm.value,form:this.sliderForm});
 			this.isEditing = false;
 		} else {
-			this.agregarSlider.emit({usuario:this.sliderForm.value,form:this.sliderForm});
+			this.agregarSlider.emit({slider:this.sliderForm.value,form:this.sliderForm});
 		}
 		this.submitted = true; 
 	}
