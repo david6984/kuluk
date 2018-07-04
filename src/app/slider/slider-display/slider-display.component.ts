@@ -37,6 +37,7 @@ export class SliderDisplayComponent implements OnInit {
 
 
 	editar(){
+		console.log('s/cd/editar:',this.slider);
 		this.editarSlider.emit(this.slider);
 	}
 

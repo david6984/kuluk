@@ -26,6 +26,7 @@ export class SliderComponent implements OnInit {
 	public editarSlider(slider){
 		console.log('edit',slider);
 		this.selectedSlider = Object.assign({}, slider);
+		console.log('selectedSlider:',this.selectedSlider);
 	}
 
 	public editarSliderSave(slider){
