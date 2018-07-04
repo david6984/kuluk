@@ -34,14 +34,11 @@ ngOnInit() {
 public obtenerSliders(){
   this.sliderService.obtenerSliders().subscribe((data) => {
       console.log('data',data);
-      console.log('Items',this.items);
       this.sliders = data.slide;
       for(let i=0;i<this.sliders.length;i++){
         this.slider=this.sliders[i];
-        name:"'"+this.slider.imagenUrl+"'";
-        this.items.push(name);
+        this.items.push(this.slider);
       }
-      console.log('carousel',this.items);
     });
 }
 
