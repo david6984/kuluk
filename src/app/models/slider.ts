@@ -1,7 +1,7 @@
 export class Slider {
 	public _id: string = undefined;
-    public shortDescripcion : string = '';
-    public longDescripcion : string = '';
+    public shortText : string = '';
+    public longText : string = '';
 	public imgurl : string = '';
 	constructor(){
 	}
