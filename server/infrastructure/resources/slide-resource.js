@@ -47,7 +47,7 @@ function updateSlider(slide) {
 }
 
 function addSlider(slide) {
-    console.log('add user',slide)
+    console.log('add slide',slide)
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
     var slide = await(dbase.collection("sliders").insertOne(slide));
