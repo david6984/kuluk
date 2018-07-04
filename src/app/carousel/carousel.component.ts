@@ -33,12 +33,13 @@ ngOnInit() {
 
 public obtenerSliders(){
   this.sliderService.obtenerSliders().subscribe((data) => {
-      console.log('data',data);
+      console.log('entro al obtener sliders',data);
       this.sliders = data.slide;
       for(let i=0;i<this.sliders.length;i++){
         this.slider=this.sliders[i];
         this.items.push(this.slider);
       }
+      console.log(this.items);
     });
 }
 
