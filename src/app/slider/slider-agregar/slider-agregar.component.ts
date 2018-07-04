@@ -55,6 +55,7 @@ export class SliderAgregarComponent implements OnInit {
 			console.log('is editing');
 			this.sliderForm.setValue(changes.slider.currentValue);
 			this.isEditing = true;
+			console.log('entro al onchanges al if: ',this.sliderForm);
 		}
 	}
 
