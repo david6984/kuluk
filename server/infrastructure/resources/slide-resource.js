@@ -8,17 +8,17 @@ var await = require('asyncawait/await');
 function getSliders() {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
-    var sliders= await(dbase.collection("sliders").find({}).toArray());
+    var slides= await(dbase.collection("sliders").find({}).toArray());
     db.close();
-    return sliders;
+    return slides;
 }
 
 function getSlider(id) {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
-    var slider = await(dbase.collection("sliders").findOne({_id: new ObjectId(id)}));
+    var slide = await(dbase.collection("sliders").findOne({_id: new ObjectId(id)}));
     db.close();
-    return slider;
+    return slide;
 }
 
 
@@ -26,13 +26,13 @@ function deleteSlider(id) {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
     try{
-        var slider = await(dbase.collection("sliders").deleteOne({_id: new ObjectId(id)}));    
+        var slide = await(dbase.collection("sliders").deleteOne({_id: new ObjectId(id)}));    
     }catch(e){
         console.log(e);
     }
     
     db.close();
-    return slider;
+    return slide;
 }
 
 function updateSlider(slide) {
