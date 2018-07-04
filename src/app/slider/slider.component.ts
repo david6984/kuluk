@@ -52,7 +52,7 @@ export class SliderComponent implements OnInit {
 	public obtenerSliders(){
 		this.sliderService.obtenerSliders().subscribe((data) => {
 				console.log('data',data);
-				this.sliders = data.slider;
+				this.sliders = data.slide;
 			});
 	}
 
