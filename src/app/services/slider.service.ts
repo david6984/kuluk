@@ -20,6 +20,7 @@ export class SliderService {
 	}
 
 	public editarSlider(slider:Slider){
+		console.log('editarSliderService:',slider);
 		return this.dataService.put('/api/slides/'+slider._id,{'slide':slider});
 	}
 }
