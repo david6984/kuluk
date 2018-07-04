@@ -12,7 +12,7 @@ export class SliderService {
 
 	public agregarSlider(slider:Slider){
 		console.log('service add slider:', slider);
-		return this.dataService.post('/api/sliders',{'slider':slider});
+		return this.dataService.post('/api/sliders',{'slide':slider});
 	}
 
 	public borrarSlider(slider:Slider){
@@ -20,6 +20,6 @@ export class SliderService {
 	}
 
 	public editarSlider(slider:Slider){
-		return this.dataService.put('/api/sliders/'+slider._id,{'slider':slider});
+		return this.dataService.put('/api/sliders/'+slider._id,{'slide':slider});
 	}
 }

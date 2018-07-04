@@ -1,7 +1,7 @@
 'use strict';
 var async = require('asyncawait/async');
 var await = require('asyncawait/await');
-var SlidersRsrc = require(__base + 'server/infrastructure/resources').slider;
+var SlidersRsrc = require(__base + 'server/infrastructure/resources').slide;
 
 function getSlider(id) {
     var result;
@@ -16,20 +16,20 @@ function getSlider(id) {
     } catch(error) {
         throw error;
     }
-    return { slider : result };
+    return { slide : result };
 }
 
 
-function updateSlider(slider) {
+function updateSlider(slide) {
     var result;
-    console.log('update slider by ' + slider.id);
+    console.log('update slider by ' + slide.id);
     try {
-        result = await (SlidersRsrc.updateSlider(slider));
+        result = await (SlidersRsrc.updateSlider(slide));
         console.log('result length ' + result.length);    
     } catch(error) {
         throw error;
     }
-    return {slider: result};
+    return {slide: result};
 }
 
 function deleteSlider(id) {
@@ -41,19 +41,19 @@ function deleteSlider(id) {
     } catch(error) {
         throw error;
     }
-    return {slider: result};
+    return {slide: result};
 }
 
-function postSlider(slider) {
+function postSlider(slide) {
     var result;
-    console.log('post Slider service',slider);
+    console.log('post Slider service',slide);
     try {
-        result = await (SlidersRsrc.addSlider(slider));
+        result = await (SlidersRsrc.addSlider(slide));
         console.log('result length ' + result.length);    
     } catch(error) {
         throw error;
     }
-    return {slider: result};
+    return {slide: result};
 }
 
 module.exports.getSlider = async(getSlider);
