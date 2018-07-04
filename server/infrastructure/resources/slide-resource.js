@@ -35,24 +35,24 @@ function deleteSlider(id) {
     return slider;
 }
 
-function updateSlider(slider) {
+function updateSlider(slide) {
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
-    var id = slider._id;
-    delete slider._id; // no se puede enviar el ID de nuevo porque da un error de que _id es inmutable
-    var slider = await(dbase.collection("sliders").replaceOne({_id: new ObjectId(id)}, slider, {upsert: true}));
+    var id = slide._id;
+    delete slide._id; // no se puede enviar el ID de nuevo porque da un error de que _id es inmutable
+    var slide = await(dbase.collection("sliders").replaceOne({_id: new ObjectId(id)}, slide, {upsert: true}));
     
     db.close();
-    return slider;
+    return slide;
 }
 
-function addSlider(slider) {
-    console.log('add user',slider)
+function addSlider(slide) {
+    console.log('add user',slide)
     var db = await(MongoClient.connect(url)); 
     var dbase = db.db("heroku_p2cqk5m3");
-    var slider = await(dbase.collection("sliders").insertOne(slider));
+    var slide = await(dbase.collection("sliders").insertOne(slide));
     db.close();
-    return slider;
+    return slide;
 }
 
 module.exports = {
