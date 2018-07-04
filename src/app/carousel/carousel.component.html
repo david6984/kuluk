@@ -16,7 +16,7 @@
   <ng-template #item let-item let-i="index">
       <div class="items col-12 col-lg-12">
           <img src="{{item.imagenUrl}}"  class="items-img" />
-            <div class="carousel-caption d-none d-md-block" *ngIf="item.shortText">
+            <div class="carousel-caption d-none d-md-block" *ngIf="item.shortText || item.longText">
                 <h3>{{item.shortText}}</h3> 
                 <p>{{item.longText}}</p>
             </div> 
