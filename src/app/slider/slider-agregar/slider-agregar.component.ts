@@ -50,10 +50,10 @@ export class SliderAgregarComponent implements OnInit {
 	}
 
 	ngOnChanges(changes){
-		console.log('changes',changes)
+		console.log('changes',changes,'slider:',this.slider)
 		if(changes.slider && changes.slider.currentValue._id){
 			console.log('is editing');
-			this.sliderForm.setValue(changes.imagenUrl.currentValue);
+			this.sliderForm.setValue(changes.slider.currentValue);
 			this.isEditing = true;
 		}
 	}
