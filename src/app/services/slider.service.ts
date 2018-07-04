@@ -7,19 +7,19 @@ export class SliderService {
 	constructor(private dataService:DataService) { }
 
 	public obtenerSliders(){
-		return this.dataService.get('/api/sliders');
+		return this.dataService.get('/api/slides');
 	}
 
 	public agregarSlider(slider:Slider){
 		console.log('service add slider:', slider);
-		return this.dataService.post('/api/sliders',{'slide':slider});
+		return this.dataService.post('/api/slides',{'slide':slider});
 	}
 
 	public borrarSlider(slider:Slider){
-		return this.dataService.delete('/api/sliders/'+slider._id);
+		return this.dataService.delete('/api/slides/'+slider._id);
 	}
 
 	public editarSlider(slider:Slider){
-		return this.dataService.put('/api/sliders/'+slider._id,{'slide':slider});
+		return this.dataService.put('/api/slides/'+slider._id,{'slide':slider});
 	}
 }
