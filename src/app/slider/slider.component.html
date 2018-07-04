@@ -1,13 +1,21 @@
-<div class="slider">
+<div class="usuario">
 	<div class="page-title row">
-		<h2 class="col-5">Carousel</h2>
+		<h2 class="col-5">Slider</h2>
 	</div>
-	<div>
-		<ul>
-			<app-slider-agregar></app-slider-agregar>
+	<div class="row" *ngIf="islogged">
+		<ul class="col-12" >
+			<app-slider-agregar   (agregarSlider)="agregarSlider($event)" (editarSlider)="editarSliderSave($event)" [selectedSlider]="selectedSlider" [canAdd]='!loading'></app-slider-agregar>
+			<div *ngIf="loading">
+				loading...
+			</div>
 		</ul>
-		<ul>
-			<app-slider-display></app-slider-display>
+		<ul class="col-12">
+			<li *ngFor="let slider of sliders">
+				<app-slider-display [slider]='slider' 
+				(borrarSlider)="borrarSlider($event)" 
+				(editarSlider)="editarSlider($event)" >
+				</app-slider-display>
+			</li>
 		</ul>	
 	</div>
 </div>

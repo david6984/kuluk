@@ -17,6 +17,7 @@ function addCollections(db){
 	var dbase= db.db("heroku_p2cqk5m3");
 	dbase.createCollection("products");
 	dbase.createCollection("places");
+	dbase.createCollection("sliders");
 	dbase.createCollection("users",function(err, res) {
 	    if (err) throw err;
 		console.log("Collection users created!");
