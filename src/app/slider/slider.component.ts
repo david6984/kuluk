@@ -31,7 +31,7 @@ export class SliderComponent implements OnInit {
 
 	public editarSliderSave(slider){
 		console.log('editarsliderSave:',slider);
-		this.sliderService.editarSlider(slider._id)
+		this.sliderService.editarSlider(slider.slider)
 			.then(data => {
 				slider.form.reset();
 				this.obtenerSliders();
