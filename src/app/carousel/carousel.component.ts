@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Ng2CarouselamosModule} from 'ng2-carouselamos';
+import { Slider } from '../models/slider';
+import { SliderService } from '../services/slider.service';
+import { INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS } from '@angular/platform-browser-dynamic/src/platform_providers';
 
 @Component({
   selector: 'app-carousel',
@@ -9,8 +12,11 @@ import {Ng2CarouselamosModule} from 'ng2-carouselamos';
 export class CarouselComponent implements OnInit {
 
 items: Array<any>=[];
+public sliders : Slider[];
+public slider:Slider = new Slider();
+public name:string='';
 
-constructor() {
+constructor(private sliderService:SliderService) {
   this.items=[
     {name:'https://res.cloudinary.com/kuluk/image/upload/v1518043522/27067332_1630745313671296_8162047250216444593_n.jpg'},
     {name:'https://res.cloudinary.com/kuluk/image/upload/v1519266130/KULUK-PCover02.png'},
@@ -21,6 +27,22 @@ constructor() {
 }
 
 ngOnInit() {
+  this.obtenerSliders();
+}
+
+
+public obtenerSliders(){
+  this.sliderService.obtenerSliders().subscribe((data) => {
+      console.log('data',data);
+      console.log('Items',this.items);
+      this.sliders = data.slide;
+      for(let i=0;i<this.sliders.length;i++){
+        this.slider=this.sliders[i];
+        name:"'"+this.slider.imagenUrl+"'";
+        this.items.push(name);
+      }
+      console.log('carousel',this.items);
+    });
 }
 
 }
