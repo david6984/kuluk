@@ -34,7 +34,7 @@ function updateSlider(request, response) {
     console.log('UPDATE Slider');
     var result;
     try {
-        result = await (service.slidesService.updateUser(request.body.slide));
+        result = await (service.slidesService.updateSlider(request.body.slide));
         return handlers.successResponseHandler(response, result);
     } catch (error) {
         return handlers.errorResponseHandler(response, error);
